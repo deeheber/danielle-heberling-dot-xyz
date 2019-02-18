@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "danielle-heberling-dot-xyz",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Source code for danielleheberling.xyz",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Danielle Heberling",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/deeheber/danielle-heberling-dot-xyz/issues"
   },
   "dependencies": {
     "gatsby": "^2.1.4",
@@ -43,7 +43,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/deeheber/danielle-heberling-dot-xyz.git"
   },
   "scripts": {
     "build": "gatsby build",
