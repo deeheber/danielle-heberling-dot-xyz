@@ -1,6 +1,7 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
+import Nav from "./nav";
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -11,43 +12,49 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-            fontSize: `3.25rem`
-          }}
-        >
-          <Link
+        <Fragment>
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`
+              ...scale(1.5),
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
+              fontSize: `3.25rem`
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h1>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h1>
+          <Nav />
+        </Fragment>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0
-          }}
-        >
-          <Link
+        <Fragment>
+          <h3
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`
+              fontFamily: `Montserrat, sans-serif`,
+              marginTop: 0
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+          <Nav />
+        </Fragment>
       )
     }
     return (
