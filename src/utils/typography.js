@@ -3,9 +3,29 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    "body": {
+      background: `#333`,
+      color: `white`,
+      fontSize: `1.2rem`
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`
     },
+    "a": {
+      color: `yellow`
+    },
+    "ul": {
+      paddingLeft: `2rem`
+    },
+    "blockquote": {
+      color: `whitesmoke`,
+      borderLeftColor: `whitesmoke`
+    },
+    "pre": {
+      background: `white`,
+      padding: `1rem`,
+      color: `#333`
+    }
   }
 }
 
