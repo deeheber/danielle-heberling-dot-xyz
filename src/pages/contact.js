@@ -9,7 +9,7 @@ class Contact extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout title={siteTitle}>
         <h3>This is the contact page</h3>
       </Layout>
     );
