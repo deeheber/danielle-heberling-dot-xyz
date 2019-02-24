@@ -1,10 +1,43 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 class Contact extends React.Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {};
+  }
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
+
   render () {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -34,26 +67,35 @@ class Contact extends React.Component {
             <form
               name="contact"
               method="post"
-              action="/success"
+              action="/success/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              onSubmit={this.handleSubmit}
             >
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
               <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
+              <p style={{ display: `none` }}>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={this.handleChange} />
+                </label>
+              </p>
               <div style={ divStyle }>
-                <label htmlFor="name">Name </label>
-                <br />
-                <input style={inputStyle} type="text" id="name" name="name" />
+                <label>
+                  Name <br />
+                  <input style={inputStyle} name="name" onChange={this.handleChange} />
+                </label>
               </div>
               <div style={ divStyle }>
-                <label htmlFor="email">Email </label>
-                <br />
-                <input style={inputStyle}  type="text" id="email" name="email" />
+                <label>
+                  Email <br />
+                  <input style={inputStyle} name="email" onChange={this.handleChange} />
+                </label>
               </div>
               <div style={ divStyle }>
-                <label htmlFor="message">Message</label>
-                <br />
-                <textarea style={inputStyle} rows="6" id="message" name="message"></textarea>
+                <label>Message <br />
+                <textarea style={inputStyle} rows="6" name="message" onChange={this.handleChange}></textarea>
+                </label>
               </div>
               <div style={ divStyle }>
                 <input style={{ ...inputStyle, background: `#FFC20E`, width: `10rem` }} type="submit" />
