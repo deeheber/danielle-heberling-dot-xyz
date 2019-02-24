@@ -10,7 +10,7 @@ class Contact extends React.Component {
 
     return (
       <Layout title={siteTitle}>
-        <h3>This is the contact page</h3>
+        <h3>Let's talk more.</h3>
       </Layout>
     );
   }
