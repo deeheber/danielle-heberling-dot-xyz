@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import Nav from "./nav";
+import Footer from "./footer"
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -45,14 +46,7 @@ class Layout extends React.Component {
         <main style={{ borderBottom: `0.05rem solid white`, marginBottom: `1.5rem`}}>
           {children}
         </main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>,
-          Deployed via
-          {` `}
-          <a href="https://www.netlify.com/">Netlify</a>
-        </footer>
+        <Footer />
       </div>
     )
   }
