@@ -42,12 +42,16 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
-        <hr />
+        <main style={{ borderBottom: `0.05rem solid white`, marginBottom: `1.5rem`}}>
+          {children}
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a>,
+          Deployed via
+          {` `}
+          <a href="https://www.netlify.com/">Netlify</a>
         </footer>
       </div>
     )
