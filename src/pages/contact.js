@@ -34,7 +34,7 @@ class Contact extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => navigate(`${form.getAttribute("action")}?no-cache=1`))
       .catch(error => alert(error));
   };
 
@@ -67,7 +67,7 @@ class Contact extends React.Component {
             <form
               name="contact"
               method="post"
-              action="/success/"
+              action="/success"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
