@@ -20,7 +20,7 @@ class About extends React.Component {
               />
               <h3>Nice to meet you.</h3>
                 <div>
-                  <div style={{ float: `right` }}>
+                  <div style={{ float: `left`, paddingRight: `1.5rem` }}>
                     <Image
                       fixed={data.avatar.childImageSharp.fixed}
                       alt={siteMetadata.author}

@@ -12,14 +12,14 @@ Wordpress2016.overrideThemeStyles = () => {
       boxShadow: `none`
     },
     "a": {
-      color: `yellow`
+      color: `#FFC20E`
     },
     "ul": {
       paddingLeft: `2rem`
     },
     "blockquote": {
-      color: `whitesmoke`,
-      borderLeftColor: `whitesmoke`
+      color: `#B2BABF`,
+      borderLeftColor: `#B2BABF`
     },
     "pre": {
       background: `white`,
