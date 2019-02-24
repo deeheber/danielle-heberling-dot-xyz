@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const linkStyle = {
-  padding: `1em`,
+  margin: `0 1rem`,
   boxShadow: `none`
 };
 
@@ -14,7 +14,7 @@ function Nav () {
   return (
     <nav>
       <Link style={linkStyle} activeStyle={linkActiveStyle} to="/">
-        Home
+        Blog
       </Link>
       <Link style={linkStyle} activeStyle={linkActiveStyle} to="/about">
         About
