@@ -7,7 +7,7 @@ const linkStyle = {
 };
 
 const linkActiveStyle = {
-  borderBottom: `1px solid yellow`
+  borderBottom: `1px solid #FFC20E`
 };
 
 function Nav () {
