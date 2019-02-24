@@ -31,8 +31,7 @@ class Contact extends React.Component {
             <p>
               Fill out the form to get in touch. Alternately, you can reach out to me via my social media accounts.
             </p>
-            <form name="contact" method="post" action="/success" data-netlify="true" data-netlify-honeypot="bot-field">
-              <input type="hidden" name="bot-field" />
+            <form name="contact" method="post" data-netlify="true">
               <div style={ divStyle }>
                 <label htmlFor="name">Name </label>
                 <br />
