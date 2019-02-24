@@ -10,24 +10,24 @@ class Layout extends React.Component {
 
     const header = (
       <Fragment>
-        <h1
+        <Link
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-            fontSize: `3.25rem`
+            boxShadow: `none`,
+            textDecoration: `none`
           }}
+          to={`/`}
         >
-          <Link
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`
+              ...scale(1.5),
+              margin: `0 auto`,
+              fontSize: `3.25rem`
             }}
-            to={`/`}
           >
             {title}
-          </Link>
-        </h1>
+          </h1>
+          <h2 style={{ marginTop: 0 }}>Software Engineer</h2>
+        </Link>
         <Nav />
       </Fragment>
     );
