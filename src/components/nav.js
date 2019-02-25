@@ -19,9 +19,9 @@ function Nav () {
       <Link style={linkStyle} activeStyle={linkActiveStyle} to="/about">
         About
       </Link>
-      <Link style={linkStyle} activeStyle={linkActiveStyle} to="/contact">
+      <a style={linkStyle} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
         Contact
-      </Link>
+      </a>
     </nav>
   )
 }
