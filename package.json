@@ -36,9 +36,14 @@
     "typography": "^0.16.18",
     "typography-theme-wordpress-2016": "^0.16.18"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/deeheber/danielle-heberling-dot-xyz/blob/master/README.md",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "netlify",
+    "static site",
+    "blog",
+    "portfolio",
+    "serverless"
   ],
   "license": "MIT",
   "main": "n/a",
