@@ -13,7 +13,7 @@ const linkActiveStyle = {
 function Nav () {
   return (
     <nav>
-      <Link style={linkStyle} activeStyle={linkActiveStyle} to="/">
+      <Link style={{ ...linkStyle, marginLeft: 0 }} activeStyle={linkActiveStyle} to="/">
         Blog
       </Link>
       <Link style={linkStyle} activeStyle={linkActiveStyle} to="/about">
