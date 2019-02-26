@@ -1,2 +1,5 @@
-# Redirect default Netlify subdomain to primary domain
-https://deeheber.netlify.com/* https://www.deeheber.com/:splat 301!
+# Redirect domain aliases to primary domain
+https://www.deeheber.com/* https://www.danielleheberling.xyz/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://deeheber.netlify.com/* https://www.danielleheberling.xyz/:splat 301!
