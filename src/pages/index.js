@@ -30,7 +30,10 @@ class BlogIndex extends Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <div style={{ color: '#B2BABF' }}>
+                <small>{node.frontmatter.date}  — </small>
+                <small>{node.timeToRead} min read</small>
+              </div>
               <p style={{ marginBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               <p>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
@@ -65,6 +68,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
           }
+          timeToRead
         }
       }
     }
