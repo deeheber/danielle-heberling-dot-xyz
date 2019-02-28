@@ -1,28 +1,28 @@
-import React, { Fragment } from "react"
-import { Link } from "gatsby"
+import React, { Component, Fragment } from 'react';
+import { Link } from 'gatsby';
 
-import Nav from "./nav";
-import Footer from "./footer"
-import { rhythm, scale } from "../utils/typography"
+import Nav from './nav';
+import Footer from './footer';
+import { rhythm, scale } from '../utils/typography';
 
-class Layout extends React.Component {
-  render() {
+class Layout extends Component {
+  render () {
     const { title, children } = this.props;
 
     const header = (
       <Fragment>
         <Link
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`
+            boxShadow: 'none',
+            textDecoration: 'none'
           }}
-          to={`/`}
+          to={'/'}
         >
           <h1
             style={{
               ...scale(1.5),
-              margin: `0 auto`,
-              fontSize: `3.25rem`
+              margin: '0 auto',
+              fontSize: '3.25rem'
             }}
           >
             {title}
@@ -36,20 +36,20 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
+          marginLeft: 'auto',
+          marginRight: 'auto',
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
         <header>{header}</header>
-        <main style={{ borderBottom: `0.05rem solid white`, marginBottom: `1.5rem`}}>
+        <main style={{ borderBottom: '0.05rem solid white', marginBottom: `1.5rem` }}>
           {children}
         </main>
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;
