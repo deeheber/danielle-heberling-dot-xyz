@@ -25,6 +25,11 @@ Wordpress2016.overrideThemeStyles = () => {
       background: 'white',
       padding: '1rem',
       color: '#333'
+    },
+    code: {
+      display: 'inline-block',
+      'text-overflow': 'hidden',
+      'white-space': 'pre-wrap'
     }
   };
 };
