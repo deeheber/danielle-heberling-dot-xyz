@@ -12,7 +12,7 @@ class NotFoundPage extends Component {
     return (
       <Layout title={siteTitle}>
         <SEO title='404: Not Found' />
-        <h1>Not Found</h1>
+        <h3>Not Found</h3>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       </Layout>
     );
