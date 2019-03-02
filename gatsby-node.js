@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog posts pages.
+    // Create blog post detail pages
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach((post, index) => {
@@ -48,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
 
-    // Create blog-list pages
+    // Create paginated blog-list pages
     const postsPerPage = 4;
     const numPages = Math.ceil(posts.length / postsPerPage);
     Array.from({ length: numPages }).forEach((_, i) => {
