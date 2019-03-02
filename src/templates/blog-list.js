@@ -33,7 +33,7 @@ class BlogIndex extends Component {
                   marginBottom: rhythm(1 / 4)
                 }}
               >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: 'none' }} to={`/blog${node.fields.slug}`}>
                   {title}
                 </Link>
               </h3>
@@ -43,7 +43,7 @@ class BlogIndex extends Component {
               </div>
               <p style={{ marginBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               <p>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: 'none' }} to={`/blog${node.fields.slug}`}>
                   Continue Reading →
                 </Link>
               </p>
