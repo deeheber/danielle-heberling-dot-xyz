@@ -11,6 +11,13 @@ class BlogIndex extends Component {
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges;
 
+    // Pagination stuff
+    const { currentPage, numPages } = this.props.pageContext;
+    const isFirst = currentPage === 1;
+    const isLast = currentPage === numPages;
+    const prevPage = currentPage - 1 === 1 ? '/' : `/blog${currentPage - 1}`;
+    const nextPage = `/blog${currentPage + 1}`;
+
     return (
       <Layout title={siteTitle}>
         <SEO
@@ -43,6 +50,25 @@ class BlogIndex extends Component {
             </div>
           );
         })}
+
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            paddingBottom: '1em'
+          }}
+        >
+          {!isFirst && (
+            <Link to={prevPage} rel='prev' style={{ boxShadow: 'none' }}>
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={nextPage} rel='next' style={{ boxShadow: 'none', marginLeft: 'auto' }}>
+              Next Page →
+            </Link>
+          )}
+        </div>
       </Layout>
     );
   }
@@ -51,13 +77,17 @@ class BlogIndex extends Component {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query {
+  query pageQuery($skip: Int!, $limit: Int!){
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+      ) {
       edges {
         node {
           excerpt(pruneLength: 280)
