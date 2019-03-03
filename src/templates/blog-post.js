@@ -15,7 +15,7 @@ class BlogPostTemplate extends Component {
     return (
       <Layout title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
+        <h3>{post.frontmatter.title}</h3>
         <p
           style={{
             ...scale(-1 / 5),
