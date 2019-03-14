@@ -44,7 +44,7 @@ Not directly Gatsby related, but I attempted to use <a href="https://www.netlify
 ## The Future
 I view pretty much every project of mine as a living, breathing entity that is never complete. I'm keeping track of ideas of things I'd like to implement in the future on <a href="https://github.com/deeheber/danielle-heberling-dot-xyz/issues" target="_blank" rel="noopeener noreferrer">GitHub</a>. Feel free to contribute if you'd like.
 
-In addition to my issues listed on GitHub, I also think I'd like to deploy the site to an S3 bucket (it is currently hosted on Netlify) to make integration with other AWS services easier. For now, I think thinking I'd like to put that bucket behind a CloudFront distributation that can talk to a Lambda which processes the form and then sends me a customized email with the form submission info via SES and utilizes Cloud Monkey. Ok now I'm just making up fictional AWS services, I'll stop.
+In addition to my issues listed on GitHub, I also think I'd like to deploy the site to an S3 bucket (it is currently hosted on Netlify) to make integration with other AWS services easier. For now, I think thinking I'd like to put that bucket behind a CloudFront distribution that can talk to a Lambda which processes the form and then sends me a customized email with the form submission info via SES and utilizes Cloud Monkey. Ok now I'm just making up fictional AWS services, I'll stop.
 
 ## Final Thoughts
 Working with Gatsby has been a joy. The community is so kind and helpful, and the docs are very detailed/searchable. Anytime I had a question 99% of the time, I could find it through a quick search since someone else had already asked the same question I was.
