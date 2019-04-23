@@ -5,8 +5,6 @@ date: "2018-10-24T22:12:03.284Z"
 
 ![Amplify](./amplify.jpg)
 
->Note: This post was originally published on https://www.stackery.io/
-
 So you want to use AWS Cognito to authenticate users and have your user pool, identity pool, and app client all set up in the AWS console. ...the next question is how can you connect this with your React based frontend? While there are a few ways to go about doing this, this post is going to give you a brief overview on how to do this via a library called <a href="https://aws-amplify.github.io/" target="_blank" rel="noopener noreferrer">AWS-Amplify</a>.
 
 AWS-Amplify is an open source project managed by AWS described as “a declarative JavaScript library for application development using cloud services.” I liked this particular library, because it has a client first approach and abstracts away some of <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/using-amazon-cognito-user-identity-pools-javascript-examples.html" target="_blank" rel="noopener noreferrer">the setup</a> required in the JavaScript SDK.
@@ -133,3 +131,5 @@ So now the user is looking at the confirmation form and has their confirmation c
 So it is taking in the form data, using Amplify to confirm the user’s email address via the conformation code and signing in the user if successful. You can then verify if a user is signed in via props at the route level if you’d like. In this case, I arbitrarily named it `isAuthenticated` and redirected the user to the root path.
 
 The complete docs for using the Auth feature of Amplify can be <a href="https://aws-amplify.github.io/docs/js/authentication" target="_blank" rel="noopener noreferrer">found here</a>. We’ve only scratched the surface in this post, so go forth and explore the all of the different features that Amplify has to offer. I’ve found it has a very nice declarative syntax and is very readable for folks who are new to a codebase. For building further on your React-based serverless applications, I highly recommend Stackery for <a href="https://www.stackery.io/product/" target="_blank" rel="noopener noreferrer">managing all of your serverless infrastructure</a> backed up by seamless, git-based version control.
+
+>Note: This post was originally published on https://www.stackery.io/
