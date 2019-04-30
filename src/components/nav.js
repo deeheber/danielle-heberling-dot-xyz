@@ -18,7 +18,7 @@ const linkStyle = {
 };
 
 const linkActiveStyle = {
-  borderBottom: '1px solid #7D3C98'
+  borderBottom: '1px solid #2E86C1'
 };
 
 function Nav () {

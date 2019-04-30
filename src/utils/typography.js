@@ -10,7 +10,7 @@ Wordpress2016.overrideThemeStyles = () => {
       boxShadow: 'none'
     },
     'a': {
-      color: '#7D3C98'
+      color: '#2E86C1'
     },
     'ul': {
       paddingLeft: '2rem'
