@@ -37,7 +37,7 @@ class BlogIndex extends Component {
                   {title}
                 </Link>
               </h3>
-              <div style={{ color: '#B2BABF' }}>
+              <div style={{ color: '#707B7C' }}>
                 <small>{node.frontmatter.date}  — </small>
                 <small>{node.timeToRead} min read</small>
               </div>

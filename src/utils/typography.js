@@ -4,29 +4,27 @@ import Wordpress2016 from 'typography-theme-wordpress-2016';
 Wordpress2016.overrideThemeStyles = () => {
   return {
     'body': {
-      background: '#333',
-      color: 'white',
       fontSize: '1.2rem'
     },
     'a.gatsby-resp-image-link': {
       boxShadow: 'none'
     },
     'a': {
-      color: '#FFC20E'
+      color: '#7D3C98'
     },
     'ul': {
       paddingLeft: '2rem'
     },
     'blockquote': {
-      color: '#B2BABF',
-      borderLeftColor: '#B2BABF'
+      color: '#707B7C',
+      borderLeftColor: '#707B7C'
     },
     'pre': {
-      background: 'white',
+      background: '#333',
       padding: '1rem',
-      color: '#333'
+      color: 'white'
     },
-    code: {
+    'code': {
       display: 'inline-block',
       'text-overflow': 'hidden',
       'white-space': 'pre-wrap'
