@@ -31,7 +31,7 @@ function Bio () {
               }}
             />
             <p>
-              {author} is a queer yinzer software engineer building the future of serverless at <a href='https://www.stackery.io/' target='_blank' rel='noopener noreferrer'>Stackery</a>. She's also pretty into <a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>reactJS</a> and building <a href='https://developer.amazon.com/alexa-skills-kit' target='_blank' rel='noopener noreferrer'>Alexa skills</a>. she/her
+              {author} is a queer yinzer software engineer building the future of serverless at <a href='https://www.stackery.io/' target='_blank' rel='noopener noreferrer'>Stackery</a>. Head often in the cloud(s). she/her
             </p>
           </div>
         );

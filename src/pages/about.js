@@ -38,6 +38,7 @@ class About extends Component {
                 <p>
                   This information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing.
                 </p>
+                <p>Any opinions expressed on this site are mine and are not reflective of any organizations I am affiliated with.</p>
               </div>
             </Layout>
           );
