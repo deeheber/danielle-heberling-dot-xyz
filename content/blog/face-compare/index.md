@@ -50,4 +50,3 @@ For demo purposes, I did not update that in the detectLabels branch, but you can
 
 ## Closing
 Overall my testing has shown that AWS Rekognition is a lot more accurate than I had imagined. Despite this, I do think that it is important to ensure that new technology is representative of everyone especially if we plan to use AI to make decisions/judgements on things that have the potential to leave a large impact on an individual's life. This initial hands off experiment has gotten me more interested in exploring AI further and possibly learning how to create my own AI models in the future.
-
