@@ -16,7 +16,7 @@ class Layout extends Component {
             boxShadow: 'none',
             textDecoration: 'none'
           }}
-          to={'/'}
+          to='/'
         >
           <h1
             style={{
