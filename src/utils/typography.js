@@ -3,31 +3,32 @@ import Wordpress2016 from 'typography-theme-wordpress-2016';
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
-    'body': {
+    body: {
       fontSize: '1.2rem'
     },
     'a.gatsby-resp-image-link': {
       boxShadow: 'none'
     },
-    'a': {
+    a: {
       color: '#2E86C1'
     },
-    'ul': {
+    ul: {
       paddingLeft: '2rem'
     },
-    'blockquote': {
+    blockquote: {
       color: '#707B7C',
       borderLeftColor: '#707B7C'
     },
-    'pre': {
+    pre: {
       background: '#333',
       padding: '1rem',
       color: 'white'
     },
-    'code': {
+    code: {
       display: 'inline-block',
       'text-overflow': 'hidden',
-      'white-space': 'pre-wrap'
+      'white-space': 'pre-wrap',
+      fontSize: '1rem'
     }
   };
 };
