@@ -4,7 +4,7 @@ date: "2019-11-06T22:12:03.284Z"
 ---
 
 ![Glasses](./glasses.jpg)
-Photo by Kevin Ku on Unsplash
+>Photo by Kevin Ku on Unsplash
 
 Recently, I’ve been playing around with <a href="https://aws.amazon.com/amplify/" target="_blank" rel="noopener noreferrer">AWS Amplify</a>. Wanted to share some thoughts in case anyone is interested in exploring this ecosystem. Disclaimer that these are my opinions and experiences. You may have a different one. This is ok.
 
