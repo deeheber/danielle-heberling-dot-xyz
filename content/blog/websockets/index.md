@@ -16,20 +16,20 @@ Enter websockets. Websockets allow for two way communication between clients (in
 In my particular use case, I wanted to send a request to start the translation from my client (the website) to my backend. Whenever the translation is ready, send a response to the client from the backend (it is ready when the translated file is put in an S3 Bucket). 
 
 ## Setting Up the Websocket API
-Luckily Stackery offers the Websocket API Gateway <a href="https://docs.stackery.io/docs/api/nodes/WebSocketApi/" target="_blank" rel="noopener noreferrer">as a drag/drop resource</a> in the editor. So I started by doing this. The important thing for me to add was my routes. AWS has three reserved routes `$connect`, `$disconnect`, and `$default`. It’s up to you if you want to include them in your project or not. `$connect` is triggered when a client connects to the websocket API, `$disconnect` is triggered when a client disconnects, and $default is the route that requests fall back on if a request comes in that doesn’t match any of the routes. You can also add your own custom routes in addition to these three default ones.
+Luckily Stackery offers the Websocket API Gateway <a href="https://docs.stackery.io/docs/api/nodes/WebSocketApi/" target="_blank" rel="noopener noreferrer">as a drag/drop resource</a> in the editor. So I started by doing this. The important thing for me to add was my routes. AWS has three reserved routes `$connect`, `$disconnect`, and `$default`. It’s up to you if you want to include them in your project or not. `$connect` is triggered when a client connects to the websocket API, `$disconnect` is triggered when a client disconnects, and `$default` is the route that requests fall back on if a request comes in that doesn’t match any of the routes. You can also add your own custom routes in addition to these three default ones.
 
-The default route key selection is `$request.body.action`, so I decided to stick with that. This means that in the body of each of your requests, you need to include an “action” key that has a value of one of your routes in order to ensure your request gets sent to the desired route in your API. You can also include any other important key/value pairs that your system is expecting.  For example, I want to send some data to a route called “echomessage”, the body of my request would look something like this:
+The default route key selection mechanism is `$request.body.action`, so I decided to stick with that. This means that in the body of your requests, you need to include an “action” key that has a value of one of your routes in order to ensure your request gets sent to the desired route in your API. You can also include any other important key/value pairs that your system is expecting.  For example, I want to send some data to a route named "test", the body of my request would look something like this:
 
 ```
-{ “action”: “echomessage”, “data”: “data I am sending” }
+{ “action”: test, “data”: “data I am sending” }
 ```
 
 ## Backend walkthrough
-On the other end of each API Gateway route, I connected a function. I set up my `$connect` route to store all client connection ids in a DynamoDB table and my `$disconnect` route to remove the connection id from the DynamoDBtable when a client disconnects. This is a nice way of keeping track of who is all connected, especially if I want to broadcast changes to all or some of my clients.
+On the other end of each API Gateway route, I connected a Lambda Function. I set up my `$connect` route to store all client connection ids in a DynamoDB table and my `$disconnect` route to remove the connection id from the DynamoDB table when a client disconnects. This is a nice way of keeping track of who is all connected, especially if I want to broadcast changes to all or some of my clients.
 
-So I then got to work on my BucketPutNotification function. I first wired it up to be triggered on `s3:ObjectCreated:*` and `s3:ObjectRemoved:*` events.
+Next I got to work on my `BucketPutNotification` Lambda Function. I first wired it up to be triggered on `s3:ObjectCreated:*` and `s3:ObjectRemoved:*` events.
 
-The function works like this:
+This Lambda Function works like this:
   1.	Get information about item(s) placed or removed from the S3 Bucket from the event object passed into the function.
   2.	Get all connection ids from the DynamoDB table.
   3.	Send the S3 Bucket information to every client.
@@ -48,15 +48,15 @@ Here's what my backend ended up looking like from an architectural standpoint.
 ## Client (Frontend) Walkthrough
 For this particular project my desired client was a website built using reactJS, so here’s how I went about getting that setup. 
 
-I first grabbed my Websocket URL from the Stackery dashboard (can also get it from the AWS console) and used the browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank" rel="noopener noreferrer">Websocket API to connect</a> on `ComponentDidMount`.
+I first grabbed my Websocket URL from the Stackery dashboard (can also get it from the AWS console) and used the browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank" rel="noopener noreferrer">Websocket API to connect</a> via `new WebSocket` on `ComponentDidMount`.
 
-Once connected, my application listened for specific events onopen, onmessage, onclose, onerror in order to determine what type of action to take.
+Once connected, my application listened for specific events `onopen`, `onmessage`, `onclose`, `onerror` in order to determine what type of action to take. These events (as well as others) are outlined in the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket" target="_blank" rel="noopener noreferrer">Websocket API spec</a>.
 
-If I want my frontend client to send a message to the backend, I can use the .send method off of my connected WebSocket object. Then I’d include a JSON object that looks something like this:
+If I want my frontend client to send a message to the backend, I can use the `send` method off of my connected WebSocket object. Then I’d include a JSON object that looks something like this:
 
 ```
 { “action”: “echomessage”, “data”: “data I am sending” }
 ```
 
 ## Closing
-We’ve only scratched the surface, but hopefully this post can give you some insight on how to setup websockets to talk to a web ui client via API Gateway websockets. If you’d like to see a working example of the infrastructure/code, I discussed in this post check out <a href="https://github.com/deeheber/websockets" target="_blank" rel="noopener noreferrer">this GitHub repo</a>.
+We’ve only scratched the surface, but hopefully this post can give you some insight on how to setup websockets to talk to a web ui client via API Gateway websockets. If you’d like to see a working example of the infrastructure/code, I discussed in this post take a look at <a href="https://github.com/deeheber/websockets" target="_blank" rel="noopener noreferrer">this GitHub repo</a>.
