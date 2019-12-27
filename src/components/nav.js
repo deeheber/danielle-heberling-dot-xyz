@@ -27,12 +27,12 @@ function Nav () {
       <Link getProps={blogLinkStyles} to='/'>
         Blog
       </Link>
+      <Link style={linkStyle} activeStyle={linkActiveStyle} to='/talks'>
+        Talks
+      </Link>
       <Link style={linkStyle} activeStyle={linkActiveStyle} to='/about'>
         About
       </Link>
-      <a style={linkStyle} href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank' rel='noopener noreferrer'>
-        Contact
-      </a>
     </nav>
   );
 }
