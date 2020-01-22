@@ -58,7 +58,8 @@ module.exports = {
         icon: 'content/assets/d-icon.png'
       }
     },
-    'gatsby-plugin-offline',
+    // Disable Progressive Web App + Offline functionality
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
