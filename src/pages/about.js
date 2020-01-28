@@ -38,7 +38,12 @@ class About extends Component {
                 <p>
                   This information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing.
                 </p>
-                <p>Any opinions expressed on this site are mine and are not reflective of any organizations I am affiliated with.</p>
+                <p>
+                  Here's my <a href='https://docs.google.com/document/d/1rAxGqjLEtfOWod-QLtAczqy_0WDJKdxmWfLWvllZIdc/edit?usp=sharing' target='_blank' rel='noopener noreferrer'>resume</a> in case you're interested.
+                </p>
+                <p>
+                  Any opinions expressed on this site are mine and are not reflective of any organizations I am affiliated with.
+                </p>
               </div>
             </Layout>
           );
