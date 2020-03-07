@@ -21,7 +21,7 @@ class Talks extends Component {
                 <h3>The Serverless Mindset</h3>
                   <p style={{ marginBottom: '0' }}>Serverless Days Nashville</p>
                   <p style={{ marginBottom: '0' }}>February 27, 2020 - Nashville, TN</p>
-                  <p>Video link coming soon.</p>
+                  <p><a href="https://www.youtube.com/watch?v=eW2rK4bnk1k" target="_blank" rel="noopener noreferrer">View</a></p>
               </div>
               <div style={{ borderBottom: '1px solid lightgrey' }}>
                 <h3 style={{ marginTop: '1.75rem' }}>The Power of Serverless for Transforming Careers and Communities</h3>
