@@ -23,6 +23,8 @@ Resources:
           - Name: DESTINATION_BUCKET_NAME
             Value: !Ref Bucket
       ServiceRole: WebsiteRole
+      Artifacts:
+        Type: NO_ARTIFACTS
       Source:
         Type: NO_SOURCE
         BuildSpec: |-
