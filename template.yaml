@@ -3,6 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Resources:
   Website:
     Type: AWS::CodeBuild::Project
+    DependsOn: WebsiteRole
     Properties:
       Name: !Sub ${AWS::StackName}-Website
       Environment:
