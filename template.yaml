@@ -78,8 +78,10 @@ Resources:
         Statement:
           - Effect: Allow
             Principal:
-              Service: codebuild.amazonaws.com
-            Action: sts:AssumeRole
+              Service:
+                - codebuild.amazonaws.com
+            Action:
+              - sts:AssumeRole
       Policies:
         - PolicyName: DownloadSourceFromStackeryAssetsBucket
           PolicyDocument:
