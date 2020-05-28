@@ -1,6 +1,12 @@
 AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
+      WebsiteConfiguration:
+        IndexDocument: index.html
   Website:
     Type: AWS::CodeBuild::Project
     DependsOn: WebsiteRole
@@ -82,6 +88,17 @@ Resources:
             Service: codebuild.amazonaws.com
           Action: sts:AssumeRole
       Policies:
+        - PolicyName: Logs
+          PolicyDocument: null
+          Version: 2012-10-17
+          Statement:
+            - Effect: Allow
+              Action:
+                - logs:CreateLogGroup
+                - logs:CreateLogStream
+                - logs:PutLogEvents
+              Resource:
+                - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${AWS::StackName}-Website:log-stream:*
         - PolicyName: DownloadSourceFromStackeryAssetsBucket
           PolicyDocument:
             Version: 2012-10-17
@@ -108,12 +125,6 @@ Resources:
       ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:stackery-agent-commander
       Type: website
       ProjectName: !Ref Website
-  Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
-      WebsiteConfiguration:
-        IndexDocument: index.html
 Parameters:
   SourceLocation:
     Type: String
