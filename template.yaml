@@ -3,6 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Resources:
   Website:
     Type: AWS::CodeBuild::Project
+    DependsOn: WebsiteRole
     Properties:
       Name: !Sub ${AWS::StackName}-Website
       Artifacts:
@@ -24,7 +25,7 @@ Resources:
             Value: !Ref SourceVersion
           - Name: DESTINATION_BUCKET_NAME
             Value: !Ref Bucket
-      ServiceRole: WebsiteRole
+      ServiceRole: !GetAtt WebsiteRole.Arn
       Source:
         Type: NO_SOURCE
         BuildSpec: |-
