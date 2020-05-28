@@ -37,8 +37,7 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
-                # Download sources from S3 or clone directly from CodeCommit
-                - [ s3 == "${SOURCE_LOCATION}%%:*" ] && aws s3 cp "${SOURCE_LOCATION}" - | tar xz || git clone "${SOURCE_LOCATION}" .
+                - aws s3 cp "${SOURCE_LOCATION}" - | tar xz || git clone "${SOURCE_LOCATION}" .
                 - cd '${SOURCE_DIRECTORY}'
                 - [ -f yarn.lock ] && npm install -g yarn
                 - touch /tmp/buildphase-install-success
