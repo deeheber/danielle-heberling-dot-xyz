@@ -1,12 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
-      WebsiteConfiguration:
-        IndexDocument: index.html
   Website:
     Type: AWS::CodeBuild::Project
     DependsOn: WebsiteRole
@@ -34,7 +28,7 @@ Resources:
       ServiceRole: !GetAtt WebsiteRole.Arn
       Source:
         Type: NO_SOURCE
-        BuildSpec: |-
+        BuildSpec: !Sub |-
           version: 0.2
           phases:
             install:
@@ -125,6 +119,12 @@ Resources:
       ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:stackery-agent-commander
       Type: website
       ProjectName: !Ref Website
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
+      WebsiteConfiguration:
+        IndexDocument: index.html
 Parameters:
   SourceLocation:
     Type: String
