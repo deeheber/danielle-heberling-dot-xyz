@@ -42,7 +42,7 @@ Resources:
                 - test -f yarn.lock && npm install -g yarn
                 - touch /tmp/buildphase-install-success
               finally:
-                - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+                - test -f /tmp/buildphase-install-success || curl -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}" -H "{\"Content-Length\": \"0\"}" -X PUT "${CFN_RESPONSE_URL}"
             pre_build:
               commands:
                 - cd '${SOURCE_DIRECTORY}'
