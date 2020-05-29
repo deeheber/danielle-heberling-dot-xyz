@@ -38,6 +38,7 @@ Resources:
                 ruby: latest
               commands:
                 - aws s3 cp "${SOURCE_LOCATION}" - | tar xz || git clone "${SOURCE_LOCATION}" .
+                - ls
                 - cd '${SOURCE_DIRECTORY}'
                 - test -f yarn.lock && npm install -g yarn
                 - touch /tmp/buildphase-install-success
