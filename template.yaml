@@ -44,6 +44,7 @@ Resources:
               finally:
                 - test -f /tmp/buildphase-install-success || curl -X PUT ${CFN_RESPONSE_URL} "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             pre_build:
+              commands:
                 - cd '${SOURCE_DIRECTORY}'
                 - test -f yarn.lock -a -f package.json || npm install --production
                 - test -f yarn.lock && yarn install --production
