@@ -37,7 +37,8 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
-                - aws s3 cp "${SOURCE_LOCATION}" - | tar xz || git clone "${SOURCE_LOCATION}" .
+                - [ s3 == "${SOURCE_LOCATION%%:*}" ] && aws s3 cp "${SOURCE_LOCATION}" - | tar xz || git clone "${SOURCE_LOCATION}" .
+                # - aws s3 cp "${SOURCE_LOCATION}" - | tar xz
                 - ls
                 - cd '${SOURCE_DIRECTORY}'
                 - test -f yarn.lock && npm install -g yarn
