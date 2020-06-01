@@ -45,11 +45,11 @@ Resources:
                     # git checkout $GIT_REF
                   else
                     aws s3 cp $SOURCE_LOCATION repo.tgz
-                    ls
                     tar --strip-components 1 -xvvzf repo.tgz
                   fi
-                - find . -maxdepth 3
                 - cd $SOURCE_DIRECTORY
+                - ls
+                - yarn --version
                 - test -f yarn.lock && npm install -g yarn
                 - touch /tmp/buildphase-install-success
               finally:
