@@ -48,7 +48,7 @@ Resources:
                     ls
                     tar --strip-components 1 -xvvzf repo.tgz
                   fi
-                - ls
+                - find . -maxdepth 3
                 - cd '${SOURCE_DIRECTORY}'
                 - test -f yarn.lock && npm install -g yarn
                 - touch /tmp/buildphase-install-success
