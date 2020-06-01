@@ -37,14 +37,23 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
-                - '[ s3 == "${SOURCE_LOCATION%%:*}" ] && aws s3 cp "${SOURCE_LOCATION}" - | tar --strip-components 1 -xvvzf || git clone "${SOURCE_LOCATION}" .'
-                # - aws s3 cp "${SOURCE_LOCATION}" - | tar xz
+                # - 'if [ s3 == "${SOURCE_LOCATION%%:*}" ] && aws s3 cp "${SOURCE_LOCATION}" - | tar --strip-components 1 -xvvzf || git clone "${SOURCE_LOCATION}" .'
+                - |
+                  if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
+                    git clone $SOURCE_LOCATION .
+                    # cd repo
+                    # git checkout $GIT_REF
+                  else
+                    aws s3 cp $SOURCE_LOCATION repo.tgz
+                    ls
+                    tar --strip-components 1 -xvvzf repo.tgz
+                  fi
                 - ls
                 - cd '${SOURCE_DIRECTORY}'
                 - test -f yarn.lock && npm install -g yarn
                 - touch /tmp/buildphase-install-success
-              # finally:
-              #   - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+              finally:
+                - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             pre_build:
               commands:
                 - cd '${SOURCE_DIRECTORY}'
