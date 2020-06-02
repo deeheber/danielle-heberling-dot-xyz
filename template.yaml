@@ -67,13 +67,13 @@ Resources:
                 - test -f /tmp/buildphase-pre_build-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed pre build phase, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             build:
               commands:
-                - let i=1/0
                 - $BUILD_COMMAND
                 - touch /tmp/buildphase-build-success
               finally:
                 - test -f /tmp/buildphase-build-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to build site, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             post_build:
               commands:
+                - let i=1/0
                 - cd $CODEBUILD_SRC_DIR
                 - aws s3 sync $PUBLISH_DIRECTORY "s3://${DESTINATION_BUCKET_NAME}" --acl public-read --cache-control 'max-age=0, must-revalidate, public' --no-progress --delete
                 - curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"SUCCESS\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
