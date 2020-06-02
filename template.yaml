@@ -37,9 +37,6 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
-                - echo $CODEBUILD_BUILD_ID
-                - echo $CODEBUILD_LOG_PATH
-                - let i=1/0
                 - |
                   if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
                     git clone $SOURCE_LOCATION .
@@ -55,6 +52,7 @@ Resources:
                 - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             pre_build:
               commands:
+                - let i=1/0
                 - |
                   if [ ! -f yarn.lock -a -f package.json ]; then
                     npm install --production
