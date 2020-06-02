@@ -129,7 +129,9 @@ Resources:
                   - s3:ListBucket
                   - s3:PutObject
                   - s3:PutObjectAcl
-                Resource: !Sub ${Bucket.Arn}/*
+                Resource:
+                  - !Sub ${Bucket.Arn}/*
+                  - !Sub ${Bucket.Arn}
   WebsiteBuildTrigger:
     Type: Custom::StackeryWebsiteBuildTrigger
     Properties:
@@ -142,9 +144,9 @@ Resources:
       BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
       WebsiteConfiguration:
         IndexDocument: index.html
-      PublicAccessBlockConfiguration:
-        BlockPublicAcls: false
-        IgnorePublicAcls: false
+      # PublicAccessBlockConfiguration:
+      #   BlockPublicAcls: false
+      #   IgnorePublicAcls: false
 Parameters:
   SourceLocation:
     Type: String
