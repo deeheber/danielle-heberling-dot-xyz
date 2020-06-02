@@ -142,6 +142,9 @@ Resources:
       BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
       WebsiteConfiguration:
         IndexDocument: index.html
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        IgnorePublicAcls: false
 Parameters:
   SourceLocation:
     Type: String
