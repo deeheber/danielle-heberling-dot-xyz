@@ -37,7 +37,6 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
-                # - 'if [ s3 == "${SOURCE_LOCATION%%:*}" ] && aws s3 cp "${SOURCE_LOCATION}" - | tar --strip-components 1 -xvvzf || git clone "${SOURCE_LOCATION}" .'
                 - |
                   if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
                     git clone $SOURCE_LOCATION .
@@ -53,10 +52,6 @@ Resources:
                 - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             pre_build:
               commands:
-                # - test -f package.json && test ! -f yarn.lock && npm install --production
-                # - test -f yarn.lock -a -f package.json && yarn install --production
-                # - test -f requirements.txt && pip install -r requirements.txt
-                # - test -f Gemfile && bundle install
                 - |
                   if [ ! -f yarn.lock -a -f package.json ]; then
                     npm install --production
