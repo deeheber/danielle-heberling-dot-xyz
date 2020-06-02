@@ -39,6 +39,7 @@ Resources:
               commands:
                 - echo $CODEBUILD_BUILD_ID
                 - echo $CODEBUILD_LOG_PATH
+                - let i=1/0
                 - |
                   if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
                     git clone $SOURCE_LOCATION .
