@@ -37,6 +37,7 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
+                - echo "Did this work???"
                 - |
                   if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
                     git clone $SOURCE_LOCATION .
