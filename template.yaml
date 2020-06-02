@@ -37,6 +37,8 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
+                - echo $CODEBUILD_BUILD_ID
+                - echo $CODEBUILD_LOG_PATH
                 - |
                   if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
                     git clone $SOURCE_LOCATION .
@@ -139,9 +141,6 @@ Resources:
       BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
       WebsiteConfiguration:
         IndexDocument: index.html
-      # PublicAccessBlockConfiguration:
-      #   BlockPublicAcls: false
-      #   IgnorePublicAcls: false
 Parameters:
   SourceLocation:
     Type: String
