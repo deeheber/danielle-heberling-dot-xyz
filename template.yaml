@@ -37,12 +37,11 @@ Resources:
                 python: latest
                 ruby: latest
               commands:
-                - echo "Did this work???"
                 - |
                   if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
-                    git clone $SOURCE_LOCATION .
-                    # cd repo
-                    # git checkout $SOURCE_VERSION
+                    git clone $SOURCE_LOCATION repo
+                    cd repo
+                    git checkout $SOURCE_VERSION
                   else
                     aws s3 cp $SOURCE_LOCATION repo.tgz
                     tar --strip-components 1 -xvvzf repo.tgz
@@ -74,7 +73,12 @@ Resources:
                 - test -f /tmp/buildphase-build-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to build site, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
             post_build:
               commands:
-                - cd $CODEBUILD_SRC_DIR
+                - |
+                  if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
+                    cd "${CODEBUILD_SRC_DIR}/repo"
+                  else
+                    cd $CODEBUILD_SRC_DIR
+                  fi
                 - aws s3 sync $PUBLISH_DIRECTORY "s3://${DESTINATION_BUCKET_NAME}" --acl public-read --cache-control 'max-age=0, must-revalidate, public' --no-progress --delete
                 - curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"SUCCESS\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
                 - touch /tmp/buildphase-post_build-success
