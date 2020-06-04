@@ -140,7 +140,7 @@ Resources:
       ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:stackery-agent-commander
       Type: website
       ProjectName: !Ref Website
-      DeploymentTimestamp: !Ref DeploymentTimestamp
+      SourceVersion: !Ref SourceVersion
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
@@ -148,9 +148,6 @@ Resources:
       WebsiteConfiguration:
         IndexDocument: index.html
 Parameters:
-  DeploymentTimestamp:
-    Type: Number
-    Description: Deployment preparation timestamp in milliseconds Since Epoch (injected by Stackery at deployment time)
   SourceLocation:
     Type: String
     Description: Location of source code for deployment (injected by Stackery at deployment time)
