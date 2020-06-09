@@ -1,2 +1,156 @@
 AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${AWS::StackName}-bucket-${AWS::AccountId}
+      WebsiteConfiguration:
+        IndexDocument: index.html
+  Website:
+    Type: AWS::CodeBuild::Project
+    Metadata:
+      StackeryType: website
+    DependsOn: WebsiteRole
+    Properties:
+      Name: !Sub ${AWS::StackName}-Website
+      Artifacts:
+        Type: NO_ARTIFACTS
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/amazonlinux2-x86_64-standard:3.0
+        Type: LINUX_CONTAINER
+        EnvironmentVariables:
+          - Name: SOURCE_DIRECTORY
+            Value: src/site
+          - Name: BUILD_COMMAND
+            Value: npm run build
+          - Name: PUBLISH_DIRECTORY
+            Value: src/site/public
+          - Name: SOURCE_LOCATION
+            Value: !Ref SourceLocation
+          - Name: SOURCE_VERSION
+            Value: !Ref SourceVersion
+          - Name: DESTINATION_BUCKET_NAME
+            Value: !Ref Bucket
+      ServiceRole: !GetAtt WebsiteRole.Arn
+      Source:
+        Type: NO_SOURCE
+        BuildSpec: |-
+          version: 0.2
+          phases:
+            install:
+              runtime-versions:
+                nodejs: latest
+                python: latest
+                ruby: latest
+              commands:
+                - |
+                  if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
+                    git clone $SOURCE_LOCATION repo
+                    cd repo
+                    git checkout $SOURCE_VERSION
+                  else
+                    aws s3 cp $SOURCE_LOCATION repo.tgz
+                    tar --strip-components 1 -xvvzf repo.tgz
+                  fi
+                - cd $SOURCE_DIRECTORY
+                - touch /tmp/buildphase-install-success
+              finally:
+                - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+            pre_build:
+              commands:
+                - |
+                  if [ ! -f yarn.lock -a -f package.json ]; then
+                    npm install --production
+                  elif [ -f yarn.lock -a -f package.json ]; then
+                    yarn install --production
+                  elif [ -f requirements.txt ]; then
+                    pip install -r requirements.txt
+                  elif [ -f Gemfile ]; then
+                    bundle install
+                  fi
+                - touch /tmp/buildphase-pre_build-success
+              finally:
+                - test -f /tmp/buildphase-pre_build-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed pre build phase, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+            build:
+              commands:
+                - $BUILD_COMMAND
+                - touch /tmp/buildphase-build-success
+              finally:
+                - test -f /tmp/buildphase-build-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to build site, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+            post_build:
+              commands:
+                - |
+                  if [ s3 != "${SOURCE_LOCATION%%:*}" ]; then
+                    cd "${CODEBUILD_SRC_DIR}/repo"
+                  else
+                    cd $CODEBUILD_SRC_DIR
+                  fi
+                - aws s3 sync $PUBLISH_DIRECTORY "s3://${DESTINATION_BUCKET_NAME}" --acl public-read --cache-control 'max-age=0, must-revalidate, public' --no-progress --delete
+                - curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"SUCCESS\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+                - touch /tmp/buildphase-post_build-success
+              finally:
+                - test -f /tmp/buildphase-post_build-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to publish site, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
+      Tags:
+        - Key: Stackery Project Type
+          Value: Website Builder
+  WebsiteRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${AWS::StackName}-Website
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: codebuild.amazonaws.com
+          Action: sts:AssumeRole
+      Policies:
+        - PolicyName: Logs
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource:
+                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${AWS::StackName}-Website:log-stream:*
+        - PolicyName: DownloadSourceFromStackeryAssetsBucket
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: s3:GetObject
+                Resource: arn:aws:s3:::stackery-assetsbucket-*/*
+        - PolicyName: UploadToDestinationObjectStore
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:DeleteObject
+                  - s3:GetBucketLocation
+                  - s3:GetObject
+                  - s3:ListBucket
+                  - s3:PutObject
+                  - s3:PutObjectAcl
+                Resource:
+                  - !Sub ${Bucket.Arn}/*
+                  - !Sub ${Bucket.Arn}
+  WebsiteBuildTrigger:
+    Type: Custom::StackeryWebsiteBuildTrigger
+    Properties:
+      ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:stackery-agent-commander
+      Type: website
+      ProjectName: !Ref Website
+      SourceVersion: !Ref SourceVersion
+Parameters:
+  SourceLocation:
+    Type: String
+    Description: Location of source code for deployment (injected by Stackery at deployment time)
+  SourceVersion:
+    Type: String
+    Description: Source version for deployment (injected by Stackery at deployment time)
