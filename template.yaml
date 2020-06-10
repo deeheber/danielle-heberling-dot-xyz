@@ -107,7 +107,6 @@ Resources:
           - CodeBuild Build State Change
         detail:
           build-status:
-            - IN_PROGRESS
             - SUCCEEDED
             - FAILED
             - STOPPPED
@@ -163,6 +162,7 @@ Resources:
                   - !Sub ${Bucket.Arn}
   WebsiteBuildTrigger:
     Type: Custom::StackeryWebsiteBuildTrigger
+    DependsOn: WebsiteEvents
     Properties:
       ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:stackery-agent-commander
       Type: website
