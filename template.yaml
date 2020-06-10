@@ -55,6 +55,8 @@ Resources:
                     tar --strip-components 1 -xvvzf repo.tgz
                   fi
                 - cd $SOURCE_DIRECTORY
+                # - Delete this
+                - cd foobar
               #   - touch /tmp/buildphase-install-success
               # finally:
               #   - test -f /tmp/buildphase-install-success || curl -X PUT "${CFN_RESPONSE_URL}" -H "Content-Type:application/json" -d "{\"Status\":\"FAILED\",\"Reason\":\"Failed to install runtime dependencies, see https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=/aws/codebuild/${CODEBUILD_BUILD_ID%:*};stream=${CODEBUILD_BUILD_ID#*:}\",\"PhysicalResourceId\":\"${SOURCE_VERSION}\",\"StackId\":\"${CFN_STACK_ID}\",\"RequestId\":\"${CFN_REQUEST_ID}\",\"LogicalResourceId\":\"${CFN_LOGICAL_ID}\"}"
