@@ -17,12 +17,6 @@ Resources:
         EnvironmentVariables:
           - Name: API_URL
             Value: !Sub https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com
-          - Name: QUEUE_NAME
-            Value: !GetAtt Queue.QueueName
-          - Name: QUEUE_ARN
-            Value: !GetAtt Queue.Arn
-          - Name: QUEUE_URL
-            Value: !Ref Queue
       ServiceRole: !GetAtt WebsiteRole.Arn
       Source:
         Type: NO_SOURCE
@@ -163,14 +157,13 @@ Resources:
           title: !Sub ${AWS::StackName}-HttpApi
           version: '1.0'
         paths:
-          /:
+          /hello:
+            get:
+              responses: {}
+          /world:
             get:
               responses: {}
       FailOnWarnings: true
-  Queue:
-    Type: AWS::SQS::Queue
-    Properties:
-      QueueName: !Sub ${AWS::StackName}-Queue
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
