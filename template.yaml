@@ -37,7 +37,7 @@ Resources:
                       aws s3 cp ${SourceLocation} repo.tgz
                       tar --strip-components 1 -xvvzf repo.tgz
                     fi
-                  - cd ${SourceDirectory}
+                  - cd foobar
               pre_build:
                 commands:
                   - |
