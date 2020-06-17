@@ -14,9 +14,6 @@ Resources:
         ComputeType: BUILD_GENERAL1_SMALL
         Image: aws/codebuild/amazonlinux2-x86_64-standard:3.0
         Type: LINUX_CONTAINER
-        EnvironmentVariables:
-          - Name: API_URL
-            Value: !Sub https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com
       ServiceRole: !GetAtt WebsiteRole.Arn
       Source:
         Type: NO_SOURCE
@@ -73,6 +70,14 @@ Resources:
       Tags:
         - Key: Stackery Project Type
           Value: Website Builder
+  WebsiteEventToHandlerPermission:
+    Type: AWS::Lambda::Permission
+    DependsOn: WebsiteEvents
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:stackery-agent-commander
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt WebsiteEvents.Arn
   WebsiteEvents:
     Type: AWS::Events::Rule
     DependsOn: Website
@@ -148,22 +153,6 @@ Resources:
       Type: website
       ProjectName: !Ref Website
       SourceVersion: !Ref SourceVersion
-  HttpApi:
-    Type: AWS::Serverless::HttpApi
-    Properties:
-      DefinitionBody:
-        openapi: '3.0'
-        info:
-          title: !Sub ${AWS::StackName}-HttpApi
-          version: '1.0'
-        paths:
-          /hello:
-            get:
-              responses: {}
-          /world:
-            get:
-              responses: {}
-      FailOnWarnings: true
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
