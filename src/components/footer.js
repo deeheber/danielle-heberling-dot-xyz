@@ -24,11 +24,11 @@ function Footer () {
       </div>
       {/* TODO: Programically create these nodes */}
       <div style={{ paddingTop: '1rem' }}>
-        <a style={socialStyle} href='https://twitter.com/deeheber' target='_blank' rel='noopener noreferrer'><FaTwitter size={35} /></a>
-        <a style={socialStyle} href='https://github.com/deeheber' target='_blank' rel='noopener noreferrer'><FaGithub size={35} /></a>
-        <a style={socialStyle} href='https://www.linkedin.com/in/deeheber' target='_blank' rel='noopener noreferrer'><FaLinkedin size={35} /></a>
-        <a style={socialStyle} href='https://www.instagram.com/deeheber' target='_blank' rel='noopener noreferrer'><FaInstagram size={35} /></a>
-        <a style={socialStyle} href='/rss.xml' target='_blank' rel='noopener noreferrer'><FaRss size={35} /></a>
+        <a style={socialStyle} href='https://twitter.com/deeheber' target='_blank' rel='noopener noreferrer' aria-label='twitter link'><FaTwitter size={35} /></a>
+        <a style={socialStyle} href='https://github.com/deeheber' target='_blank' rel='noopener noreferrer' aria-label='github link'><FaGithub size={35} /></a>
+        <a style={socialStyle} href='https://www.linkedin.com/in/deeheber' target='_blank' rel='noopener noreferrer' aria-label='linkedin link'><FaLinkedin size={35} /></a>
+        <a style={socialStyle} href='https://www.instagram.com/deeheber' target='_blank' rel='noopener noreferrer' aria-label='instagram link'><FaInstagram size={35} /></a>
+        <a style={socialStyle} href='/rss.xml' target='_blank' rel='noopener noreferrer' aria-label='rss feed'><FaRss size={35} /></a>
       </div>
     </footer>
   );

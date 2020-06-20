@@ -45,14 +45,14 @@ class BlogPostTemplate extends Component {
         >
           <li>
             {previous && (
-              <Link style={{ boxShadow: 'none' }} to={`blog${previous.fields.slug}`} rel='prev'>
+              <Link style={{ boxShadow: 'none' }} to={`/blog${previous.fields.slug}`} rel='prev'>
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link style={{ boxShadow: 'none' }} to={`blog${next.fields.slug}`} rel='next'>
+              <Link style={{ boxShadow: 'none' }} to={`/blog${next.fields.slug}`} rel='next'>
                 {next.frontmatter.title} →
               </Link>
             )}
