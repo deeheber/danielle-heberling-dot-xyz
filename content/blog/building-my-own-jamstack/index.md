@@ -1,11 +1,9 @@
 ---
-title: Automated React Frontend Deploys
-date: "2019-08-29T22:12:03.284Z"
+title: Building My Own Jamstack
+date: "2020-06-26T22:12:03.284Z"
 ---
 
 As the frontend and backend are slowly merging closer together, more and more folks are writing full stack applications. While Serverless mostly is referring to the underlying infrastructure that tends to live a bit closer to the backend side, you can also use a serverless architecture to build and deploy the frontend portion of your application.
-
-> Note: Technology is always changing. I found what I feel is a "better" way to build/deploy a website to AWS. Check it out [here](https://danielleheberling.xyz/blog/building-my-own-jamstack/)
 
 ## What We're Building
 <a href="https://www.danielleheberling.xyz/blog/text-to-speech/" target="_blank" rel="noopener noreferrer">Previously</a>, I wrote an application that translates written text to speech. I was getting tired of having to recall the different API endpoints to hit and wanted a nice UI to better manage these files...so I got to work on building a frontend.
