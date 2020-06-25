@@ -113,6 +113,6 @@ The important thing to note here is the first line where we require from `/opt/n
 
 Once deployed, go ahead and invoke the function. You should see the original string reversed in the function response.
 
-Check out the full code example in <a href="https://github.com/deeheber/lambda-layer-example" target="_blank" target="_blank" rel="noopener noreferrer">this repo</a>.
+Check out the full code example in <a href="https://github.com/deeheber/lambda-layer-example/tree/original-blog-post" target="_blank" target="_blank" rel="noopener noreferrer">this repo</a>.
 
 All of the official documentation from AWS  about Lambda layers can be found <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html" target="_blank" target="_blank" rel="noopener noreferrer">here</a>.
