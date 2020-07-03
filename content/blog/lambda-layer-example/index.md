@@ -9,6 +9,8 @@ date: "2020-01-22T22:12:03.284Z"
 ## The Problem
 While speaking with folks who are new to serverless, I’m often asked “how can I reuse my code across multiple Lambda functions?” One way to do this is by writing your own custom Lambda Layer. In this post, we’re going to build a simple layer using nodeJS, deploy it, and use the layer in a function.
 
+> *Note*: there is an updated method for using Lambda layers outlined [here](https://www.danielleheberling.xyz/blog/lambda-layer-update/)
+
 ## What We’re Building
 We’re going to write a lambda layer that contains a helper function. This function takes in a word or phrase and reverses the string. It’s not overly helpful in prod, but a simple example can be useful in seeing how things are setup.
 
