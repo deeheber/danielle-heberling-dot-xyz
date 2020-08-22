@@ -1,4 +1,5 @@
 # Danielle-Heberling-Dot-XYZ
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a4629274-59c5-47ee-901f-9621a8fb5174/deploy-status)](https://app.netlify.com/sites/deeheber/deploys)
 
 ## 🧐 What's inside?
 

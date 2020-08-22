@@ -27,18 +27,18 @@ Lucky for us, there's AWS CodeBuild!
 So I embarked on the journey of replacing my `PopulateFrontend` Lambda function with a CodeBuild Project.
 
 ### The Easy Push Button Way of Doing this
-Stackery released the <a href="https://docs.stackery.io/docs/api/nodes/Website/" target="_blank" rel="noopener noreferrer">Website Builder Resource</a>. Check it out...it's just a matter of dragging and dropping the resource into your stack and providing a few settings (Source Directory, Build Command, and Publish Directory).
+Stackery released the <a href="https://docs.stackery.io/docs/api/nodes/Website/" target="_blank" rel="noopener noreferrer">Website Resource</a>. Check it out...it's just a matter of dragging and dropping the resource into your stack and providing a few settings (Source Directory, Build Command, and Publish Directory).
 
-![Website Builder Canvas](./website-resource.png)
+![Website Canvas](./website-resource.png)
 
 We have a more detailed tutorial <a href="https://docs.stackery.io/docs/tutorials/react-spa-tutorial/" target="_blank" rel="noopener noreferrer">here</a>.
 
 ### Connecting my Frontend to a Backend API
-Once your S3 Bucket and Website Builder are on the canvas, add an API too (both HTTP API and original API Gateway work).
+Once your S3 Bucket and Website are on the canvas, add an API too (both HTTP API and original API Gateway work).
 
 ![Website to API](./websiteToApi.png)
 
-After you connect the API to the `References` facet under the `Website Builder`, you'll then see that the `API_URL` environment variable is available to the CodeBuild Project.
+After you connect the API to the `References` facet under the `Website`, you'll then see that the `API_URL` environment variable is available to the CodeBuild Project.
 
 ![API URL setting](./api-url.png)
 
@@ -58,7 +58,7 @@ echo "Config file written to src/config.js"
 npm run build
 ```
 
-I added an npm script to my `package.json` that executes this script, titled it "production", and updated my `Website Builder` `Build Command` to be `npm run production`. All this script does is run the snippet above.
+I added an npm script to my `package.json` that executes this script, titled it "production", and updated my `Website` `Build Command` to be `npm run production`. All this script does is run the snippet above.
 
 ![package json](./package-json.png)
 
@@ -78,7 +78,7 @@ The CodeBuild job does the following:
 3. Executes my build command
 4. Copies the built files into an S3 Bucket
 
-All of the necessary variables are set via the Stackery Website Builder resource settings, but you can also directly alter the template if you prefer.
+All of the necessary variables are set via the Stackery Website resource settings, but you can also directly alter the template if you prefer.
 
 Here's what the CodeBuild job template code looks like for my text to speech converter app:
 
@@ -207,11 +207,11 @@ WebsiteEvents:
         Id: StackeryAgentCommander
 ```
 
-When the CodeBuild Project for our Website Builder has a build status of SUCCEEDED, FAILED, FAULT, STOPPED, or TIMED_OUT, the configured CloudWatch Event reports this information back to my custom resource function. My custom resource function then sends the appropriate information to CloudFormation. Once CloudFormation gets a pass/fail response, it knows how to conintue with deploying the stack.
+When the CodeBuild Project for our Website has a build status of SUCCEEDED, FAILED, FAULT, STOPPED, or TIMED_OUT, the configured CloudWatch Event reports this information back to my custom resource function. My custom resource function then sends the appropriate information to CloudFormation. Once CloudFormation gets a pass/fail response, it knows how to conintue with deploying the stack.
 
 ### Closing
 Check out the entire code repository referenced <a href="https://github.com/deeheber/text-to-speech-converter/tree/blog-post-3" target="_blank" rel="noopener noreferrer">here</a>.
 
 There are definitely many different approaches to build and deploy a JavaScript frontend on AWS. I encourage you to investigate everything that's out there and see what works best for you.
 
-I'm biased, but I recommend checking out Stackery. Not only has the Websuild Builder resource been added recently, we've also updated our Developer plan to have more features still at the amazing price of free.
+I'm biased, but I recommend checking out Stackery. Not only has the <a href="https://docs.stackery.io/docs/api/nodes/Website/" target="_blank" rel="noopener noreferrer">Website resource</a> been added recently, we've also updated our Developer plan to have more features still at the amazing price of free.
