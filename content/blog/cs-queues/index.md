@@ -1,6 +1,6 @@
 ---
 title: Computer Science for Everyone - Queues
-date: "2020-09-06T22:12:03.284Z"
+date: "2020-09-08T22:12:03.284Z"
 ---
 
 ![Bubbles](./queue.jpg)
