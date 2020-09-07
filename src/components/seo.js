@@ -8,8 +8,8 @@ function SEO ({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
+        const image = `https://www.danielleheberling.xyz/${data.avatar.childImageSharp.fixed.src}`;
+        const metaDescription = description || data.site.siteMetadata.description;
         return (
           <Helmet
             htmlAttributes={{
@@ -35,11 +35,19 @@ function SEO ({ description, lang, meta, keywords, title }) {
                 content: 'website'
               },
               {
+                property: 'og:image',
+                content: image
+              },
+              {
                 name: 'twitter:card',
                 content: 'summary'
               },
               {
-                name: 'witter:creator',
+                name: 'twitter:image',
+                content: image
+              },
+              {
+                name: 'twitter:creator',
                 content: data.site.siteMetadata.author
               },
               {
@@ -85,6 +93,13 @@ export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     site {
       siteMetadata {
         title
