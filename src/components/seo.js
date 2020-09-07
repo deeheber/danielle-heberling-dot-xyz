@@ -8,7 +8,14 @@ function SEO ({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const image = `https://www.danielleheberling.xyz/${data.avatar.childImageSharp.fixed.src}`;
+        let origin = "";
+        if (typeof window !== "undefined") {
+          origin = window.location.origin;
+        }
+        const imageSrc = data.defaultThumbnail.childImageSharp.sizes.src;
+        const image = `${origin}${imageSrc}`;
+        // TODO delete later
+        console.log('thumbnail ', image)
         const metaDescription = description || data.site.siteMetadata.description;
         return (
           <Helmet
@@ -93,10 +100,10 @@ export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    defaultThumbnail: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
+        sizes(maxWidth: 600) {
+          ...GatsbyImageSharpSizes
         }
       }
     }
