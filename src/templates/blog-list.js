@@ -26,6 +26,7 @@ class BlogIndex extends Component {
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
+          const excerpt = node.excerpt.replace(/Photo by (.*?) on Unsplash/i, '');
           return (
             <div key={node.fields.slug}>
               <h3
@@ -41,7 +42,7 @@ class BlogIndex extends Component {
                 <small>{node.frontmatter.date}  — </small>
                 <small>{node.timeToRead} min read</small>
               </div>
-              <p style={{ marginBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <p style={{ marginBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: excerpt }} />
               <p>
                 <Link style={{ boxShadow: 'none' }} to={`/blog${node.fields.slug}`}>
                   Continue Reading →

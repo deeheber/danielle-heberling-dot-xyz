@@ -10,11 +10,12 @@ class BlogPostTemplate extends Component {
   render () {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
+    const excerpt = post.excerpt.replace(/Photo by (.*?) on Unsplash/i, '');
     const { previous, next } = this.props.pageContext;
 
     return (
       <Layout title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO title={post.frontmatter.title} description={excerpt} />
         <h3>{post.frontmatter.title}</h3>
         <p
           style={{
