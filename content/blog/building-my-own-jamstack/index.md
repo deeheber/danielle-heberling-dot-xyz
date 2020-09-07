@@ -44,7 +44,7 @@ After you connect the API to the `References` facet under the `Website`, you'll 
 
 I personally decided to write a minimal shell script that writes the `API_URL` environment varaible to a file that my frontend code later references. Here's a snippet.
 
-```
+```shell
 #!/bin/sh
 
 # Inject API into config file
@@ -82,7 +82,7 @@ All of the necessary variables are set via the Stackery Website resource setting
 
 Here's what the CodeBuild job template code looks like for my text to speech converter app:
 
-```
+```yaml
 Website:
   Type: AWS::CodeBuild::Project
   Metadata:
@@ -162,7 +162,7 @@ Now that the CodeBuild job is setup, we know how we're going to build the site a
 
 My answer to that question was to use a <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html" target="_blank" rel="noopener noreferrer">Custom Resource</a>. The template for it looks like this
 
-```
+```yaml
 WebsiteBuildTrigger:
   Type: Custom::StackeryWebsiteBuildTrigger
   DependsOn: WebsiteEvents
@@ -183,7 +183,7 @@ Step 1 is handled directly in the Lambda function via <a href="https://docs.aws.
 
 My answer is `CloudWatch Events`. This is wired up in the template under the resource named `WebsiteEvents`.
 
-```
+```yaml
 WebsiteEvents:
   Type: AWS::Events::Rule
   DependsOn: Website

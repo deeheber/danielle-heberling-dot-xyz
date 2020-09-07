@@ -26,7 +26,7 @@ The idea of the line or queue also exists in the digital world. You click to pri
 
 There's many ways to go about simulating a queue. I'm going to use Javascript since tons of the CS resources I've found tend to lean on Java for code snippets.
 
-```
+```javascript
 // Create the queue
 const queue = [];
 

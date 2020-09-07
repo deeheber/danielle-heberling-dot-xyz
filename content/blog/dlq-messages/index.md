@@ -26,7 +26,7 @@ In the event that something goes wrong during the function execution, I set up a
 
 I added a RedrivePolicy to the original SQS queue to point those failed messages to my DLQ by adding some <a href="https://aws.amazon.com/cloudformation/" target="_blank" rel="noopener noreferrer">Cloudformation</a> in my template.yaml:
 
-```
+```yaml
  Queue:
     Type: AWS::SQS::Queue
     Properties:
@@ -38,7 +38,7 @@ I added a RedrivePolicy to the original SQS queue to point those failed messages
 
 By default, the queue’s message retention period is 4 days. I wanted to give myself some extra time to review the messages in the DLQ, so I upped the MessageRetentionPeriod on my DLQ to the max allowed 14 days like this in my template.yaml. This is the sci-fi beauty of my profession: creating *more time* is possible! As many before me have discussed on the floor of a dorm room, time is a malleable concept— and at least in software engineering, it has a practical purpose like gaining more days to review DLQ messages. Note that the values are in seconds:
 
-```
+```yaml
  DeadLetterQueue:
     Type: AWS::SQS::Queue
     Properties:
@@ -58,7 +58,7 @@ Repeat
 
 Here’s what the code looks like written in nodeJS:
 
-```
+```javascript
 const aws = require('aws-sdk');
 const sqs = new aws.SQS();
 

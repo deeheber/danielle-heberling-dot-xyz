@@ -28,7 +28,7 @@ Here’s how the visualization of the completed stack looks.
 ## Populate Frontend - Custom Resource
 There are a few ways you could go about automating the build/deploy of your frontend. After thinking through different options, I finally decided to use a <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html" target="_blank" rel="noopener noreferrer">CloudFormation Custom Resource</a>. The YAML for my custom resource in the `template.yaml` file looks like this:
 
-```
+```yaml
  PopulateFrontendDeployTrigger:
     Type: Custom::FunctionDeployTrigger
     Properties:
@@ -60,7 +60,7 @@ In order to make calls to my API Gateway http endpoints via this framework, I ne
 
 As a note, if you want to work on the react frontend locally, you’ll need to add a config.js file in src/PopulateFrontend/frontend-content/src that looks something like this:
 
-```
+```javascript
 export default {
  backendAPI: 'ENTER YOUR API GATEWAY URL HERE'
 };

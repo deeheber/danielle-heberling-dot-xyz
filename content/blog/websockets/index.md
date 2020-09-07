@@ -20,7 +20,7 @@ Luckily Stackery offers the Websocket API Gateway <a href="https://docs.stackery
 
 The default route key selection mechanism is `$request.body.action`, so I decided to stick with that. This means that in the body of your requests, you need to include an “action” key that has a value of one of your routes in order to ensure your request gets sent to the desired route in your API. You can also include any other important key/value pairs that your system is expecting.  For example, I want to send some data to a route named "test", the body of my request would look something like this:
 
-```
+```json
 { “action”: test, “data”: “data I am sending” }
 ```
 
@@ -54,7 +54,7 @@ Once connected, my application listened for specific events `onopen`, `onmessage
 
 If I want my frontend client to send a message to the backend, I can use the `send` method off of my connected WebSocket object. Then I’d include a JSON object that looks something like this:
 
-```
+```json
 { “action”: “echomessage”, “data”: “data I am sending” }
 ```
 

@@ -18,17 +18,6 @@ Wordpress2016.overrideThemeStyles = () => {
     blockquote: {
       color: '#707B7C',
       borderLeftColor: '#707B7C'
-    },
-    pre: {
-      background: '#333',
-      padding: '1rem',
-      color: 'white'
-    },
-    code: {
-      display: 'inline-block',
-      'text-overflow': 'hidden',
-      'white-space': 'pre-wrap',
-      fontSize: '1rem'
     }
   };
 };

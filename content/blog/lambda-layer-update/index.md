@@ -40,7 +40,7 @@ Once everything is deployed, I can now iterate locally on my function even if it
 
 Here's the command that I ran to test my function locally, keep in mind it might be a tad different than yours.
 
-```
+```shell
 stackery local invoke -e development -f Function --build
 ```
 

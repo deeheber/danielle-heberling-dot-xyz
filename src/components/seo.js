@@ -14,8 +14,6 @@ function SEO ({ description, lang, meta, keywords, title }) {
         }
         const imageSrc = data.defaultThumbnail.childImageSharp.sizes.src;
         const image = `${origin}${imageSrc}`;
-        // TODO delete later
-        console.log('thumbnail ', image)
         const metaDescription = description || data.site.siteMetadata.description;
         return (
           <Helmet

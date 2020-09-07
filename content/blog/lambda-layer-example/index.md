@@ -26,7 +26,7 @@ palindrome
 
 The package.json will look like this
 
-```
+```json
 {
  "name": "palindrome",
  "version": "1.0.0"
@@ -35,7 +35,7 @@ The package.json will look like this
 
 The reverse.js file looks like this
 
-```
+```javascript
 module.exports = function (phrase) {
  return phrase.split('').reverse().join('');
 };
@@ -49,7 +49,7 @@ First we’ll need to zip up the layer in order to upload it to the AWS Lambda c
 
 You’ll want to `cd` into your `palindrome` folder via the terminal and run:
 
-```
+```shell
 Zip -r palindrome.zip ./*
 ```
 
@@ -93,7 +93,7 @@ Also keep in mind that as of my writing this, AWS has  a limit of 5  layers per 
 
 The code in your index.js should look like this:
 
-```
+```javascript
 const palindrome = require('/opt/nodejs/palindrome');
 
 exports.handler = async (event, context) => {

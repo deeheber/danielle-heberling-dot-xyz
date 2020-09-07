@@ -13,11 +13,9 @@ My favorite features of Amplify are: Authentication (via <a href="https://aws.am
 
 #### The Setup
 
-First you’ll need to setup a config file to reference your already created AWS resources (in this case the user pool, identity pool, and client id) in your /src folder. The file will look something like this :
+First you’ll need to setup a config file to reference your already created AWS resources (in this case the user pool, identity pool, and client id) in your /src folder. The `src/config.js` file will look something like this :
 
-```
-src/config.js
-
+```javascript
 export default {
    cognito: {
     REGION: ‘YOUR_COGNITO_REGION’,
@@ -28,11 +26,9 @@ export default {
 };
 ```
 
-Then in your `index.js` file where you setup your react app, you’ll need to configure aws Amplify. It’ll look similar to this:
+Then in your `src/index.js` file where you setup your react app, you’ll need to configure aws Amplify. It’ll look similar to this:
 
-```
-src/index.js
-
+```javascript
 import React from ‘react’;
 import ReactDOM from ‘react-dom’;
 import Amplify from ‘aws-amplify’;
@@ -79,7 +75,7 @@ First in your signup form component, you’ll need to import Auth from the Ampli
 
 As you create your form, I’d suggest using local component state to store the form data. It’ll look like your typical form with the difference being using the Amplify methods in your handleSubmit function whenever the user submits the form. The handleSubmit function will look like this:
 
-```
+```javascript
  handleSubmit = async event => {
     event.preventDefault();
 
@@ -112,7 +108,7 @@ Before we continue let’s go over a quick edge case. So if our user refreshes t
 
 So now the user is looking at the confirmation form and has their confirmation code to type in. We’ll need to render the confirmation form. Similar to the signup form it’ll look like a typical form with the exception being the function that is called whenever the user submits the confirmation form. The handleSubmit function for the confirmation form will look similar to this when using Amplify:
 
-```
+```javascript
  handleConfirmationSubmit = async event => {
     event.preventDefault();
 

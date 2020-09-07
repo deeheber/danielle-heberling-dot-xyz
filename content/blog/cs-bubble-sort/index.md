@@ -37,7 +37,8 @@ With our example list we'll start by comparing the first two numbers
 
 ## Code Snippet
 Since a lot of computer science example material seems to be Java-centric, here's  what  a bubble sort looks like in JavaScript for a little change of scenery. Keep in mind there are other ways to write this.
-```
+
+```javascript
 function bubbleSort (nums) {
   let wasSwapped = false;
   do {

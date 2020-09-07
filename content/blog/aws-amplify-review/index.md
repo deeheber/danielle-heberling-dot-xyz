@@ -30,7 +30,7 @@ After another `amplify push`, I now needed to update my GraphQL schema to only a
 
 Here’s what my schema looked like before:
 
-```
+```graphql
 type Todo @model {
   id: ID!
   name: String!
@@ -40,7 +40,7 @@ type Todo @model {
 
 And after
 
-```
+```graphql
 type Todo @model @auth(rules: [{allow: owner}]) {
   id: ID!
   name: String!
