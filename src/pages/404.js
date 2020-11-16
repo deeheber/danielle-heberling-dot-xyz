@@ -21,7 +21,7 @@ class NotFoundPage extends Component {
 
 export default NotFoundPage;
 
-export const pageQuery = graphql`
+export const notFoundQuery = graphql`
   query {
     site {
       siteMetadata {
