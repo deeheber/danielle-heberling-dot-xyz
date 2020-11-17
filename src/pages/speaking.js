@@ -17,6 +17,7 @@ class Speaking extends Component {
                 title='Speaking'
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />
+              <h3>Here's some of my past speaking appearances.</h3>
               <div style={{ borderBottom: '1px solid lightgrey' }}>
                 <h3><a style={{ boxShadow: 'none' }} href="https://www.youtube.com/watch?v=eW2rK4bnk1k" target="_blank" rel="noopener noreferrer">The Serverless Mindset</a></h3>
                 <p style={{ marginBottom: '0' }}>Serverless Days Nashville</p>
