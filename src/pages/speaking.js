@@ -30,6 +30,12 @@ class Speaking extends Component {
               </div>
 
               <div style={{ borderBottom: '1px solid lightgrey' }}>
+                <h3 style={{ marginTop: '1.75rem' }}><a style={{ boxShadow: 'none' }} href="https://www.serverlesschats.com/25/" target="_blank" rel="noopener noreferrer">Episode #25: Using Serverless to Transform Careers and Communities</a></h3>
+                <p style={{ marginBottom: '0' }}>Serverless Chats</p>
+                <p>December 2, 2019 - The Internet</p>
+              </div>
+
+              <div style={{ borderBottom: '1px solid lightgrey' }}>
                 <h3 style={{ marginTop: '1.75rem' }}><a style={{ boxShadow: 'none' }} href="https://acloud.guru/series/serverlessconf-nyc-2019/view/leveling-up-in-serverless" target="_blank" rel="noopener noreferrer">Leveling Up in Serverless</a></h3>
                 <p style={{ marginBottom: '0' }}>Serverlessconf</p>
                 <p>October 9, 2019 - New York, NY</p>
