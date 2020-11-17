@@ -27,8 +27,8 @@ function Nav () {
       <Link getProps={blogLinkStyles} to='/'>
         Blog
       </Link>
-      <Link style={linkStyle} activeStyle={linkActiveStyle} to='/talks'>
-        Talks
+      <Link style={linkStyle} activeStyle={linkActiveStyle} to='/speaking'>
+        Speaking
       </Link>
       <Link style={linkStyle} activeStyle={linkActiveStyle} to='/about'>
         About
