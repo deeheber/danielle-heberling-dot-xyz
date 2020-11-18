@@ -4,17 +4,17 @@ import { StaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-class Talks extends Component {
+class Speaking extends Component {
   render () {
     return (
       <StaticQuery
-        query={talksQuery}
+        query={speakingQuery}
         render={data => {
           const siteMetadata = data.site.siteMetadata;
           return (
             <Layout title={siteMetadata.title}>
               <SEO
-                title='Talks'
+                title='Speaking'
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />
               <div style={{ borderBottom: '1px solid lightgrey' }}>
@@ -29,6 +29,13 @@ class Talks extends Component {
                 <p style={{ marginBottom: '0' }}>AWS re:Invent</p>
                 <p style={{ marginBottom: '0' }}>December 3, 2019 - Las Vegas, NV</p>
                 <p><a href="https://www.pscp.tv/w/1yoJMzjeXypxQ" target="_blank" rel="noopener noreferrer">View</a></p>
+              </div>
+
+              <div style={{ borderBottom: '1px solid lightgrey' }}>
+                <h3 style={{ marginTop: '1.75rem' }}>Episode #25: Using Serverless to Transform Careers and Communities</h3>
+                <p style={{ marginBottom: '0' }}>Serverless Chats</p>
+                <p style={{ marginBottom: '0' }}>December 2, 2019</p>
+                <p><a href="https://www.serverlesschats.com/25/" target="_blank" rel="noopener noreferrer">Listen</a></p>
               </div>
 
               <div style={{ borderBottom: '1px solid lightgrey' }}>
@@ -58,8 +65,8 @@ class Talks extends Component {
   }
 }
 
-const talksQuery = graphql`
-  query TalksQuery {
+const speakingQuery = graphql`
+  query SpeakingQuery {
     site {
       siteMetadata {
         title,
@@ -69,4 +76,4 @@ const talksQuery = graphql`
   }
 `;
 
-export default Talks;
+export default Speaking;
