@@ -4,17 +4,17 @@ import { StaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-class Talks extends Component {
+class Speaking extends Component {
   render () {
     return (
       <StaticQuery
-        query={talksQuery}
+        query={speakingQuery}
         render={data => {
           const siteMetadata = data.site.siteMetadata;
           return (
             <Layout title={siteMetadata.title}>
               <SEO
-                title='Talks'
+                title='Speaking'
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />
               <div style={{ borderBottom: '1px solid lightgrey' }}>
@@ -58,8 +58,8 @@ class Talks extends Component {
   }
 }
 
-const talksQuery = graphql`
-  query TalksQuery {
+const speakingQuery = graphql`
+  query SpeakingQuery {
     site {
       siteMetadata {
         title,
@@ -69,4 +69,4 @@ const talksQuery = graphql`
   }
 `;
 
-export default Talks;
+export default Speaking;
