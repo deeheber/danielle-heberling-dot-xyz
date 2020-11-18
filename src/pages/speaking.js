@@ -32,6 +32,13 @@ class Speaking extends Component {
               </div>
 
               <div style={{ borderBottom: '1px solid lightgrey' }}>
+                <h3 style={{ marginTop: '1.75rem' }}>Episode #25: Using Serverless to Transform Careers and Communities</h3>
+                <p style={{ marginBottom: '0' }}>Serverless Chats</p>
+                <p style={{ marginBottom: '0' }}>December 2, 2019</p>
+                <p><a href="https://www.serverlesschats.com/25/" target="_blank" rel="noopener noreferrer">Listen</a></p>
+              </div>
+
+              <div style={{ borderBottom: '1px solid lightgrey' }}>
                 <h3 style={{ marginTop: '1.75rem' }}>Leveling Up in Serverless</h3>
                 <p style={{ marginBottom: '0' }}>Serverlessconf</p>
                 <p style={{ marginBottom: '0' }}>October 9, 2019 - New York, NY</p>
