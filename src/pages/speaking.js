@@ -18,6 +18,12 @@ class Speaking extends Component {
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />
               <div style={{ borderBottom: '1px solid lightgrey' }}>
+                <h3>Serverless Myth Busters</h3>
+                <p style={{ marginBottom: '0' }}>Bits of Serverless</p>
+                <p style={{ marginBottom: '0' }}>December 8, 2020 - Virtual</p>
+                <p>Vido link coming soon - <a href="https://www.datadoghq.com/event/serverless-talks/" target="_blank" rel="noopener noreferrer">Register</a></p>
+              </div>
+              <div style={{ borderBottom: '1px solid lightgrey' }}>
                 <h3>The Serverless Mindset</h3>
                 <p style={{ marginBottom: '0' }}>Serverless Days Nashville</p>
                 <p style={{ marginBottom: '0' }}>February 27, 2020 - Nashville, TN</p>
