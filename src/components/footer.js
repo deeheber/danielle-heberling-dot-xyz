@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  FaGithub, FaTwitter,
-  FaInstagram, FaLinkedin,
+  FaGithub, 
+  FaTwitter,
+  FaLinkedin, 
   FaRss
 } from 'react-icons/fa';
 
@@ -14,20 +15,11 @@ function Footer () {
 
   return (
     <footer>
-      <div>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href='https://www.gatsbyjs.org' target='_blank' rel='noopener noreferrer'>Gatsby</a>,
-          Deployed via
-        {` `}
-        <a href='https://www.netlify.com/' target='_blank' rel='noopener noreferrer'>Netlify</a>
-      </div>
       {/* TODO: Programically create these nodes */}
-      <div style={{ paddingTop: '1rem' }}>
+      <div>
         <a style={socialStyle} href='https://twitter.com/deeheber' target='_blank' rel='noopener noreferrer' aria-label='twitter link'><FaTwitter size={35} /></a>
         <a style={socialStyle} href='https://github.com/deeheber' target='_blank' rel='noopener noreferrer' aria-label='github link'><FaGithub size={35} /></a>
         <a style={socialStyle} href='https://www.linkedin.com/in/deeheber' target='_blank' rel='noopener noreferrer' aria-label='linkedin link'><FaLinkedin size={35} /></a>
-        <a style={socialStyle} href='https://www.instagram.com/deeheber' target='_blank' rel='noopener noreferrer' aria-label='instagram link'><FaInstagram size={35} /></a>
         <a style={socialStyle} href='/rss.xml' target='_blank' rel='noopener noreferrer' aria-label='rss feed'><FaRss size={35} /></a>
       </div>
     </footer>

@@ -55,8 +55,7 @@ class BlogIndex extends Component {
         <div
           style={{
             display: 'flex',
-            flexWrap: 'wrap',
-            paddingBottom: '1em'
+            flexWrap: 'wrap'
           }}
         >
           {!isFirst && (
