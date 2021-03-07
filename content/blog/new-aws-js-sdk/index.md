@@ -30,6 +30,9 @@ Since DynamoDB is my database in this app, I went looking for the v3 equivalent 
 
 Anyway long story short, I found I was able to get the same result by marshalling and unmarshalling JavaScript objects/DynamoDB Records in the code. Info on that can be found in the docs for the `util-dynamodb` package <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_util_dynamodb.html" target="_blank" rel="noopener noreferrer">here</a>. Another example can also be found in my git diff mentioned above.
 
+> Post update March 7, 2021
+> Looks like there's now a <a href="https://github.com/aws/aws-sdk-js-v3/pull/2097" target="_blank" rel="noopener noreferrer">DynamoDB Document Client</a> 😀.
+
 ## What's Next?
 Out of caution, I plan to wait for things to settle a bit more before doing upgrades on major business critical applications.
 
