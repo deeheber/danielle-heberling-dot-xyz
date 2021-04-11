@@ -16,11 +16,12 @@ This is the source code for my personal blog website https://www.danielleheberli
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into the site’s directory and start it up.
 
     ```sh
     cd danielle-heberling-dot-xyz/
-    gatsby develop
+    npm i
+    npm start
     ```
 
 1.  **Open the source code and start editing!**
@@ -29,4 +30,4 @@ This is the source code for my personal blog website https://www.danielleheberli
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `danielle-heberling-dot-xyz` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `danielle-heberling-dot-xyz` directory in your code editor of choice and edit files. Save your changes and the browser will update in real time!
