@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends Component {
@@ -14,7 +14,7 @@ class BlogPostTemplate extends Component {
 
     return (
       <Layout title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={excerpt} />
+        <Seo title={post.frontmatter.title} description={excerpt} />
         <h3>{post.frontmatter.title}</h3>
         <p
           style={{

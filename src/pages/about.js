@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 class About extends Component {
   render () {
@@ -14,15 +14,15 @@ class About extends Component {
           const siteMetadata = data.site.siteMetadata;
           return (
             <Layout title={siteMetadata.title}>
-              <SEO
+              <Seo
                 title='About'
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />
               <h3>Nice to meet you.</h3>
               <div>
                 <div style={{ float: 'left', paddingRight: '1.5rem' }}>
-                  <Image
-                    fixed={data.avatar.childImageSharp.fixed}
+                  <GatsbyImage
+                    image={data.avatar.childImageSharp.gatsbyImageData}
                     alt={siteMetadata.author}
                   />
                 </div>
@@ -54,9 +54,11 @@ const aboutQuery = graphql`
   query AboutQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          layout: FIXED
+          width: 200
+          height: 200
+        )
       }
     }
     site {

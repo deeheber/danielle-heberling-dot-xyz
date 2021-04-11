@@ -3,18 +3,21 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-function SEO ({ description, lang, meta, keywords, title }) {
+function Seo ({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
+        // Social image stuff
         let origin = "";
         if (typeof window !== "undefined") {
           origin = window.location.origin;
         }
-        const imageSrc = data.defaultThumbnail.childImageSharp.sizes.src;
+        const imageSrc = data.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src;
         const image = `${origin}${imageSrc}`;
+
         const metaDescription = description || data.site.siteMetadata.description;
+
         return (
           <Helmet
             htmlAttributes={{
@@ -80,13 +83,13 @@ function SEO ({ description, lang, meta, keywords, title }) {
   );
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: 'en',
   meta: [],
   keywords: []
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
@@ -94,15 +97,17 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired
 };
 
-export default SEO;
+export default Seo;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    defaultThumbnail: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    thumbnail: file(absolutePath: { regex: "/d-icon.png/" }) {
       childImageSharp {
-        sizes(maxWidth: 600) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(
+          layout: FIXED
+          width: 400
+          height: 400
+        )
       }
     }
     site {
