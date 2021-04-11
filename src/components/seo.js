@@ -15,7 +15,6 @@ function Seo ({ description, lang, meta, keywords, title }) {
         }
         const imageSrc = data.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src;
         const image = `${origin}${imageSrc}`;
-        console.log(image);
 
         const metaDescription = description || data.site.siteMetadata.description;
 
