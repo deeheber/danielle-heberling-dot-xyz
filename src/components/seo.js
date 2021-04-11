@@ -8,7 +8,17 @@ function Seo ({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
+        // Social image stuff
+        let origin = "";
+        if (typeof window !== "undefined") {
+          origin = window.location.origin;
+        }
+        const imageSrc = data.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src;
+        const image = `${origin}${imageSrc}`;
+        console.log(image);
+
         const metaDescription = description || data.site.siteMetadata.description;
+
         return (
           <Helmet
             htmlAttributes={{
@@ -34,8 +44,16 @@ function Seo ({ description, lang, meta, keywords, title }) {
                 content: 'website'
               },
               {
+                property: 'og:image',
+                content: image
+              },
+              {
                 name: 'twitter:card',
                 content: 'summary'
+              },
+              {
+                name: 'twitter:image',
+                content: image
               },
               {
                 name: 'twitter:creator',
@@ -84,6 +102,15 @@ export default Seo;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
+    thumbnail: file(absolutePath: { regex: "/d-icon.png/" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FIXED
+          width: 400
+          height: 400
+        )
+      }
+    }
     site {
       siteMetadata {
         title
