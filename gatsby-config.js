@@ -114,6 +114,7 @@ module.exports = {
     // Disable Progressive Web App + Offline functionality
     // 'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

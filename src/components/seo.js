@@ -8,12 +8,6 @@ function Seo ({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        let origin = "";
-        if (typeof window !== "undefined") {
-          origin = window.location.origin;
-        }
-        const imageSrc = data.defaultThumbnail.childImageSharp.fluid.src;
-        const image = `${origin}${imageSrc}`;
         const metaDescription = description || data.site.siteMetadata.description;
         return (
           <Helmet
@@ -40,16 +34,8 @@ function Seo ({ description, lang, meta, keywords, title }) {
                 content: 'website'
               },
               {
-                property: 'og:image',
-                content: image
-              },
-              {
                 name: 'twitter:card',
                 content: 'summary'
-              },
-              {
-                name: 'twitter:image',
-                content: image
               },
               {
                 name: 'twitter:creator',
@@ -98,13 +84,6 @@ export default Seo;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    defaultThumbnail: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     site {
       siteMetadata {
         title
