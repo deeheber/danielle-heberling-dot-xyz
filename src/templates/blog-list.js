@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { rhythm } from '../utils/typography';
 
 class BlogIndex extends Component {
@@ -20,7 +20,7 @@ class BlogIndex extends Component {
 
     return (
       <Layout title={siteTitle}>
-        <SEO
+        <Seo
           title='All posts'
           keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
         />

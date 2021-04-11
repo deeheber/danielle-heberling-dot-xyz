@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-function SEO ({ description, lang, meta, keywords, title }) {
+function Seo ({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -12,7 +12,7 @@ function SEO ({ description, lang, meta, keywords, title }) {
         if (typeof window !== "undefined") {
           origin = window.location.origin;
         }
-        const imageSrc = data.defaultThumbnail.childImageSharp.sizes.src;
+        const imageSrc = data.defaultThumbnail.childImageSharp.fluid.src;
         const image = `${origin}${imageSrc}`;
         const metaDescription = description || data.site.siteMetadata.description;
         return (
@@ -80,13 +80,13 @@ function SEO ({ description, lang, meta, keywords, title }) {
   );
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: 'en',
   meta: [],
   keywords: []
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
@@ -94,14 +94,14 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired
 };
 
-export default SEO;
+export default Seo;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
     defaultThumbnail: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        sizes(maxWidth: 600) {
-          ...GatsbyImageSharpSizes
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

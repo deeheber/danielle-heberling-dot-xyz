@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 class NotFoundPage extends Component {
   render () {
@@ -11,7 +11,7 @@ class NotFoundPage extends Component {
 
     return (
       <Layout title={siteTitle}>
-        <SEO title='404: Not Found' />
+        <Seo title='404: Not Found' />
         <h3>Not Found</h3>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       </Layout>

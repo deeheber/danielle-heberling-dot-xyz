@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 class Speaking extends Component {
   render () {
@@ -13,7 +13,7 @@ class Speaking extends Component {
           const siteMetadata = data.site.siteMetadata;
           return (
             <Layout title={siteMetadata.title}>
-              <SEO
+              <Seo
                 title='Speaking'
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />

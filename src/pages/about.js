@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 class About extends Component {
   render () {
@@ -14,7 +14,7 @@ class About extends Component {
           const siteMetadata = data.site.siteMetadata;
           return (
             <Layout title={siteMetadata.title}>
-              <SEO
+              <Seo
                 title='About'
                 keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
               />
