@@ -1,23 +1,23 @@
 ---
 title: You Are More Than Your Tech Choices
-date: "2021-05-25T21:12:03.284Z"
+date: "2021-05-22T21:12:03.284Z"
 ---
 
 If you know me, you've probably noticed that my technical specialities lately have been JavaScript and AWS Serverless.
 
-As a software engineer with a few years of experience, I noticed that recruiters will proactively reach out in an attempt to recruit me for their company. In one specific instance, I was actively job seeking and came across a very interesting message encouraging me to apply for a Python developer position.
+As a software developer with a few years of experience, recruiters often message me trying to convince me to apply for a job opening. In one specific instance, I was actively job seeking and came across a very interesting recruiter message encouraging me to apply for a Python developer position.
 
-...sure I've read Python before and know a tiny bit, but my imposter syndrome immediately kicked in and I wondered if I'd be good enough. I then started thinking about who I am as a developer and if I'd miss being primarily a JavaScript developer.
+...sure I've read Python before and know a tiny bit, but my imposter syndrome immediately kicked in and I wondered if I'd be good enough. I then started reflecting on who I am as a developer and if I'd miss being primarily a JavaScript developer.
 
 ## Looking Around
-In my experience both online and offline when you get a group of developers together, people have opinions. Strong opinions that sometimes transform into a way that people self identify as a developer.
+In my experience both online and offline when you get a group of software developers together, people have opinions. Strong opinions that sometimes transform into a way that people self identify as a developer.
 
 Here's some examples of said opinions:
 - Monolith vs Microservices
 - Containers vs Serverless
-- Language x vs Language y
+- Language X vs Language Y
 - SQL vs NoSQL
-- Don't use language x because it's old and bad
+- Don't use language X because it's old and bad
 
 ...ok I over emphasized a bit on the last one, but you get my point.
 
