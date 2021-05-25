@@ -33,7 +33,7 @@ class About extends Component {
                   Career wise, I used to work in tech support for <a href='https://support.apple.com/' target='_blank' rel='noopener noreferrer'>AppleCare</a> and then <a href='https://www.squarespace.com/' target='_blank' rel='noopener noreferrer'>Squarespace</a>. I loved helping customers; however, I discovered that my job centered around asking an engineer to fix a bug or UX issue.
                 </p>
                 <p>
-                  Because of my desire to provide a better customer experience and to take matters into my own hands, I began teaching myself how to code and became a software engineer. Currently interested in Serverless architectures, Javascript/Typescript, and AWS though that will probably evolve over time as new technologies come out.
+                  Because of my desire to provide a better customer experience and to take matters into my own hands, I began teaching myself how to code and became a software engineer.
                 </p>
                 <p>
                   This information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing.
