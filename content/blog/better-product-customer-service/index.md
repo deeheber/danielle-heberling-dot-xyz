@@ -1,6 +1,7 @@
 ---
 title: Building a Better Product through Customer Service
 date: "2019-05-21T22:12:03.284Z"
+canonical: "https://www.stackery.io/blog/building-a-better-product-through-customer-service"
 ---
 
 ![Teamwork](./teamwork.png)
