@@ -1,6 +1,7 @@
 ---
 title: Chaos Engineering Ideas For Serverless
 date: "2019-01-24T22:12:03.284Z"
+canonical: "https://www.stackery.io/blog/chaos-engineering-serverless"
 ---
 
 ![Chaos](./chaos.jpg)

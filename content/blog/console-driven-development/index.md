@@ -1,6 +1,7 @@
 ---
 title: Dangers of Console-Driven Development
 date: "2020-10-15T22:12:03.284Z"
+canonical: "https://www.stackery.io/blog/dangers-of-console-driven-development"
 ---
 ## What is Console Driven Development (CDD)?
 

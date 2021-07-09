@@ -1,6 +1,7 @@
 ---
 title: The Secret Lives of Failed SQS Messages
 date: "2019-09-18T22:12:03.284Z"
+canonical: "https://www.stackery.io/blog/secret-lives-of-failed-sqs-messages"
 ---
 
 ![Mailbox](./mailbox.jpg)

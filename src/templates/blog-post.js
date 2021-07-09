@@ -13,7 +13,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={siteTitle}>
-      <Seo title={post.frontmatter.title} description={excerpt} />
+      <Seo
+        title={post.frontmatter.title}
+        description={excerpt}
+        canonical={post.frontmatter.canonical}
+      />
       <h3>{post.frontmatter.title}</h3>
       <p
         style={{
@@ -77,6 +81,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        canonical
       }
     }
   }
