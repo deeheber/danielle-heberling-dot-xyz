@@ -30,3 +30,5 @@ My top three activities while taking a break throughout the workday are:
 ![twitterPoll](./twitterPoll.png)
 
 Remembering to take breaks has helped me to get more done while working fewer hours, and I can support my teammates better by bringing my best self to my work. Maybe it can help you too. What are some of your favorite activities to do when taking a break during the work day?
+
+>Note: This post was originally published on the [Koan dev blog](https://dev.to/koan/the-secret-to-getting-more-done-5hjh)
