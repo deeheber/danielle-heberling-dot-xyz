@@ -6,6 +6,8 @@ canonical: "https://dev.to/koan/the-secret-to-getting-more-done-5hjh"
 
 ![Coffee and Cookies](./coffee-cookies.jpg)
 
+>Note: This post was originally published on the [Koan dev blog](https://dev.to/koan/the-secret-to-getting-more-done-5hjh)
+
 It was a cold and rainy day as I sat alone in my home office debugging Webpack config errors. No matter what I tried, the errors would not go away. My natural inclination was to "just get through most of them" before eating lunch. But as I fixed errors, more emerged. Do you know what eventually got me through these hang ups?
 
 ## Taking a break.
