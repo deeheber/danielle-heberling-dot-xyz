@@ -1,6 +1,6 @@
 ---
 title: Event Driven Background Processes
-date: "2021-09-13T22:12:03.284Z"
+date: "2021-09-12T07:12:03.284Z"
 ---
 
 One theme when talking about serverless computing that frequently comes up is that "serverless is event driven." Personally I've found this to be true and am going to share one of my favorite event driven architectures built with AWS in this post.
