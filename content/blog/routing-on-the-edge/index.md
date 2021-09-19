@@ -6,8 +6,6 @@ canonical: "https://medium.com/developing-koan/routing-on-the-edge-913eb00da742"
 
 ![Feet dangling from roof](./jake-ingle-s-t1oJXKYI4-unsplash.jpg)
 
->Note: This post was originally published on the [Koan dev blog](https://medium.com/developing-koan/routing-on-the-edge-913eb00da742)
-
 At [Koan](https://www.koan.co/?utm_campaign=edgerouter&utm_medium=blog&utm_source=medium), our application’s frontend is a [React](https://reactjs.org/) [Single Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) running in two distinct environments (Staging and Production).
 
 In addition to viewing the Staging and Production versions of our frontend, we also need to serve up a version of the frontend based off of a git commit in our Staging environment. Doing this gives Koan developers a “live preview” URL to review what the frontend looks like after committing changes but before they’re merged.
@@ -213,3 +211,5 @@ While there are opportunities for improvement, this setup works well for our tea
 More recently, AWS released [CloudFront Functions](https://aws.amazon.com/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/). Stay tuned as we evaluate if that’s a good solution for us to use instead of our existing Lambda@Edge functions. It’s highly possible we could re-architect this to completely bypass the S3 GET and/or further utilize the edge caching.
 
 > Thanks to [Daniel Kaczmarczyk](https://dev.to/danielkaczmarczyk) and [RJ Zaworski](https://dev.to/rjz) for reviewing drafts of this article.
+
+>Note: This post was originally published on the [Koan dev blog](https://medium.com/developing-koan/routing-on-the-edge-913eb00da742)
