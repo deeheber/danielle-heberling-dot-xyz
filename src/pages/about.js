@@ -32,10 +32,13 @@ const About = ({ data }) => {
           Because of my desire to provide a better customer experience and to take matters into my own hands, I began teaching myself how to code and became a software engineer.
         </p>
         <p>
-          This information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing.
+          The information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing. Feel free to reach out anytime.
         </p>
         <p>
-          Any opinions expressed on this site are mine and are not reflective of any organizations I am affiliated with.
+          Since technology is always evolving, disclaimer that older content might contain out of date information and/or examples.
+        </p>
+        <p>
+          Any opinions expressed on this site are mine and are not reflective of any organizations that I am affiliated with.
         </p>
       </div>
     </Layout>
