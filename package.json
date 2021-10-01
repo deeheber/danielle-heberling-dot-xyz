@@ -8,7 +8,7 @@
     "url": "https://github.com/deeheber/danielle-heberling-dot-xyz/issues"
   },
   "dependencies": {
-    "gatsby": "^3.14.0",
+    "gatsby": "^3.14.1",
     "gatsby-plugin-feed": "^3.14.0",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-manifest": "^3.14.0",
