@@ -31,6 +31,7 @@ const About = ({ data }) => {
         <p>
           Because of my desire to provide a better customer experience and to take matters into my own hands, I began teaching myself how to code and became a software engineer.
         </p>
+        <p>Currently, I generally fall into the category of a full stack software engineer with a preference to focus on the backend and serverless cloud infrastructure. GraphQL, TypeScript/JavaScript, AWS SAM, and AWS CDK are lot of fun to work with for me at the moment, but I'm open to learning new languages and technology if it makes sense for the project and/or team.</p>
         <p>
           The information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing. Feel free to reach out anytime.
         </p>
