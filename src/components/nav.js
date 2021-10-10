@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 // Special styles for the blog link
 // From https://reach.tech/router/api/Link
 // Highlights as active if on a paginated blog list page or a blog detail page
-// Kinda messy, so I want to redo this later prob with styled components or something
+// Kinda messy, so I want to redo this later probably
 const blogLinkStyles = ({ location }) => {
   const isBlogPage = location.pathname === '/' || location.pathname.startsWith('/blog');
   return isBlogPage
@@ -25,7 +25,7 @@ function Nav () {
   return (
     <nav>
       <Link getProps={blogLinkStyles} to='/'>
-        Writing
+        Blog
       </Link>
       <Link style={linkStyle} activeStyle={linkActiveStyle} to='/speaking'>
         Speaking
