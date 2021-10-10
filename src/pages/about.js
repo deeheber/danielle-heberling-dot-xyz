@@ -23,7 +23,7 @@ const About = ({ data }) => {
           />
         </div>
         <p>
-          Throughout my entire life, I questioned why and how things work with a strong desire to make them better.
+          Throughout my entire life, I questioned why and how things work with a strong interest in making them better.
         </p>
         <p>
           Career wise, I used to work in tech support for <a href='https://support.apple.com/' target='_blank' rel='noopener noreferrer'>AppleCare</a> and later <a href='https://www.squarespace.com/' target='_blank' rel='noopener noreferrer'>Squarespace</a>. I enjoyed helping customers; however, I felt that my job centered around asking an engineer to fix a bug or UX issue.
@@ -31,7 +31,7 @@ const About = ({ data }) => {
         <p>
           Because of my desire to provide a better customer experience and to take matters into my own hands, I taught myself how to code and became a software engineer.
         </p>
-        <p>Currently loving TypeScript/JavaScript, GraphQL, AWS SAM, and AWS CDK, but I'm open to learning new languages and technologies if it makes sense for the project/team, or matches my personal interest.</p>
+        <p>Currently loving TypeScript/JavaScript, GraphQL, AWS SAM, and AWS CDK, but I'm open to learning new languages and technologies if it makes sense for the project/team, or matches my interest.</p>
         <p>
           The information on this site serves as a personal reminder of my commitment to life long learning, improvement, creating things, and knowledge sharing. Feel free to reach out anytime.
         </p>
