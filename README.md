@@ -15,6 +15,7 @@ This is the source code for my personal blog website https://www.danielleheberli
     ```
 
 1.  **Start developing.**
+
     This site is built with the latest nodeJS LTS in mind. Other version might work, but it's not guaranteed.
 
     Navigate into the site’s directory and start it up.
@@ -25,7 +26,7 @@ This is the source code for my personal blog website https://www.danielleheberli
     npm start
     ```
 
-    Note: If using npm v7 or above add the `--legacy-peer-deps` flag to `npm i`
+    Note: If using npm v7 or above add the `--legacy-peer-deps` flag to `npm i` per [Gatsby's suggestion](https://v4.gatsbyjs.com/docs/reference/release-notes/migrating-from-v3-to-v4/#update-gatsby-version)
 
 1.  **Open the source code and start editing!**
 
