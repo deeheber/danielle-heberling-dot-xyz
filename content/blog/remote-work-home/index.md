@@ -3,7 +3,9 @@ title: On Home and Remote Work
 date: "2021-11-23T22:12:03.284Z"
 ---
 
-Placeholder for map of PIT area
+![Crossroads](./bridge-med.jpg)
+>Photo by <a href="https://unsplash.com/@cutnshoot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonathan Rivera</a> on <a href="https://unsplash.com/s/photos/western-pennsylvania?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 
 I spent the first 22 years of my life in a part of the United States that many would call "flyover country." To most people this is an insignificant small town that peaked in the 1950s. As my father likes to say "This town was so much better when the mafia ran everything."
 
@@ -14,13 +16,15 @@ To me this town is a lot more...it is where
 - I learned that I loved performing music
 - I became the head drum major of my high school marching band
 
-In short, this town was home to me.
+...in short, this town was home to me...
 
 I attended a state school in the area to earn a Bachelor Degree in Music Education. Taking a look around me, I noticed that teachers in public K-12 schools stayed in their positions for a long time. Upon graduation, I hit a crossroads where I had to choose between:
 1.  substitute teaching for 10+ years until a teacher left their position
 2. moving somewhere else, getting some experience as a teacher, and moving back
 
-Placeholder for crossroads image
+![Crossroads](./crossroads-med.jpg)
+
+>Photo by <a href="https://unsplash.com/@ivalex?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ivan Aleksic</a> on <a href="https://unsplash.com/s/photos/crossroads?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 I chose option #2 in the end. Through many twists and turns, I am no longer a music teacher, nor have I moved back. Nowhere that I've lived since the initial move has felt like home.
 
