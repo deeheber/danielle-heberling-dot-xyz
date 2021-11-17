@@ -16,7 +16,7 @@ This is the source code for my personal blog website https://www.danielleheberli
 
 1.  **Start developing.**
 
-    This site is built with the latest nodeJS LTS in mind. Other version might work, but it's not guaranteed.
+    This site is built with the latest NodeJS LTS (current 16.x.x) in mind. Other version might work, but it's not guaranteed.
 
     Navigate into the site’s directory and start it up.
 
