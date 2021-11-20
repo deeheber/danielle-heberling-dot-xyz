@@ -34,4 +34,4 @@ I take a look at my very young neice who is growing up in the same way that I di
 
 I don't regret the people and life experiences that I've had as a result of my choice. I do still wonder how much I've missed and ponder the possibility of an eventual return.
 
-Afterall when we're gone, it doesn't matter what our rank was at our workplaces. It's the love we shared with the people around us.
+Afterall when we're gone, it doesn't matter what our rank was at our workplaces. It's the love we shared with the people around us. In the meantime, my neighbors will have to deal with my accent that slips out on ocassion.
