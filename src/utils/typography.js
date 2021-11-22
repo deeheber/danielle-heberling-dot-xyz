@@ -15,6 +15,9 @@ Wordpress2016.overrideThemeStyles = () => {
     ul: {
       paddingLeft: '2rem'
     },
+    ol: {
+      paddingLeft: '2rem'
+    },
     blockquote: {
       color: '#707B7C',
       borderLeftColor: '#707B7C'
