@@ -18,7 +18,7 @@ To me this town is a lot more... to me it is
 
 ...in short, this town was home to me...
 
-After high school graduction, I attended a state school in the area to earn a Bachelor Degree in Music Education. Taking a look around me, I noticed that teachers in local schools stayed in their positions for a long time. Upon graduation from university, I hit a crossroads where I had to choose between:
+After high school graduation, I attended a state school in the area to earn a Bachelor Degree in Music Education. Taking a look around me, I noticed that teachers in local schools stayed in their positions for a long time. Upon graduation from university, I hit a crossroads where I had to choose between:
 1. Substitute teaching for 10+ years until a teacher left their position
 2. Moving somewhere else, getting some experience as a teacher, and moving back
 
@@ -30,7 +30,7 @@ I chose option #2 in the end. Through many twists and turns, I am no longer a mu
 
 Now we are in the midst of the Covid-19 global pandemic where many workers are forced to work remotely, some for the first time. Many companies have stated that they're planning on keeping employees fully remote for the forseeable future.
 
-I take a look at my young neice whose bedroom is my childhood bedroom. The future of remote work gives me hope. Hope that my neice won't be forced into the same decision crossroad that I was. If she wants to move away, she still can...but with the increase of remote work it is less likely to be a decision that could impact how much money she can make or her career opportunities.
+I take a look at my young neice whose current bedroom is my childhood bedroom. The future of remote work gives me hope. Hope that my neice won't be forced into the same decision crossroad that I was. If she wants to move away, she still can...but with the increase of remote work it is less likely to be a decision that could impact how much money she can make or her career opportunities.
 
 I don't regret the people and life experiences that I've had as a result of my choice. I do still wonder how much I've missed and ponder the possibility of an eventual return.
 
