@@ -133,4 +133,6 @@ As you can see, it does require a bit of additional setup, but creating dead let
 
 For a solid and succinct description of the benefits of a DLQ (alongside lots of other info about them,) check out the AWS documentation <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html#sqs-dead-letter-queues-benefits" target="_blank" rel="noopener noreferrer">here</a>.
 
+**Update December 1, 2021** - AWS has added the ability to redrive your SQS messages in the console. See [here](https://aws.amazon.com/about-aws/whats-new/2021/12/amazon-sqs-dead-letter-queue-management-experience-queues/) for more information.
+
 >Note: This post was originally published on https://www.stackery.io/
