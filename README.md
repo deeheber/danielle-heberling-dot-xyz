@@ -22,7 +22,7 @@ This is the source code for my personal blog website https://www.danielleheberli
 
     ```sh
     cd danielle-heberling-dot-xyz/
-    npm i
+    npm i --legacy-peer-deps
     npm start
     ```
 
