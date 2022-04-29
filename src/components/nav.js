@@ -14,23 +14,23 @@ const blogLinkStyles = ({ location }) => {
 
 const linkStyle = {
   margin: '0 1rem',
-  boxShadow: 'none'
+  boxShadow: 'none',
 };
 
 const linkActiveStyle = {
-  borderBottom: '1px solid #2E86C1'
+  borderBottom: '1px solid #2E86C1',
 };
 
-function Nav () {
+function Nav() {
   return (
     <nav>
-      <Link getProps={blogLinkStyles} to='/'>
+      <Link getProps={blogLinkStyles} to="/">
         Blog
       </Link>
-      <Link style={linkStyle} activeStyle={linkActiveStyle} to='/speaking'>
+      <Link style={linkStyle} activeStyle={linkActiveStyle} to="/speaking">
         Speaking
       </Link>
-      <Link style={linkStyle} activeStyle={linkActiveStyle} to='/about'>
+      <Link style={linkStyle} activeStyle={linkActiveStyle} to="/about">
         About
       </Link>
     </nav>

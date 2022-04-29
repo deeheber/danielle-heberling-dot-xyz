@@ -1,20 +1,24 @@
 ---
 title: Create Your Own Lambda Layer with NodeJS
-date: "2020-01-22T22:12:03.284Z"
+date: '2020-01-22T22:12:03.284Z'
 ---
 
 ![Mountains](./layer-header.jpg)
->Photo by Ivana Cajina on Unsplash
+
+> Photo by Ivana Cajina on Unsplash
 
 ## The Problem
+
 While speaking with folks who are new to serverless, I’m often asked “how can I reuse my code across multiple Lambda functions?” One way to do this is by writing your own custom Lambda Layer. In this post, we’re going to build a simple layer using nodeJS, deploy it, and use the layer in a function.
 
-> *Note*: there is an updated method for using Lambda layers outlined [here](https://www.danielleheberling.xyz/blog/lambda-layer-update/)
+> _Note_: there is an updated method for using Lambda layers outlined [here](https://www.danielleheberling.xyz/blog/lambda-layer-update/)
 
 ## What We’re Building
+
 We’re going to write a lambda layer that contains a helper function. This function takes in a word or phrase and reverses the string. It’s not overly helpful in prod, but a simple example can be useful in seeing how things are setup.
 
 ## Write Lambda Layer Source Code
+
 Create a new directory named palindrome. The file hierarchy will look like this.
 
 ```
@@ -28,8 +32,8 @@ The package.json will look like this
 
 ```json
 {
- "name": "palindrome",
- "version": "1.0.0"
+  "name": "palindrome",
+  "version": "1.0.0"
 }
 ```
 
@@ -37,14 +41,14 @@ The reverse.js file looks like this
 
 ```javascript
 module.exports = function (phrase) {
- return phrase.split('').reverse().join('');
+  return phrase.split('').reverse().join('');
 };
 ```
 
 Note that `palindrome` and `nodejs` are folders. The nodejs folder naming and placement is very important because it affects how the layer delivers the code to functions.
 
-
 ## Deploy the Layer
+
 First we’ll need to zip up the layer in order to upload it to the AWS Lambda console.
 
 You’ll want to `cd` into your `palindrome` folder via the terminal and run:
@@ -87,7 +91,7 @@ Note: you need to do this everytime you update the layer version.
 
 Not overly necessary for this example, but if you have multiple environments that rely on different layers you can <a href="https://docs.stackery.io/docs/using-stackery/environments/#setting-configuration-store-values" target="_blank" target="_blank" rel="noopener noreferrer">setup a parameter</a> to reference this layer that will be dependent on which environment you’re deployed into.
 
-Also keep in mind that as of my writing this, AWS has  a limit of 5  layers per function.
+Also keep in mind that as of my writing this, AWS has a limit of 5 layers per function.
 
 ## Add code to the function
 
@@ -97,17 +101,17 @@ The code in your index.js should look like this:
 const palindrome = require('/opt/nodejs/palindrome');
 
 exports.handler = async (event, context) => {
- // Log the event argument for debugging and for use in local development.
- console.log(JSON.stringify(event, undefined, 2));
+  // Log the event argument for debugging and for use in local development.
+  console.log(JSON.stringify(event, undefined, 2));
 
- const words = 'This string should be reversed';
- const response = palindrome(words);
+  const words = 'This string should be reversed';
+  const response = palindrome(words);
 
- return {
-   statusCode: 200,
-   headers: {},
-   response: JSON.stringify(response)
- };
+  return {
+    statusCode: 200,
+    headers: {},
+    response: JSON.stringify(response),
+  };
 };
 ```
 
@@ -117,4 +121,4 @@ Once deployed, go ahead and invoke the function. You should see the original str
 
 Check out the full code example in <a href="https://github.com/deeheber/lambda-layer-example/tree/original-blog-post" target="_blank" target="_blank" rel="noopener noreferrer">this repo</a>.
 
-All of the official documentation from AWS  about Lambda layers can be found <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html" target="_blank" target="_blank" rel="noopener noreferrer">here</a>.
+All of the official documentation from AWS about Lambda layers can be found <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html" target="_blank" target="_blank" rel="noopener noreferrer">here</a>.

@@ -1,7 +1,7 @@
 ---
 title: The Secret to Getting More Done
-date: "2021-07-14T22:12:03.284Z"
-canonical: "https://dev.to/koan/the-secret-to-getting-more-done-5hjh"
+date: '2021-07-14T22:12:03.284Z'
+canonical: 'https://dev.to/koan/the-secret-to-getting-more-done-5hjh'
 ---
 
 ![Coffee and Cookies](./coffee-cookies.jpg)
@@ -31,4 +31,4 @@ My top three activities while taking a break throughout the workday are:
 
 Remembering to take breaks has helped me to get more done while working fewer hours, and I can support my teammates better by bringing my best self to my work. Maybe it can help you too. What are some of your favorite activities to do when taking a break during the work day?
 
->Note: This post was originally published on the [Koan dev blog](https://dev.to/koan/the-secret-to-getting-more-done-5hjh)
+> Note: This post was originally published on the [Koan dev blog](https://dev.to/koan/the-secret-to-getting-more-done-5hjh)

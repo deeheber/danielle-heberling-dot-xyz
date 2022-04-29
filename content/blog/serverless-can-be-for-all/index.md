@@ -1,7 +1,7 @@
 ---
 title: Serverless *Can* be for Everyone - Let's Build it that Way
-date: "2019-12-23T22:12:03.284Z"
-canonical: "https://www.stackery.io/blog/serverless-can-be-for-everyone"
+date: '2019-12-23T22:12:03.284Z'
+canonical: 'https://www.stackery.io/blog/serverless-can-be-for-everyone'
 ---
 
 ![AWS re:Invent Booth Picture](./boothpic.jpg)
@@ -54,7 +54,7 @@ Here’s a few highlights of things that noticed from a technical standpoint tha
 
 Many people mark the start of serverless with the launch of AWS Lambda in late 2014. If you think about it, it really wasn’t that long ago. Serverless as a concept is still in its early stages, so is the community surrounding it.
 
-I do a lot of time thinking about the serverless community, the degree to which it’s evolved in this short amount of time, and the direction I believe it should go in. It might sound like an oversimplification, but I believe the most important thing that we need to intentionally focus on in regards to evolving the serverless ecosystem is inclusion. We **must _**do everything possible to attract folks from all backgrounds in order to make the community stronger and to build better applications that more accurately reflect the diverse userbase we serve. It’s also crucial to continue asking what that looks like: _how do we speak to various individuals and groups? It’s not a static answer.
+I do a lot of time thinking about the serverless community, the degree to which it’s evolved in this short amount of time, and the direction I believe it should go in. It might sound like an oversimplification, but I believe the most important thing that we need to intentionally focus on in regards to evolving the serverless ecosystem is inclusion. We **must \_**do everything possible to attract folks from all backgrounds in order to make the community stronger and to build better applications that more accurately reflect the diverse userbase we serve. It’s also crucial to continue asking what that looks like: \_how do we speak to various individuals and groups? It’s not a static answer.
 
 For now, I’ve come up with an answer in my own personal work and life: speaking to as many different groups in as many different locations as possible. Earlier in December, I spoke alongside Stackery’s Ecosystem’s Director, Farrah Campbell at <a href="https://www.stackery.io/blog/reinvent-danielle-talk/" target="_blank" rel="noopener noreferrer">AWS re:Invent in Las Vegas</a>.
 
@@ -66,4 +66,4 @@ This was an amazing and humbling opportunity that I’m still stoked about! But 
 
 Next up is Tennessee for <a href="https://serverlessnashville.io/" target="_blank" rel="noopener noreferrer">Serverless Days Nashville</a>. The topic? Encouraging people to take the first (or umpteenth) step in their serverless journey by using Stackery. If you can/will be in the area in February, I’d love to see you there. Want to connect about serverless and Stackery (or share any sweet tips about Nashville)? <a href="https://twitter.com/deeheber" target="_blank" rel="noopener noreferrer">Reach out to me on Twitter</a>.
 
->Note: This post was originally published on https://www.stackery.io/
+> Note: This post was originally published on https://www.stackery.io/

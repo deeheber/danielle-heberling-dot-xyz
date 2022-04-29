@@ -1,8 +1,9 @@
 ---
 title: Dangers of Console-Driven Development
-date: "2020-10-15T22:12:03.284Z"
-canonical: "https://www.stackery.io/blog/dangers-of-console-driven-development"
+date: '2020-10-15T22:12:03.284Z'
+canonical: 'https://www.stackery.io/blog/dangers-of-console-driven-development'
 ---
+
 ## What is Console Driven Development (CDD)?
 
 AWS offers the ability to login to a web UI dashboard. In this dashboard, you can add, edit, and deploy various cloud resources. When I was first getting started with AWS, this is where I began for two reasons:
@@ -24,9 +25,9 @@ While getting started in AWS or any cloud provider, it can be easy to just jump 
 
 IaC is helpful for many reasons, including but not limited to:
 
-- *Have a written record of your infrastructure settings and how to connect things.* No need to recall how and where in the console you set something up. Bonus if you have this in git, since it makes it easier to rollback to previous versions should the unexpected happen.
-- *Transportable infrastructure.* Having the IaC template allows us to take what we have in one cloud provider account and replicate it in another cloud provider account. Having separate dev, staging, prod etc. accounts helps reduce the risk of taking something down in prod when you just want to test a code change in a sandbox environment.
-- *Onboarding new engineers is easier.* All they have to do to get their dev environment setup is to clone the repo and deploy it into their sandboxed cloud provider account.
+- _Have a written record of your infrastructure settings and how to connect things._ No need to recall how and where in the console you set something up. Bonus if you have this in git, since it makes it easier to rollback to previous versions should the unexpected happen.
+- _Transportable infrastructure._ Having the IaC template allows us to take what we have in one cloud provider account and replicate it in another cloud provider account. Having separate dev, staging, prod etc. accounts helps reduce the risk of taking something down in prod when you just want to test a code change in a sandbox environment.
+- _Onboarding new engineers is easier._ All they have to do to get their dev environment setup is to clone the repo and deploy it into their sandboxed cloud provider account.
 
 ## How Stackery is helpful...
 
@@ -37,4 +38,4 @@ IaC is helpful for many reasons, including but not limited to:
 
 Getting started in serverless and IaC can feel very daunting at first. It can be tempting to just click through the AWS console to create your cloud resources like many of the “getting started” tutorials recommend; however, I encourage you to sign up for a free trial of Stackery and give us a try. Your teammates, customers, and future self will be happy you made that choice.
 
->Note: This post was originally published on https://www.stackery.io/
+> Note: This post was originally published on https://www.stackery.io/

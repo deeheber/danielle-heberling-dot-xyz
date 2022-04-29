@@ -1,6 +1,6 @@
 ---
 title: Rekognition - Facing My Artificial Intelligence Fears
-date: "2019-07-03T22:12:03.284Z"
+date: '2019-07-03T22:12:03.284Z'
 ---
 
 ![Me in rekognition](./rekognition-me.png)
@@ -10,6 +10,7 @@ Artificial intelligence (henceforth referred to as AI for the rest of this post)
 So like the serverless developer that I am, I decided to scratch the surface by playing around a bit with the AWS service <a href="https://aws.amazon.com/rekognition/" target="_blank" rel="noopener noreferrer">Rekognition</a>. I wanted to see what I could do with it and also to test it’s accuracy.
 
 ## Detect Labels
+
 I began my journey with the detect labels API. To me this was super interesting, because all that I had to do was feed the API an image and the managed AWS service would do all of the heavy lifting and return a list of labels along with the level of confidence in that label. For example it might return something that would suggest “I’m 90% confident there is a dog” in this image.
 
 Stackery and the AWS SDK made this possible for me to build. I set up an S3 Images bucket where uploading an image would trigger my ImageProcessor Lambda function. Then within the ImageProcessor Lambda function, I used the AWS SDK to make calls to Rekognition. For simplicity sake, I decided to just send the results to my Cloudwatch logs. Here’s what that architecture looked like.
@@ -19,6 +20,7 @@ Stackery and the AWS SDK made this possible for me to build. I set up an S3 Imag
 If you'd like to see my code for this stack, you can check it out <a href="https://github.com/deeheber/face-match/tree/detectLabels" target="_blank" rel="noopener noreferrer">here</a>.
 
 ## Compare Faces
+
 Overall, the images that I uploaded were surprisingly accurate in the results returned, so I decided to go a step further. How about I create an application that when I upload an image of a person, it does a comparison through a collection of images of myself to see if there are any face matches? When I spoke about this idea with a coworker, he suggested I use this as a way to unlock a diary. Hardware on the diary takes a picture of me and then if there is a face match, the diary unlocks. Unsure if I’ll do that exact thing with this, but it was a pretty funny idea.
 
 First, I needed to setup a collection that contained pictures of myself. These pictures are the ones that I will be comparing to, so it’s important to get a nice mix of pictures that are reflective of how I would look on an average day. So I opened up my terminal, installed the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html" target="_blank" rel="noopener noreferrer">aws cli</a>, and ran:
@@ -40,6 +42,7 @@ Here’s what that architecture looks like in Stackery:
 You can also take a peek at my source code <a href="https://github.com/deeheber/face-match/tree/compareFaces" target="_blank" rel="noopener noreferrer">here</a>.
 
 ## Circular Dependency Errors
+
 If you take a look at my template.yaml in the detectLabels branch, you’ll see something really bad. <a href="https://github.com/deeheber/face-match/blob/detectLabels/template.yaml#L23" target="_blank" rel="noopener noreferrer">Here's</a> where I'm talking about.
 
 I essentially gave my ImageProcessor function GetObject access to all S3 buckets in my entire AWS account. The best practice is to give the minimal permissions necessary…so I should’ve just given that function GetObject access to my Images S3 bucket.
@@ -49,4 +52,5 @@ The problem that I ran into when I did that was a circular dependency error when
 For demo purposes, I did not update that in the detectLabels branch, but you can see that I fixed that <a href="https://github.com/deeheber/face-match/blob/compareFaces/template.yaml#L49" target="_blank" rel="noopener noreferrer">on this line</a> in the compareFaces branch. Since I already knew what my S3 bucket’s name will be, I place that in there instead of referencing the CloudFormation resource directly. So now, that function no longer has GetObject access to every single S3 bucket in my AWS account...it just has GetObject permission on that specific bucket without a circular dependency error.
 
 ## Closing
+
 Overall my testing has shown that AWS Rekognition is a lot more accurate than I had imagined. Despite this, I do think that it is important to ensure that new technology is representative of everyone especially if we plan to use AI to make decisions/judgements on things that have the potential to leave a large impact on an individual's life. This initial hands off experiment has gotten me more interested in exploring AI further and possibly learning how to create my own AI models in the future.

@@ -13,18 +13,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={siteTitle}>
-      <Seo
-        title={post.frontmatter.title}
-        description={excerpt}
-        canonical={post.frontmatter.canonical}
-      />
+      <Seo title={post.frontmatter.title} description={excerpt} canonical={post.frontmatter.canonical} />
       <h3>{post.frontmatter.title}</h3>
       <p
         style={{
           ...scale(-1 / 5),
           display: 'block',
           marginBottom: rhythm(1),
-          marginTop: rhythm(-1)
+          marginTop: rhythm(-1),
         }}
       >
         {post.frontmatter.date}
@@ -32,7 +28,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{
-          marginBottom: rhythm(1)
+          marginBottom: rhythm(1),
         }}
       />
 
@@ -42,19 +38,19 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           flexWrap: 'wrap',
           justifyContent: 'space-between',
           listStyle: 'none',
-          padding: 0
+          padding: 0,
         }}
       >
         <li>
           {previous && (
-            <Link style={{ boxShadow: 'none' }} to={`/blog${previous.fields.slug}`} rel='prev'>
+            <Link style={{ boxShadow: 'none' }} to={`/blog${previous.fields.slug}`} rel="prev">
               ← {previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link style={{ boxShadow: 'none' }} to={`/blog${next.fields.slug}`} rel='next'>
+            <Link style={{ boxShadow: 'none' }} to={`/blog${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}

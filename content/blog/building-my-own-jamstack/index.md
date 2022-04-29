@@ -1,6 +1,6 @@
 ---
 title: Building My Own Jamstack
-date: "2020-06-26T22:12:03.284Z"
+date: '2020-06-26T22:12:03.284Z'
 ---
 
 The trend of the frontend and backend coming closer together is continuing and even has a name now...the <a href="https://jamstack.org/" target="_blank" rel="noopener noreferrer">Jam stack</a>.
@@ -10,6 +10,7 @@ The trend of the frontend and backend coming closer together is continuing and e
 Building and deploying websites still continues to be a very common use case with folks using AWS, but I personally wanted a more "push button" solution that would also allow me to connect my Stackery backend resources easily. So I've decided to iterate on what we built the last time to make it better.
 
 ### What We Built Last Time
+
 <a href="https://www.danielleheberling.xyz/blog/text-to-speech/" target="_blank" rel="noopener noreferrer">Previously</a>, I wrote an application that translates written text to speech. I was getting tired of having to recall the different API endpoints to hit and wanted a nice UI to better manage these files...so I got to work on building a frontend.
 
 Then I got tired of manually building and uploading those files to S3 for website hosting, so I wrote a Lambda function to do this for me. Here's what the final architecture looked like
@@ -17,16 +18,18 @@ Then I got tired of manually building and uploading those files to S3 for websit
 ![Finished stack](./finishedStack.png)
 
 That is all fine and still works, but keeping up with latest Serverless trends I recognize that writing code in a Lambda function can cause potential unwanted technical debt. What if there was some service that I could just input specific things like:
-  - source code location
-  - build command
-  - built files location
-  - location (an S3 Bucket) to upload the built files
+
+- source code location
+- build command
+- built files location
+- location (an S3 Bucket) to upload the built files
 
 Lucky for us, there's AWS CodeBuild!
 
 So I embarked on the journey of replacing my `PopulateFrontend` Lambda function with a CodeBuild Project.
 
 ### The Easy Push Button Way of Doing this
+
 Stackery released the <a href="https://docs.stackery.io/docs/api/nodes/Website/" target="_blank" rel="noopener noreferrer">Website Resource</a>. Check it out...it's just a matter of dragging and dropping the resource into your stack and providing a few settings (Source Directory, Build Command, and Publish Directory).
 
 ![Website Canvas](./website-resource.png)
@@ -34,6 +37,7 @@ Stackery released the <a href="https://docs.stackery.io/docs/api/nodes/Website/"
 We have a more detailed tutorial <a href="https://docs.stackery.io/docs/tutorials/react-spa-tutorial/" target="_blank" rel="noopener noreferrer">here</a>.
 
 ### Connecting my Frontend to a Backend API
+
 Once your S3 Bucket and Website are on the canvas, add an API too (both HTTP API and original API Gateway work).
 
 ![Website to API](./websiteToApi.png)
@@ -65,15 +69,18 @@ I added an npm script to my `package.json` that executes this script, titled it 
 ![build command setting](./build-command.png)
 
 ### Speeding up the Delivery with a CDN (Optional)
+
 If you want to speed up the delevery of your website, I'd suggest adding a CDN in front of your S3 bucket using Amazon CloudFront. Connect your S3 Bucket to the CDN Origin like this.
 
 ![cdn](./cdn.png)
 
 ### The CodeBuild Job
+
 The rest of this post is going to be a technical deep dive under the hood for those who are interested.
 
 The CodeBuild job does the following:
-1. Installs dependencies  (in my case NodeJS  and NPM)
+
+1. Installs dependencies (in my case NodeJS and NPM)
 2. Copies my source code into the build job container
 3. Executes my build command
 4. Copies the built files into an S3 Bucket
@@ -158,6 +165,7 @@ Website:
 ```
 
 ### Orchestrating the CodeBuild Job
+
 Now that the CodeBuild job is setup, we know how we're going to build the site and publish it to an S3 Bucket. The remaining question is how can we trigger the CodeBuild job to start when the CloudFormation stack is deployed?
 
 My answer to that question was to use a <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html" target="_blank" rel="noopener noreferrer">Custom Resource</a>. The template for it looks like this
@@ -173,11 +181,12 @@ WebsiteBuildTrigger:
     SourceVersion: !Ref SourceVersion
 ```
 
-Note the `Type` starts with `Custom::`...this is  how  CloudFormation knows it's a custom resource.
+Note the `Type` starts with `Custom::`...this is how CloudFormation knows it's a custom resource.
 
 Any time one of the `Properties` changes (in this case the `SourceVersion`), CloudFormation will trigger Lambda function I specify under `ServiceToken`. In this case, it's a Stackery controlled Lambda function in a different CloudFormation stack that has two main jobs:
-  1. Trigger the start of the CodeBuild job
-  2. Report back to CloudFormation when the CodeBuild job succeeds or fails, so CloudFormation knows how to continue  deploying the stack
+
+1. Trigger the start of the CodeBuild job
+2. Report back to CloudFormation when the CodeBuild job succeeds or fails, so CloudFormation knows how to continue deploying the stack
 
 Step 1 is handled directly in the Lambda function via <a href="https://docs.aws.amazon.com/cli/latest/reference/codebuild/start-build.html" target="_blank" rel="noopener noreferrer">this command</a>, but how can we enable the CodeBuild job to report back a success or failure to CloudFormation?
 
@@ -210,6 +219,7 @@ WebsiteEvents:
 When the CodeBuild Project for our Website has a build status of SUCCEEDED, FAILED, FAULT, STOPPED, or TIMED_OUT, the configured CloudWatch Event reports this information back to my custom resource function. My custom resource function then sends the appropriate information to CloudFormation. Once CloudFormation gets a pass/fail response, it knows how to conintue with deploying the stack.
 
 ### Closing
+
 Check out the entire code repository referenced <a href="https://github.com/deeheber/text-to-speech-converter/tree/blog-post-3" target="_blank" rel="noopener noreferrer">here</a>.
 
 There are definitely many different approaches to build and deploy a JavaScript frontend on AWS. I encourage you to investigate everything that's out there and see what works best for you.

@@ -1,7 +1,7 @@
 ---
 title: Using AWS Amplify To Authenticate Users
-date: "2018-10-24T22:12:03.284Z"
-canonical: "https://www.stackery.io/blog/serverlessaws-amplify"
+date: '2018-10-24T22:12:03.284Z'
+canonical: 'https://www.stackery.io/blog/serverlessaws-amplify'
 ---
 
 ![Amplify](./amplify.jpg)
@@ -57,11 +57,12 @@ ReactDOM.render(
 
 The `mandatorySignIn` property is optional, but is a good idea if you are using other AWS resources via Amplify and want to enforce user authentication before accessing those resources.
 
-Also note that for now having a separate config file might seem a bit overkill, but once you add in multiple resources (i.e. Storage, API, Pub Sub etc.)  you’ll want that extra config file to keep things easy to manage.
+Also note that for now having a separate config file might seem a bit overkill, but once you add in multiple resources (i.e. Storage, API, Pub Sub etc.) you’ll want that extra config file to keep things easy to manage.
 
 #### Implementation Overview
 
 The signup flow will look like this:
+
 1. The user submits what they’ll use for login credentials (in this case email and password) via a signup form and a second form to type in a confirmation code will appear.
 2. Behind the scenes the Amplify library will sign the user up in Cognito.
 3. Cognito will send a confirmation code email to the user’s signup email address to verify that the email address is real.
@@ -110,23 +111,23 @@ Before we continue let’s go over a quick edge case. So if our user refreshes t
 So now the user is looking at the confirmation form and has their confirmation code to type in. We’ll need to render the confirmation form. Similar to the signup form it’ll look like a typical form with the exception being the function that is called whenever the user submits the confirmation form. The handleSubmit function for the confirmation form will look similar to this when using Amplify:
 
 ```javascript
- handleConfirmationSubmit = async event => {
-    event.preventDefault();
+handleConfirmationSubmit = async (event) => {
+  event.preventDefault();
 
-    try {
-      await Auth.confirmSignUp(this.state.email, this.state.confirmationCode);
-      await Auth.signIn(this.state.email, this.state.password);
+  try {
+    await Auth.confirmSignUp(this.state.email, this.state.confirmationCode);
+    await Auth.signIn(this.state.email, this.state.password);
 
-      this.props.isAuthenticated(true);
-      this.props.history.push("/");
-    } catch (event) {
-      alert(event.message);
-    }
+    this.props.isAuthenticated(true);
+    this.props.history.push('/');
+  } catch (event) {
+    alert(event.message);
   }
+};
 ```
 
 So it is taking in the form data, using Amplify to confirm the user’s email address via the conformation code and signing in the user if successful. You can then verify if a user is signed in via props at the route level if you’d like. In this case, I arbitrarily named it `isAuthenticated` and redirected the user to the root path.
 
 The complete docs for using the Auth feature of Amplify can be <a href="https://aws-amplify.github.io/docs/js/authentication" target="_blank" rel="noopener noreferrer">found here</a>. We’ve only scratched the surface in this post, so go forth and explore the all of the different features that Amplify has to offer. I’ve found it has a very nice declarative syntax and is very readable for folks who are new to a codebase. For building further on your React-based serverless applications, I highly recommend Stackery for <a href="https://www.stackery.io/product/" target="_blank" rel="noopener noreferrer">managing all of your serverless infrastructure</a> backed up by seamless, git-based version control.
 
->Note: This post was originally published on https://www.stackery.io/
+> Note: This post was originally published on https://www.stackery.io/

@@ -1,11 +1,12 @@
 ---
 title: The Secret Lives of Failed SQS Messages
-date: "2019-09-18T22:12:03.284Z"
-canonical: "https://www.stackery.io/blog/secret-lives-of-failed-sqs-messages"
+date: '2019-09-18T22:12:03.284Z'
+canonical: 'https://www.stackery.io/blog/secret-lives-of-failed-sqs-messages'
 ---
 
 ![Mailbox](./mailbox.jpg)
->Photo by Samuel Zeller on Unsplash
+
+> Photo by Samuel Zeller on Unsplash
 
 A common pattern in serverless architecture is to have a queue before a function. This is great because you can create a second queue for all of the messages that failed in the function execution (or, if we want to put it in terms that don’t sound like we’re aggressively shaming them, we can classify them as having “encountered an error at some point”). This second queue is known as a “dead letter queue” or DLQ for short. If messages arrive in the DLQ, you can analyze what might have caused the error by reviewing any relevant logs, making changes to your stack, and running a redrive function to retry those messages. DLQs are useful for debugging your serverless application because they let you isolate problem-messages to determine why their processing isn’t working.
 
@@ -28,24 +29,25 @@ In the event that something goes wrong during the function execution, I set up a
 I added a RedrivePolicy to the original SQS queue to point those failed messages to my DLQ by adding some <a href="https://aws.amazon.com/cloudformation/" target="_blank" rel="noopener noreferrer">Cloudformation</a> in my template.yaml:
 
 ```yaml
- Queue:
-    Type: AWS::SQS::Queue
-    Properties:
-      QueueName: !Sub ${AWS::StackName}-Queue
-      RedrivePolicy:
-        deadLetterTargetArn: !GetAtt DeadLetterQueue.Arn
-        maxReceiveCount: 3
+Queue:
+  Type: AWS::SQS::Queue
+  Properties:
+    QueueName: !Sub ${AWS::StackName}-Queue
+    RedrivePolicy:
+      deadLetterTargetArn: !GetAtt DeadLetterQueue.Arn
+      maxReceiveCount: 3
 ```
 
-By default, the queue’s message retention period is 4 days. I wanted to give myself some extra time to review the messages in the DLQ, so I upped the MessageRetentionPeriod on my DLQ to the max allowed 14 days like this in my template.yaml. This is the sci-fi beauty of my profession: creating *more time* is possible! As many before me have discussed on the floor of a dorm room, time is a malleable concept— and at least in software engineering, it has a practical purpose like gaining more days to review DLQ messages. Note that the values are in seconds:
+By default, the queue’s message retention period is 4 days. I wanted to give myself some extra time to review the messages in the DLQ, so I upped the MessageRetentionPeriod on my DLQ to the max allowed 14 days like this in my template.yaml. This is the sci-fi beauty of my profession: creating _more time_ is possible! As many before me have discussed on the floor of a dorm room, time is a malleable concept— and at least in software engineering, it has a practical purpose like gaining more days to review DLQ messages. Note that the values are in seconds:
 
 ```yaml
- DeadLetterQueue:
-    Type: AWS::SQS::Queue
-    Properties:
-      QueueName: !Sub ${AWS::StackName}-DeadLetterQueue
-      MessageRetentionPeriod: 1209600
+DeadLetterQueue:
+  Type: AWS::SQS::Queue
+  Properties:
+    QueueName: !Sub ${AWS::StackName}-DeadLetterQueue
+    MessageRetentionPeriod: 1209600
 ```
+
 ## Redrive Function Content
 
 Now that the base architecture is all set up, let’s take a look inside the redrive function. This is how I decided to set mine up, but keep in mind that there are many different ways you can do this:
@@ -63,7 +65,7 @@ Here’s what the code looks like written in nodeJS:
 const aws = require('aws-sdk');
 const sqs = new aws.SQS();
 
-exports.handler = async event => {
+exports.handler = async (event) => {
   // Log the event argument for debugging and for use in local development.
   console.log(JSON.stringify(event, undefined, 2));
 
@@ -73,7 +75,7 @@ exports.handler = async event => {
       const receiveParams = {
         QueueUrl: process.env.DLQ_URL,
         MaxNumberOfMessages: 10,
-        WaitTimeSeconds: 1
+        WaitTimeSeconds: 1,
       };
 
       // Get messages from the DLQ
@@ -92,7 +94,7 @@ exports.handler = async event => {
         // Send message to original queue
         const outboundMessage = {
           MessageBody: message.Body,
-          QueueUrl: process.env.QUEUE_URL
+          QueueUrl: process.env.QUEUE_URL,
         };
 
         console.log(`SENDING: ${JSON.stringify(outboundMessage, null, 2)}`);
@@ -102,7 +104,7 @@ exports.handler = async event => {
         // Delete message from DLQ
         const deleteParams = {
           QueueUrl: process.env.DLQ_URL,
-          ReceiptHandle: message.ReceiptHandle
+          ReceiptHandle: message.ReceiptHandle,
         };
 
         console.log(`DELETING: ${JSON.stringify(deleteParams, null, 2)}`);
@@ -117,6 +119,7 @@ exports.handler = async event => {
   }
 };
 ```
+
 ### What to keep in mind when setting up a redrive function.
 
 #### Receive message step
@@ -135,4 +138,4 @@ For a solid and succinct description of the benefits of a DLQ (alongside lots of
 
 **Update December 1, 2021** - AWS has added the ability to redrive your SQS messages in the console. See [here](https://aws.amazon.com/about-aws/whats-new/2021/12/amazon-sqs-dead-letter-queue-management-experience-queues/) for more information.
 
->Note: This post was originally published on https://www.stackery.io/
+> Note: This post was originally published on https://www.stackery.io/

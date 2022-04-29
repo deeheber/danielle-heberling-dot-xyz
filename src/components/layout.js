@@ -6,7 +6,7 @@ import Footer from './footer';
 import { rhythm, scale } from '../utils/typography';
 
 class Layout extends Component {
-  render () {
+  render() {
     const { title, children } = this.props;
 
     const header = (
@@ -14,15 +14,15 @@ class Layout extends Component {
         <Link
           style={{
             boxShadow: 'none',
-            textDecoration: 'none'
+            textDecoration: 'none',
           }}
-          to='/'
+          to="/"
         >
           <h1
             style={{
               ...scale(1.5),
               margin: '0 auto',
-              fontSize: '3.25rem'
+              fontSize: '3.25rem',
             }}
           >
             {title}
@@ -39,11 +39,16 @@ class Layout extends Component {
           marginLeft: 'auto',
           marginRight: 'auto',
           maxWidth: rhythm(40),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
         <header>{header}</header>
-        <main style={{ borderBottom: '0.05rem solid white', marginBottom: `1.5rem` }}>
+        <main
+          style={{
+            borderBottom: '0.05rem solid white',
+            marginBottom: `1.5rem`,
+          }}
+        >
           {children}
         </main>
         <Footer />

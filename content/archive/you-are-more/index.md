@@ -1,6 +1,6 @@
 ---
 title: You Are More Than Your Tech Choices
-date: "2021-05-22T21:12:03.284Z"
+date: '2021-05-22T21:12:03.284Z'
 ---
 
 If you know me, you've probably noticed that my technical specialities lately have been JavaScript and AWS Serverless.
@@ -10,9 +10,11 @@ As a software developer with a few years of experience, recruiters often message
 ...sure I've read Python before and know a tiny bit, but my imposter syndrome immediately kicked in and I wondered if I'd be good enough. I then started reflecting on who I am as a developer and if I'd miss being primarily a JavaScript developer.
 
 ## Looking Around
+
 In my experience both online and offline when you get a group of software developers together, people have opinions. Strong opinions that sometimes transform into a way that people self identify as a developer.
 
 Here's some examples of said opinions:
+
 - Monolith vs Microservices
 - Containers vs Serverless
 - Language X vs Language Y
@@ -24,6 +26,7 @@ Here's some examples of said opinions:
 Some of these online and offline personalities even get extreme to the point of identifying as a "JavaScript developer", "the GraphQL guy", etc etc. and then only speaking on that topic.
 
 ## Self Reflection
+
 My initial hesitation of applying for that Python job got me thinking "how much of my identity as a developer is tied to the technological choices and tools that I use?"
 
 ...turns out it was quite a lot.
@@ -35,6 +38,7 @@ Non-software engineer customers don't care if you used the latest and greatest f
 So this got me thinking more about what really matters to me as a developer.
 
 ## What Really Matters (to me)
+
 We're more than the tools that we choose to use as software developers. Technology is always changing, so those latest and greatest tools you're using today might not be the greatest in a few years. Instead of focusing on the tools, we should be focusing on why we're here.
 
 One thing that will always be around are 1) coworkers and 2) customers, so I've shifted my professional focus to center around these two things.
