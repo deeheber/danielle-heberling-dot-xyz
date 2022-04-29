@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-function Seo ({ canonical, description, lang, meta, keywords, title }) {
+function Seo({ canonical, description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         // Social image stuff
-        let origin = "";
-        if (typeof window !== "undefined") {
+        let origin = '';
+        if (typeof window !== 'undefined') {
           origin = window.location.origin;
         }
         const imageSrc = data.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src;
@@ -21,63 +21,59 @@ function Seo ({ canonical, description, lang, meta, keywords, title }) {
         return (
           <Helmet
             htmlAttributes={{
-              lang
+              lang,
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            link={
-              canonical
-                ? [{ rel: 'canonical', key: canonical, href: canonical }]
-                : []
-            }
+            link={canonical ? [{ rel: 'canonical', key: canonical, href: canonical }] : []}
             meta={[
               {
                 name: 'description',
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: 'og:title',
-                content: title
+                content: title,
               },
               {
                 property: 'og:description',
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: 'og:type',
-                content: 'website'
+                content: 'website',
               },
               {
                 property: 'og:image',
-                content: image
+                content: image,
               },
               {
                 name: 'twitter:card',
-                content: 'summary'
+                content: 'summary',
               },
               {
                 name: 'twitter:image',
-                content: image
+                content: image,
               },
               {
                 name: 'twitter:creator',
-                content: data.site.siteMetadata.author
+                content: data.site.siteMetadata.author,
               },
               {
                 name: 'twitter:title',
-                content: title
+                content: title,
               },
               {
                 name: 'twitter:description',
-                content: metaDescription
-              }
+                content: metaDescription,
+              },
             ]
               .concat(
                 keywords.length > 0
                   ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
+                      name: 'keywords',
+                      content: keywords.join(', '),
+                    }
                   : []
               )
               .concat(meta)}
@@ -91,7 +87,7 @@ function Seo ({ canonical, description, lang, meta, keywords, title }) {
 Seo.defaultProps = {
   lang: 'en',
   meta: [],
-  keywords: []
+  keywords: [],
 };
 
 Seo.propTypes = {
@@ -100,7 +96,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default Seo;
@@ -109,11 +105,7 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     thumbnail: file(absolutePath: { regex: "/d-icon.png/" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: FIXED
-          width: 400
-          height: 400
-        )
+        gatsbyImageData(layout: FIXED, width: 400, height: 400)
       }
     }
     site {

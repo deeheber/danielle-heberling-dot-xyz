@@ -18,10 +18,7 @@ const BlogIndex = ({ pageContext, data }) => {
 
   return (
     <Layout title={siteTitle}>
-      <Seo
-        title='All posts'
-        keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']}
-      />
+      <Seo title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']} />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         const excerpt = node.excerpt.replace(/Photo by (.*?) on Unsplash/i, '');
@@ -29,7 +26,7 @@ const BlogIndex = ({ pageContext, data }) => {
           <div key={node.fields.slug}>
             <h3
               style={{
-                marginBottom: rhythm(1 / 4)
+                marginBottom: rhythm(1 / 4),
               }}
             >
               <Link style={{ boxShadow: 'none' }} to={`/blog${node.fields.slug}`}>
@@ -37,7 +34,7 @@ const BlogIndex = ({ pageContext, data }) => {
               </Link>
             </h3>
             <div style={{ color: '#707B7C' }}>
-              <small>{node.frontmatter.date}  — </small>
+              <small>{node.frontmatter.date} — </small>
               <small>{node.timeToRead} min read</small>
             </div>
             <p style={{ marginBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: excerpt }} />
@@ -53,16 +50,16 @@ const BlogIndex = ({ pageContext, data }) => {
       <div
         style={{
           display: 'flex',
-          flexWrap: 'wrap'
+          flexWrap: 'wrap',
         }}
       >
         {!isFirst && (
-          <Link to={prevPage} rel='prev' style={{ boxShadow: 'none' }}>
+          <Link to={prevPage} rel="prev" style={{ boxShadow: 'none' }}>
             ← Previous Page
           </Link>
         )}
         {!isLast && (
-          <Link to={nextPage} rel='next' style={{ boxShadow: 'none', marginLeft: 'auto' }}>
+          <Link to={nextPage} rel="next" style={{ boxShadow: 'none', marginLeft: 'auto' }}>
             Next Page →
           </Link>
         )}
@@ -74,17 +71,13 @@ const BlogIndex = ({ pageContext, data }) => {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query pageQuery($skip: Int!, $limit: Int!){
+  query pageQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-      ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: $limit, skip: $skip) {
       edges {
         node {
           excerpt(pruneLength: 280)
