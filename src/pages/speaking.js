@@ -14,6 +14,16 @@ const Speaking = ({ data }) => {
       <div>
         <h3>2022</h3>
         <p>
+          <a href="https://youtu.be/_kY7o3De_9A?t=15557" target="_blank" rel="noopener noreferrer">
+            What I learned going from AWS SAM to CDK
+          </a>
+        </p>
+        <p>
+          <a href="https://youtu.be/Ey7bNVT4W1g?t=10181" target="_blank" rel="noopener noreferrer">
+            The local cloud, ideas to ensure developer productivity in serverless architectures
+          </a>
+        </p>
+        <p>
           <a href="https://www.youtube.com/watch?v=7QP5jdXb8WA" target="_blank" rel="noopener noreferrer">
             Serverless Architecture, an Honest Conversation
           </a>
