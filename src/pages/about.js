@@ -37,8 +37,9 @@ const About = ({ data }) => {
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          Currently loving TypeScript/JavaScript, GraphQL, AWS SAM, and AWS CDK, but I'm open to learning new
-          languages and technologies if it makes sense for the project/team, or matches my interest.
+          Lately, I've been enjoying mostly using Typescript, GraphQL, and AWS serverless services; however,
+          I'm always open to learn new technologies if it makes sense for the project/team and/or matches my
+          interest.
         </p>
         <p>
           The information on this site serves as a personal reminder of my commitment to life long learning,
