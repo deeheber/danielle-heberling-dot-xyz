@@ -3,18 +3,20 @@ title: Making the Switch - Software Development on Pop!_OS
 date: '2022-08-04T10:12:03.284Z'
 ---
 
+![Pop_OS Logo](./pop_os.png)
+
 ## My Background
 
-Disclaimer: this post details my personal experiences using Pop!\_OS for software development. Depending on your needs and tool chains, it's possible your experience might differ. For this reason, here's the tools that I generally use for software development:
+_Disclaimer:_ this post details my experiences using Pop!\_OS for software development. Depending on your needs, it's possible your experience might differ. For this reason, here's the tools that I generally use for software development:
 
-- Node/JavaScript/TypeScript
+- Node.js/JavaScript/TypeScript
 - AWS Serverless services
 - AWS SAM
 - AWS CDK
 
 ## Why Switch Away from macOS?
 
-Apple does a wonderful job of controlling the entire ecosystem for its devices. This is can be good since things "just work". But, if you want to go beyond that and want more flexibility it might not be the best choice.
+Apple does a wonderful job of controlling the entire ecosystem for its devices. This is can be good since things "just work." But, if you want to go beyond that and want more flexibility it might not be the best choice.
 
 I was finding myself wanting to be able to upgrade my computer's RAM quite a few times. Many Apple devices solder it to the logic board. You then have the option of 1. Buying a new logic board (almost the cost of a new computer) or 2. Buying a new computer. I didn't like these choices and decided to check out alternatives.
 
@@ -26,9 +28,9 @@ The last time I used a Windows machine was Windows XP. A lot has changed since t
 
 This is what gave me the idea to check out Linux. It's open source and there's many different distros one can choose. Plus, I was already familiar with the command line.
 
-I settled on Pop!\_OS because:
+I settled on [Pop!\_OS](https://pop.system76.com/) because:
 
-- it's based on Ubuntu, a very common distro that has lots of documentation and an active community
+- it's based on Ubuntu, a very common distro that has a lot of documentation and an active community
 - it had a very similar UI to macOS - what I'm already familiar with
 - I could use `apt-get` to install or I could use the Pop!\_Shop that comes with this distro (like the Mac App store)
 
@@ -46,6 +48,6 @@ Here's what I installed on my new Pop!\_OS machine for software development:
 
 If you use similar tools that I do, you'll notice that not much has changed to install things. You have to follow the Linux (sometimes Ubuntu) specific directions.
 
-If you would also like to get out of Apple's "walled garden", I'd recommend trying Pop!\_OS. I've been using it as my daily driver now for about a year and have not had many issues. I'll admit, I was very hesitant since I was familiar with macOS...but this has been a great upgrade in my life.
+If you would also like to get out of Apple's "walled garden," I'd recommend trying Pop!\_OS. I've been using it as my daily driver now for about a year and have not had many issues. I'll admit, I was initially very hesitant since I was familiar with macOS...but this has been a great upgrade in my life.
 
 Perhaps next year will be the year of Linux on the desktop. 😝
