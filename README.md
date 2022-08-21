@@ -6,6 +6,8 @@
 
 This is the source code for my personal blog website https://www.danielleheberling.xyz Feel free to submit a PR for any improvements and especially if you see any typos in my posts.
 
+Note that I've mostly just used the Gatsby starter, so some of the code in this repo might [not be reflective of my personal coding style](https://github.com/deeheber/danielle-heberling-dot-xyz/issues/11).
+
 ## 🚀 Quick start
 
 1.  **Clone the repository**

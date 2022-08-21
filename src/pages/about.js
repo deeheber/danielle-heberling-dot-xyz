@@ -21,15 +21,7 @@ const About = ({ data }) => {
           them better.
         </p>
         <p>
-          Career wise, I used to work in tech support for{' '}
-          <a href="https://support.apple.com/" target="_blank" rel="noopener noreferrer">
-            AppleCare
-          </a>{' '}
-          and later{' '}
-          <a href="https://www.squarespace.com/" target="_blank" rel="noopener noreferrer">
-            Squarespace
-          </a>
-          . I enjoyed helping customers; however, I felt that my job centered around asking an engineer to fix
+          Career wise, I used to work in tech support. I enjoyed helping customers; however, I felt that my job centered around asking an engineer to fix
           a bug or UX issue.
         </p>
         <p>
