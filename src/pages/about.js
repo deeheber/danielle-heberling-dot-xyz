@@ -21,21 +21,19 @@ const About = ({ data }) => {
           them better.
         </p>
         <p>
-          Career wise, I used to work in tech support. I enjoyed helping customers; however, I felt that my job centered around asking an engineer to fix
-          a bug or UX issue.
+          Career wise, I used to work in tech support. I enjoyed helping customers; however, I felt that my job centered around asking engineers to fix bugs.
         </p>
         <p>
           Because of my desire to provide a better customer experience and to take matters into my own hands,
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          Lately, I've been enjoying mostly using Typescript, GraphQL, and AWS serverless services; however,
-          I'm always open to learn new technologies if it makes sense for the project/team and/or matches my
-          interest.
+          Lately, I've been enjoying using Typescript, GraphQL, and AWS; however,
+          I'm open to learning new technologies if it makes sense for the project or matches my interest.
         </p>
         <p>
           The information on this site serves as a personal reminder of my commitment to life long learning,
-          improvement, creating things, and knowledge sharing. Feel free to reach out anytime.
+          improvement, creating things, and knowledge sharing.
         </p>
         <p>
           Since technology is always evolving, disclaimer that older content might contain out of date
