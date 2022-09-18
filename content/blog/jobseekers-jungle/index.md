@@ -21,7 +21,7 @@ The hiring manager reached out to me on LinkedIn. The tech stack and company loo
 
 I decided to trust him and agreed to continue in the interview process. I then spent many hours on a take home assignment with a follow up video interview with two engineers.
 
-After the final interview, I got a job offer! It was great news until it wasn't. Taking a look at the single health insurance plan that they offered, I had to seek out care in a state across the country to be "in netwok." Note the job posting was for a remote location.
+After the final interview, I got a job offer! It was great news until it wasn't. Taking a look at the single health insurance plan that they offered, I had to seek out care in a state across the country to be "in network." Note the job posting was for a remote location.
 
 I declined the offer, disappointed that both my time and interviewers' time was wasted.
 
