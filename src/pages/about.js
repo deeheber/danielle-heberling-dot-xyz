@@ -28,7 +28,7 @@ const About = ({ data }) => {
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          I've enjoy using Typescript, GraphQL, and AWS serverless services. In the day job, I get paid to write code that ships in containers. I'm always open to learning new technologies if it makes sense for the project or matches my interest.
+          I enjoy using Typescript, GraphQL, and AWS serverless services. In the day job, I get paid to write code that ships in containers. I'm always open to learning new technologies if it makes sense for the project or matches my interest.
         </p>
         <p>
           The information on this site serves as a personal reminder of my commitment to life long learning,
