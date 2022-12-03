@@ -40,9 +40,9 @@ With that, here's a bulleted list of other things I'd like to see in the future:
 - A way to use this outside of the AWS console - Some organizations restrict access to the console for regulatory reasons. Something like an IDE extension might help.
 - Amazon VPC resource - RDS requires a VPC.
 - AWS AppSync resource - GraphQL is amazing for mobile applications (and other use cases).
-- AWS Step Function resource with integration into Workflow Studio - Allows for easier usage of a service that is often recommended by AWS employees to use in serverless applications.
+- AWS Step Function resource integration into Workflow Studio - Allows for easier usage of a service that is often recommended by AWS employees to use in serverless applications.
 - One button push deployment from the console - It's great as is with
-  <a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/accelerate.html" target="_blank" rel="noopener noreferrer">AWS SAM accelerate</a>...but I'd love to see it be easier.
+  <a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/accelerate.html" target="_blank" rel="noopener noreferrer"> AWS SAM accelerate</a>...but I'd love to see it be easier.
 
 If you have any suggestions, I recommend using the "submit feedback" link in the console with details as to why you want x feature. The team wants to hear your feedback and is actively using it to improve the product.
 
