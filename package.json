@@ -8,7 +8,7 @@
     "url": "https://github.com/deeheber/danielle-heberling-dot-xyz/issues"
   },
   "engine": {
-    "node": ">=16.17.0"
+    "node": ">=18.12.1"
   },
   "dependencies": {
     "gatsby": "^4.23.0",
