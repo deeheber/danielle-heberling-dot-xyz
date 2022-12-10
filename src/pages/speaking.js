@@ -18,6 +18,15 @@ const Speaking = ({ data }) => {
             marginBottom: 0,
           }}
         >
+          <a href="https://www.youtube.com/watch?v=ameuy2BbphE&t=1s" target="_blank" rel="noopener noreferrer">
+            Post AWS re:Invent recap with #reInventHunt
+          </a>
+        </p>
+        <p
+          style={{
+            marginBottom: 0,
+          }}
+        >
           <a href="https://youtu.be/_kY7o3De_9A?t=15557" target="_blank" rel="noopener noreferrer">
             What I learned going from AWS SAM to CDK
           </a>
