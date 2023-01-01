@@ -9,7 +9,23 @@ const Speaking = ({ data }) => {
 
   return (
     <Layout title={siteMetadata.title}>
-      <Seo title="Speaking" keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']} />
+      <Seo
+        title="Speaking"
+        keywords={[
+          'blog',
+          'gatsby',
+          'javascript',
+          'react',
+          'serverless',
+          'software development',
+          'software engineer',
+          'software engineering',
+          'software engineer blog',
+          'cloud',
+          'devops',
+          'aws',
+        ]}
+      />
 
       <div>
         <h3>2022</h3>

@@ -115,8 +115,6 @@ module.exports = {
         icon: 'content/assets/d-icon.png',
       },
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-helmet-canonical-urls',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-typography',

@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
-function Seo({ canonical, description, lang, meta, keywords, title }) {
+function Seo({ canonical, description, keywords = [], title }) {
   const data = useStaticQuery(graphql`
     query DefaultSEOQuery {
       thumbnail: file(absolutePath: { regex: "/d-icon.png/" }) {
@@ -27,88 +25,34 @@ function Seo({ canonical, description, lang, meta, keywords, title }) {
     origin = window.location.origin;
   }
   const imageSrc = data.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src;
+  /**
+   * TODO: make this unique to the thumbnail image for each blog post (if applicable)
+   *
+   * For now, we use the favicon image for all blog posts.
+   *
+   * See: https://github.com/deeheber/danielle-heberling-dot-xyz/issues/22
+   */
   const image = `${origin}${imageSrc}`;
 
   const metaDescription = description || data.site.siteMetadata.description;
 
   return (
     <>
-      <Helmet
-        htmlAttributes={{
-          lang,
-        }}
-        title={title}
-        titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-        link={canonical ? [{ rel: 'canonical', key: canonical, href: canonical }] : []}
-        meta={[
-          {
-            name: 'description',
-            content: metaDescription,
-          },
-          {
-            property: 'og:title',
-            content: title,
-          },
-          {
-            property: 'og:description',
-            content: metaDescription,
-          },
-          {
-            property: 'og:type',
-            content: 'website',
-          },
-          {
-            property: 'og:image',
-            content: image,
-          },
-          {
-            name: 'twitter:card',
-            content: 'summary',
-          },
-          {
-            name: 'twitter:image',
-            content: image,
-          },
-          {
-            name: 'twitter:creator',
-            content: data.site.siteMetadata.author,
-          },
-          {
-            name: 'twitter:title',
-            content: title,
-          },
-          {
-            name: 'twitter:description',
-            content: metaDescription,
-          },
-        ]
-          .concat(
-            keywords.length > 0
-              ? {
-                  name: 'keywords',
-                  content: keywords.join(', '),
-                }
-              : []
-          )
-          .concat(meta)}
-      />
+      <title>{title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content={image} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:creator" content={data.site.siteMetadata.author} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     </>
   );
 }
-
-Seo.defaultProps = {
-  lang: 'en',
-  meta: [],
-  keywords: [],
-};
-
-Seo.propTypes = {
-  canonical: PropTypes.string,
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-};
 
 export default Seo;

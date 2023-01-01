@@ -10,7 +10,23 @@ const About = ({ data }) => {
 
   return (
     <Layout title={siteMetadata.title}>
-      <Seo title="About" keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']} />
+      <Seo
+        title="About"
+        keywords={[
+          'blog',
+          'gatsby',
+          'javascript',
+          'react',
+          'serverless',
+          'software development',
+          'software engineer',
+          'software engineering',
+          'software engineer blog',
+          'cloud',
+          'devops',
+          'aws',
+        ]}
+      />
       <h3>Nice to meet you.</h3>
       <div>
         <div style={{ float: 'left', paddingRight: '1.5rem' }}>
