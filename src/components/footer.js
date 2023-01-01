@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDev, FaGithub, FaLinkedin, FaMedium, FaRss, FaTwitter } from 'react-icons/fa';
+import { FaDev, FaGithub, FaLinkedin, FaRss, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
   const socialStyle = {
@@ -47,15 +47,6 @@ function Footer() {
           aria-label="linkedin link"
         >
           <FaDev size={35} />
-        </a>
-        <a
-          style={socialStyle}
-          href="https://medium.com/@deeheber"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="linkedin link"
-        >
-          <FaMedium size={35} />
         </a>
         <a
           style={socialStyle}
