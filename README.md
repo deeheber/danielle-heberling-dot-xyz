@@ -19,13 +19,13 @@ Note that I've mostly just used the Gatsby starter, so some of the code in this 
 
 1.  **Start developing.**
 
-    This site is built with the latest NodeJS LTS (current 18.x.x) in mind. Other version might work, but it's not guaranteed.
+    This site is built with the nodeJS version specified in the `.nvmrc` in mind. Other version might work, but it's not guaranteed.
 
     Navigate into the site’s directory and start it up.
 
     ```sh
     cd danielle-heberling-dot-xyz/
-    npm i --legacy-peer-deps
+    npm i
     npm start
     ```
 

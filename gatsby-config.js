@@ -80,9 +80,8 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
+                allMarkdownRemark(sort: {frontmatter:
+                  {date: DESC}}) {
                   edges {
                     node {
                       excerpt
@@ -116,8 +115,6 @@ module.exports = {
         icon: 'content/assets/d-icon.png',
       },
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-helmet-canonical-urls',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-typography',

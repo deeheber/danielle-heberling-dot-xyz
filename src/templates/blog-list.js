@@ -18,7 +18,23 @@ const BlogIndex = ({ pageContext, data }) => {
 
   return (
     <Layout title={siteTitle}>
-      <Seo title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']} />
+      <Seo
+        title="All posts"
+        keywords={[
+          'blog',
+          'gatsby',
+          'javascript',
+          'react',
+          'serverless',
+          'software development',
+          'software engineer',
+          'software engineering',
+          'software engineer blog',
+          'cloud',
+          'devops',
+          'aws',
+        ]}
+      />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         const excerpt = node.excerpt.replace(/Photo by (.*?) on Unsplash/i, '');
@@ -77,7 +93,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: $limit, skip: $skip) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
       edges {
         node {
           excerpt(pruneLength: 280)

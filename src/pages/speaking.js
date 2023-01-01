@@ -9,7 +9,23 @@ const Speaking = ({ data }) => {
 
   return (
     <Layout title={siteMetadata.title}>
-      <Seo title="Speaking" keywords={['blog', 'gatsby', 'javascript', 'react', 'serverless']} />
+      <Seo
+        title="Speaking"
+        keywords={[
+          'blog',
+          'gatsby',
+          'javascript',
+          'react',
+          'serverless',
+          'software development',
+          'software engineer',
+          'software engineering',
+          'software engineer blog',
+          'cloud',
+          'devops',
+          'aws',
+        ]}
+      />
 
       <div>
         <h3>2022</h3>
@@ -18,7 +34,11 @@ const Speaking = ({ data }) => {
             marginBottom: 0,
           }}
         >
-          <a href="https://www.youtube.com/watch?v=ameuy2BbphE&t=1s" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.youtube.com/watch?v=ameuy2BbphE&t=1s"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Post AWS re:Invent recap with #reInventHunt
           </a>
         </p>
