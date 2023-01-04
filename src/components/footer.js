@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaDev, FaGithub, FaLinkedin, FaRss, FaTwitter } from 'react-icons/fa';
+import { SiPolywork } from 'react-icons/si';
 
 function Footer() {
   const socialStyle = {
@@ -32,6 +33,15 @@ function Footer() {
         </a>
         <a
           style={socialStyle}
+          href="https://www.polywork.com/deeheber"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="polywork link"
+        >
+          <SiPolywork size={35} />
+        </a>
+        <a
+          style={socialStyle}
           href="https://www.linkedin.com/in/deeheber"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,7 +54,7 @@ function Footer() {
           href="https://dev.to/deeheber"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="linkedin link"
+          aria-label="dev.to link"
         >
           <FaDev size={35} />
         </a>
