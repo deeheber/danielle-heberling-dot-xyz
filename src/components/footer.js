@@ -9,65 +9,29 @@ function Footer() {
     cursor: 'pointer',
   };
 
+  const data = [
+    { link: 'https://twitter.com/deeheber', aria: 'twitter link', icon: <FaTwitter size={35} /> },
+    { link: 'https://github.com/deeheber', aria: 'github link', icon: <FaGithub size={35} /> },
+    { link: 'https://www.polywork.com/deeheber', aria: 'polywork link', icon: <SiPolywork size={35} /> },
+    { link: 'https://www.linkedin.com/in/deeheber', aria: 'linkedin link', icon: <FaLinkedin size={35} /> },
+    { link: 'https://dev.to/deeheber', aria: 'dev.to link', icon: <FaDev size={35} /> },
+    { link: '/rss.xml', aria: 'rss feed', icon: <FaRss size={35} /> },
+  ];
+
   return (
     <footer>
-      {/* TODO: Programically create these nodes */}
-      <div>
+      {data.map((item) => (
         <a
+          key={item.aria}
           style={socialStyle}
-          href="https://twitter.com/deeheber"
+          href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="twitter link"
+          aria-label={item.aria}
         >
-          <FaTwitter size={35} />
+          {item.icon}
         </a>
-        <a
-          style={socialStyle}
-          href="https://github.com/deeheber"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="github link"
-        >
-          <FaGithub size={35} />
-        </a>
-        <a
-          style={socialStyle}
-          href="https://www.polywork.com/deeheber"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="polywork link"
-        >
-          <SiPolywork size={35} />
-        </a>
-        <a
-          style={socialStyle}
-          href="https://www.linkedin.com/in/deeheber"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="linkedin link"
-        >
-          <FaLinkedin size={35} />
-        </a>
-        <a
-          style={socialStyle}
-          href="https://dev.to/deeheber"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="dev.to link"
-        >
-          <FaDev size={35} />
-        </a>
-        <a
-          style={socialStyle}
-          href="/rss.xml"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="rss feed"
-        >
-          <FaRss size={35} />
-        </a>
-      </div>
+      ))}
     </footer>
   );
 }
