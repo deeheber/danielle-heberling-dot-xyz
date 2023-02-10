@@ -11,20 +11,20 @@
     "node": ">=18.12.1"
   },
   "dependencies": {
-    "gatsby": "^5.3.3",
-    "gatsby-plugin-feed": "^5.3.1",
-    "gatsby-plugin-image": "^3.3.2",
-    "gatsby-plugin-manifest": "^5.3.1",
-    "gatsby-plugin-sharp": "^5.3.2",
-    "gatsby-plugin-typography": "^5.3.0",
-    "gatsby-remark-copy-linked-files": "^6.3.0",
-    "gatsby-remark-images": "^7.3.1",
-    "gatsby-remark-prismjs": "^7.3.0",
-    "gatsby-remark-responsive-iframe": "^6.3.0",
-    "gatsby-remark-smartypants": "^6.3.0",
-    "gatsby-source-filesystem": "^5.3.1",
-    "gatsby-transformer-remark": "^6.3.2",
-    "gatsby-transformer-sharp": "^5.3.1",
+    "gatsby": "^5.6.0",
+    "gatsby-plugin-feed": "^5.6.0",
+    "gatsby-plugin-image": "^3.6.0",
+    "gatsby-plugin-manifest": "^5.6.0",
+    "gatsby-plugin-sharp": "^5.6.0",
+    "gatsby-plugin-typography": "^5.6.0",
+    "gatsby-remark-copy-linked-files": "^6.6.0",
+    "gatsby-remark-images": "^7.6.0",
+    "gatsby-remark-prismjs": "^7.6.0",
+    "gatsby-remark-responsive-iframe": "^6.6.0",
+    "gatsby-remark-smartypants": "^6.6.0",
+    "gatsby-source-filesystem": "^5.6.0",
+    "gatsby-transformer-remark": "^6.6.0",
+    "gatsby-transformer-sharp": "^5.6.0",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,7 +36,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.4"
   },
   "homepage": "https://github.com/deeheber/danielle-heberling-dot-xyz/blob/master/README.md",
   "keywords": [
