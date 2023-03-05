@@ -15,11 +15,11 @@ Former residents of Portland created a website, [isitsnowinginpdx.com](http://is
 
 After moving out of Portland into the suburbs, I noticed that the site was not as accurate, so I decided to build my own site [isitsnowinginhillsboro.com](http://isitsnowinginhillsboro.com/).
 
-## Architecture Walkthrough
+## Architecture Overview
 
 Behind the scenes, this site is using AWS Serverless technologies. [S3](https://aws.amazon.com/s3/) hosts site assets, a [Step Function](https://aws.amazon.com/step-functions/) updates the site, and [EventBridge Scheduler](https://aws.amazon.com/eventbridge/scheduler/) triggers the Step Function every 10 minutes.
 
-I made the decision to not put [CloudFront](https://aws.amazon.com/cloudfront/) in front of this S3 Bucket, because this is a region specific website. Most people viewing this site live in the area and adding a CDN feels like unnecessary complexity given the use case. As a result, the site renders of `HTTP` rather than `HTTPS`.
+I made the decision to **not** put [CloudFront](https://aws.amazon.com/cloudfront/) in front of this S3 Bucket, because this is a region specific website. Most people viewing this site live in the area and adding a CDN feels like unnecessary complexity given the use case. As a result, the site renders of `HTTP` rather than `HTTPS`.
 
 Here's a breakdown of what the Step Function workflow does:
 
@@ -40,23 +40,23 @@ Overall things went smoothly. I did run into a few tiny issues.
 
 ### Issue 1: EventBridge Scheduler and CDK
 
-[EventBridge Scheduler](https://aws.amazon.com/blogs/compute/introducing-amazon-eventbridge-scheduler/) is a new-ish feature and does not have an L2 construct. I was able to implement this using an L1 construct, but with an L1 construct you're writing Cloudformation without the benefits that an L2 construct provides. In this case, I had to define an [IAM Role to allow the Scheduler to invoke the Step Function and an inline policy](https://github.com/deeheber/weather-site/blob/blog-post/lib/weather-site-stack.ts#L219-L237). This is likely a feature that would be included in an L2 construct.
+EventBridge Scheduler is a new-ish feature and does not have an L2 construct. I was able to implement what I needed for this site using an L1 construct, but with an L1 construct you're writing Cloudformation without the benefits that an L2 construct provides. In this case, I had to define an [IAM Role to allow the Scheduler to invoke the Step Function and an inline policy](https://github.com/deeheber/weather-site/blob/blog-post/lib/weather-site-stack.ts#L219-L237). This is likely a feature that would be included in an L2 construct.
 
 More info on L1 vs L2 constructs [here](https://docs.aws.amazon.com/cdk/v2/guide/constructs.html#constructs_l1_using). I plan to keep an eye on this open [RFC](https://github.com/aws/aws-cdk-rfcs/issues/474).
 
 ### Issue 2: HTML Generation
 
-Step Functions have [direct integrations](https://www.infoq.com/news/2021/11/step-functions-sdk-integration/) with many services. The advantage of this is you do not have write a Lambda Function to make those calls and can save money as well as enjoy the built in error/retry logic that comes with the Step Function service. I used the direct integration for the two calls to DynamoDB and it worked quite well.
+Step Functions have [direct integrations](https://aws.amazon.com/about-aws/whats-new/2021/09/aws-step-functions-200-aws-sdk-integration/) with many services. The advantage of this is you do not have write a Lambda Function to make those AWS SDK calls and can save money as well as enjoy the built in error/retry logic that comes with the Step Function service. I used the direct integration for the two calls to DynamoDB and it worked quite well.
 
-When it came to generating HTML and using the S3 PutObject, the direct integration added quotes around the HTML. This resulted in an HTML document that looked similar to `"<h1>My site<h1>"`. The extra quotation marks caused the page to not render properly in the browser. I eventually got this working with a Lambda Function and [sent the Body as a Buffer](https://github.com/deeheber/weather-site/blob/blog-post/src/functions/update-site.ts#L68), but I prefer the direct integration.
+When it came to generating HTML and using the S3 PutObject, the direct integration added quotes around the HTML. This resulted in an HTML document that looked similar to `"<h1>My site<h1>"`. The extra quotation marks caused the page to not render properly in the browser. I eventually got this working with a Lambda Function by [sending the Body as a Buffer](https://github.com/deeheber/weather-site/blob/blog-post/src/functions/update-site.ts#L68), but I prefer the direct integration.
 
 ## Your Turn
 
 The code is open source and you can view it [here](https://github.com/deeheber/weather-site/tree/main).
 
-You can clone the repo following the instructions in the `README.md` file to create your own weather site. Plug in the latitude and longitude of your city. Also, it's not limited to snow! Check out the `Main` weather types [here](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2) for all available options.
+You can clone the repo following the instructions in the [README.md](https://github.com/deeheber/weather-site/blob/main/README.md) file to create your own weather site. Plug in the latitude and longitude of your city. Also, it's not limited to snow! Check out the `Main` weather types [here](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2) for all available options.
 
-Open source contributions are welcome. Currently, [I'm seeking CSS help](https://github.com/deeheber/weather-site/issues/1).
+[Open source contributions are welcome](https://github.com/deeheber/weather-site/blob/main/CONTRIBUTING.md). Currently, [I'm seeking CSS help](https://github.com/deeheber/weather-site/issues/1).
 
 Thanks to the original creators of [isitsnowinginpdx.com](http://isitsnowinginpdx.com/) for the inspiration.
 
