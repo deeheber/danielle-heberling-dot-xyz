@@ -41,7 +41,7 @@ Someone more experienced with IAM recognizes that the permissions on the cloud a
 
 1. Have a non-prod cloud environment where you can test code changes before deploying to prod. It's good to catch problems before your end users do. ❤️
 2. If you're running servers locally as part of your development loop, authenticate locally using similar permissions that the production server uses. This will help catch permissions issues sooner. 🤓
-3. If you're working on a serverless first team, do not attempt to run your application locally. Instead, deploy your code to a sandbox account and test it there. One AWS account per developer. If you're working on a serverless first team, do not attempt to run your app locally. It's also a great way to get more familiar with troubleshooting in the cloud. 🙌🏻
+3. If you're working on a serverless first team, do not attempt to run your application locally. Instead, deploy your code to a sandbox account and test it there. One AWS account per developer. It's also a great way to get more familiar with troubleshooting in the cloud. 🙌🏻
 
 ## Reflections
 
