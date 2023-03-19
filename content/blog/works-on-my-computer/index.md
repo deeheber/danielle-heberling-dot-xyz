@@ -19,7 +19,7 @@ There are many tools out there that can emulate AWS on your computer, but I've e
 
 ## Scenario #2: Working on a non-serverless first team
 
-Some companies use more traditional infrastructure such as EC2 instances and RDS. Running a local version of the Node.js server against a local Postgres database is great for fast, iterative development and works well most of the time.
+Some companies use more traditional infrastructure such as EC2 instances and RDS. Running a local version of a Node.js server against a local Postgres database is great for fast, iterative development and works well most of the time.
 
 Where this falls apart is when integrating another AWS service such as S3. I've seen software developers who do not have much cloud experience, but are great at writing code do the following:
 
@@ -35,18 +35,19 @@ Where this falls apart is when integrating another AWS service such as S3. I've 
 
 > Photo by <a href="https://unsplash.com/@sammywilliams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sander Sammy</a> on <a href="https://unsplash.com/photos/ufgOEVZuHgM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-Someone more experienced with IAM recognizes that the permissions on the cloud and the local environment differ. They then fix the permissions issues in the cloud. 🚀
+8. Someone more experienced with IAM recognizes that the permissions on the cloud and the local environment differ.
+9. The more experienced person fixes the permissions issues in the cloud. 🚀
 
 ## Unsolicited advice
 
-1. Have a non-prod cloud environment where you can test code changes before deploying to prod. It's good to catch problems before your end users do. ❤️
-2. If you're running servers locally as part of your development loop, authenticate locally using similar permissions that the production server uses. This will help catch permissions issues sooner. 🤓
-3. If you're working on a serverless first team, do not attempt to run your application locally. Instead, deploy your code to a sandbox account and test it there. One AWS account per developer. It's also a great way to get more familiar with troubleshooting in the cloud. 🙌🏻
+- Have a non-prod cloud environment where you can test code changes before deploying to prod. It's good to catch problems before your end users do. ❤️
+- If you're running servers locally as part of your development loop, authenticate locally using similar permissions that the production server uses. This will help catch permissions issues sooner. 🤓
+- If you're working on a serverless first team, do not attempt to run your application locally. Instead, deploy your code to a sandbox account and test it there. One AWS account per developer. It's also a great way to get more familiar with troubleshooting in the cloud. 🙌🏻
 
 ## Reflections
 
 I've seen these scenarios play out on many different teams at different companies. The reason is due to developers needing to change their mindset.
 
-Today it is very common for software applications to use cloud services. We as developers should also evolve our development environments to match the new paradigm.
+Today it is very common for software applications to use cloud services. **We as developers should also evolve our development environments to match the new paradigm.**
 
 Let's build better software together. Good luck out there. 💪🏻
