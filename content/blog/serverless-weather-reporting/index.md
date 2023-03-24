@@ -56,7 +56,7 @@ The code is open source and you can view it [here](https://github.com/deeheber/w
 
 You can clone the repo following the instructions in the [README.md](https://github.com/deeheber/weather-site/blob/main/README.md) file to create your own weather site. Plug in the latitude and longitude of your city. Also, it's not limited to snow! Check out the `Main` weather types [here](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2) for all available options.
 
-[Open source contributions are welcome](https://github.com/deeheber/weather-site/blob/main/CONTRIBUTING.md). Currently, [I'm seeking CSS help](https://github.com/deeheber/weather-site/issues/1).
+[Open source contributions are welcome](https://github.com/deeheber/weather-site/blob/main/CONTRIBUTING.md).
 
 Thanks to the original creators of [isitsnowinginpdx.com](http://isitsnowinginpdx.com/) for the inspiration.
 
