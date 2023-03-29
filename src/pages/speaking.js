@@ -9,15 +9,6 @@ const Speaking = ({ data }) => {
   // TODO: Move this to a JSON file
   const speakingData = [
     {
-      year: '2023',
-      content: [
-        {
-          title: 'How to Succeed as a Community Builder',
-          link: 'https://www.youtube.com/watch?v=Jb9qMxKUfVc',
-        },
-      ],
-    },
-    {
       year: '2022',
       content: [
         {
