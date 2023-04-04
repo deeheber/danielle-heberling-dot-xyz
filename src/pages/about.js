@@ -57,7 +57,7 @@ const About = ({ data }) => {
           affiliated with.
         </p>
         <p>
-          I'm almost always passively seeking new opportunites (speaking, writing, mentoring, job,
+          I'm almost always passively seeking new opportunities (speaking, writing, mentoring, job,
           volunteering, open source etc). Here's my{' '}
           <a
             href="https://heberling-files.s3.us-west-2.amazonaws.com/resume-DanielleHeberling-online.pdf"
