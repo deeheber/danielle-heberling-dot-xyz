@@ -57,7 +57,7 @@ const About = ({ data }) => {
           affiliated with.
         </p>
         <p>
-          I'm passively seeking a new job. Here's my{' '}
+          I'm seeking a new job. Here's my{' '}
           <a
             href="https://heberling-files.s3.us-west-2.amazonaws.com/resume-DanielleHeberling-online.pdf"
             target="_blank"
