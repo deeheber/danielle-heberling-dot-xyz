@@ -9,6 +9,15 @@ const Speaking = ({ data }) => {
   // TODO: Move this to a JSON file
   const speakingData = [
     {
+      year: '2023',
+      content: [
+        {
+          title: 'AWS Developer Innovation Day - Community Spotlight',
+          link: 'https://www.youtube.com/live/uNOSzBP40i0?feature=share&t=8099',
+        },
+      ],
+    },
+    {
       year: '2022',
       content: [
         {
