@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2023',
       content: [
         {
+          title: 'Logicast - Season 2 Episode 16',
+          link: 'https://logicastvideo.podbean.com/e/season-2-episode-16-layoffs-panic-purchasing-cost-reductions/',
+        },
+        {
           title: 'AWS Developer Innovation Day - Community Spotlight',
           link: 'https://www.youtube.com/live/uNOSzBP40i0?feature=share&t=8099',
         },
