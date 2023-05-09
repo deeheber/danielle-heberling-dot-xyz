@@ -8,10 +8,10 @@
     "url": "https://github.com/deeheber/danielle-heberling-dot-xyz/issues"
   },
   "engine": {
-    "node": ">=18.12.1"
+    "node": ">=18.16.0"
   },
   "dependencies": {
-    "gatsby": "^5.6.0",
+    "gatsby": "^5.6.1",
     "gatsby-plugin-feed": "^5.6.0",
     "gatsby-plugin-image": "^3.6.0",
     "gatsby-plugin-manifest": "^5.6.0",
@@ -36,7 +36,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.8"
   },
   "homepage": "https://github.com/deeheber/danielle-heberling-dot-xyz/blob/master/README.md",
   "keywords": [

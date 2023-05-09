@@ -57,15 +57,17 @@ const About = ({ data }) => {
           affiliated with.
         </p>
         <p>
-          I'm seeking a new job. Here's my{' '}
-          <a
-            href="https://heberling-files.s3.us-west-2.amazonaws.com/resume-DanielleHeberling-online.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            resumé
-          </a>{' '}
-          if that's of interest to you. Feel free to reach out if you think it might be a good mutual fit.
+          <b>
+            I'm seeking a new job 🤝. Here's my{' '}
+            <a
+              href="https://heberling-files.s3.us-west-2.amazonaws.com/resume-DanielleHeberling-online.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              resumé
+            </a>{' '}
+            if that's of interest to you. Feel free to reach out if you think it might be a good mutual fit.
+          </b>
         </p>
       </div>
     </Layout>
