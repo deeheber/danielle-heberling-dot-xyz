@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2023',
       content: [
         {
+          title: 'AWS Application Composer, the App Building Future We Need',
+          link: 'https://www.youtube.com/watch?v=JabQQ0f4voM',
+        },
+        {
           title: 'Logicast - Season 2 Episode 16',
           link: 'https://logicastvideo.podbean.com/e/season-2-episode-16-layoffs-panic-purchasing-cost-reductions/',
         },
