@@ -12,6 +12,10 @@ A common pattern in serverless architecture is to have a queue before a function
 
 A redrive function is how we get those failed messages out of the DLQ and back into the original pipeline to retry the operation. I wanted to set up this type of architecture in a new stack using Stackery and decided to take a look around the internet for inspiration on different patterns and ideas on how to go about it. I found lots of information about dead letter queues, but no examples that demo-ed a redrive function to retry those failed messages. This post is meant to serve as a nice example for folks like me who want to do this on AWS and haven’t found many examples.
 
+**Update December 1, 2021** - AWS has added the ability to redrive your SQS messages in the console. See [here](https://aws.amazon.com/about-aws/whats-new/2021/12/amazon-sqs-dead-letter-queue-management-experience-queues/) for more information.
+
+**Update June 9, 2023** - AWS has added a new set of APIs to the AWS CLI for DLQ redrive. See [here](https://aws.amazon.com/blogs/aws/a-new-set-of-apis-for-amazon-sqs-dead-letter-queue-redrive/) for more information.
+
 ## The Setup
 
 ### Happy Path
@@ -135,7 +139,5 @@ Ensure the send message was successful before deleting it. I decided to wrap the
 As you can see, it does require a bit of additional setup, but creating dead letter queues and a redrive function to re-run failed messages can be extremely helpful in your application’s life cycle. You can go to https://github.com/deeheber/redrive to see an example of a simple stack that uses a DLQ and a redrive function in action.
 
 For a solid and succinct description of the benefits of a DLQ (alongside lots of other info about them,) check out the AWS documentation <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html#sqs-dead-letter-queues-benefits" target="_blank" rel="noopener noreferrer">here</a>.
-
-**Update December 1, 2021** - AWS has added the ability to redrive your SQS messages in the console. See [here](https://aws.amazon.com/about-aws/whats-new/2021/12/amazon-sqs-dead-letter-queue-management-experience-queues/) for more information.
 
 > Note: This post was originally published on https://www.stackery.io/
