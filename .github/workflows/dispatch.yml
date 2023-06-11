@@ -1,0 +1,16 @@
+name: dispatcher
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update README in deeheber/deeheber repo
+        run: |
+          curl -H "Accept: application/vnd.github.everest-preview+json" \
+          -H "Authorization: token ${{ secrets.DISPATCH_TOKEN }}" \
+          --request POST \
+          --data '{"event_type": "merge_to_main", "client_payload": {"ref": "${{ github.ref }}"}' https://api.github.com/repos/deeheber/deeheber/dispatches
