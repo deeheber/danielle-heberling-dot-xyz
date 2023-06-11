@@ -41,8 +41,15 @@ const About = ({ data }) => {
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          I enjoy using Typescript, GraphQL, and AWS serverless services. I'm always open to learning new
-          technologies if it makes sense for the project or matches my interest.
+          I enjoy using Typescript, GraphQL, and AWS serverless services. In 2023, I was named an{' '}
+          <a
+            href="https://aws.amazon.com/developer/community/heroes/danielle-heberling/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            AWS Serverless Hero
+          </a>
+          . Always open to learning new technologies if it makes sense for the project or matches my interest.
         </p>
         <p>
           The information on this site serves as a personal reminder of my commitment to life long learning,
