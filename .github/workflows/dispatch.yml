@@ -2,8 +2,8 @@ name: alert README repo of changes on main
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
+  # Runs on git reference deletion (branch or tag)
+  delete:
 
 jobs:
   dispatch:
