@@ -21,7 +21,7 @@ const Speaking = ({ data }) => {
         },
         {
           title: 'AWS Developer Innovation Day - Community Spotlight',
-          link: 'https://www.youtube.com/live/uNOSzBP40i0?feature=share&t=8099',
+          link: 'https://www.youtube.com/watch?v=a7_s6BV_4XY',
         },
       ],
     },
