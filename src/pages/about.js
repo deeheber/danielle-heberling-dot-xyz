@@ -29,9 +29,9 @@ const About = ({ data }) => {
       />
       <h3>Nice to meet you.</h3>
       <div>
-        <div style={{ float: 'left', paddingRight: '1.5rem' }}>
+        <section style={{ float: 'left', paddingRight: '1.25rem' }}>
           <GatsbyImage image={data.avatar.childImageSharp.gatsbyImageData} alt={siteMetadata.author} />
-        </div>
+        </section>
         <p>
           Career wise, I used to work in tech support. I enjoyed helping customers; however, I felt that my
           job centered around asking engineers to fix bugs.
@@ -41,19 +41,21 @@ const About = ({ data }) => {
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          I enjoy using Typescript, GraphQL, and AWS serverless services. In 2023, I was named an{' '}
+          TypeScript, GraphQL, and AWS Serverless services are my current tools of choice. I'm open to learning new technologies if it makes sense for the project or matches my interest.
+        </p>
+        <section style={{ float: 'right', paddingLeft: '1.25rem' }}>
+          <GatsbyImage image={data.waterfall.childImageSharp.gatsbyImageData} alt="Danielle standing in front of a waterfall" />
+        </section>
+        <p>
+          This site serves as a personal reminder of my commitment to life long learning,
+          improvement, creating things, and knowledge sharing. In 2023, I was named an{' '}
           <a
             href="https://aws.amazon.com/developer/community/heroes/danielle-heberling/"
             target="_blank"
             rel="noopener noreferrer"
           >
             AWS Serverless Hero
-          </a>
-          . Always open to learning new technologies if it makes sense for the project or matches my interest.
-        </p>
-        <p>
-          The information on this site serves as a personal reminder of my commitment to life long learning,
-          improvement, creating things, and knowledge sharing.
+          </a>.
         </p>
         <p>
           Since technology is always evolving, disclaimer that older content might contain out of date
@@ -72,7 +74,12 @@ export const aboutQuery = graphql`
   query AboutQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        gatsbyImageData(layout: FIXED, width: 200, height: 200)
+        gatsbyImageData(width: 200)
+      }
+    }
+    waterfall: file(absolutePath: { regex: "/waterfall.jpg/" }) {
+      childImageSharp {
+        gatsbyImageData(width: 200)
       }
     }
     site {
