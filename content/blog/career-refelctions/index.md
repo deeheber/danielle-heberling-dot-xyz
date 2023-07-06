@@ -14,15 +14,15 @@ Growing up, I was given advice from adults often. It was typically some variant 
 - Work hard
 - You'll be rewarded
 
-Early on in my career, I followed this advice and it didn't work for me. I could write an entire book on the details. For now, I will spare you the details of the various reasons and situations in this blog post.
+Early on in my career, I followed this advice and it didn't work for me. I could write an entire book on why that was the case, but for now I'll spare you the details.
 
-On top of this bad advice, I found that at least in American culture the first thing people will often ask when meeting someone for the first time is what they do for a living. Depending on how you respond will result in judgement that is sometimes accurate and sometimes not.
+On top of this bad advice, I found that in American culture the first thing people will often ask when meeting someone for the first time is what they do for a living. How you answer this question will result in judgement that is sometimes accurate and sometimes not.
 
-As my career progressed, I realized that I aspire to have a legacy beyond the company that I work for and my job title. As a result, I came up with these five core first principles as to what I'd like my career to look like to outsiders. Here they are:
+As my career progressed, I realized that I aspire to have a legacy beyond the company that I work for and my job title. As a result, I came up with these five core principles. Here they are:
 
-1. **Be kind to people despite their position in the overall hierarchy.** This includes both official heiarchy such as at a company and social heiarchy in a community setting. You never know when circumstances might change and when you might run into that individual again. I've mentored people who have exceeded my technical level of expertise as well as seen people who worked for competitors now working as a coworker.
+1. **Be kind to people despite their position in the overall hierarchy.** This includes both official heiarchy such as at a company and social heiarchy in a community setting. You never know when circumstances might change and when you might run into an individual again. I've mentored people who have exceeded my technical level of expertise as well as seen people who worked for competitors become my coworker.
 
-2. **Work in public.** And don't just limit what you share to wins. Also share your challenges with others, so they can have a full picture of the work that went into the finished product. A rising tide lifts all boats.
+2. **Work in public.** And don't limit what you pubicly share to wins. Also share your challenges, so people can have a full picture of the work that went into the finished product. A rising tide lifts all boats.
 
 3. **Approach disagreement with a curious mind.** Don't join a conversation expecting to "be right." Ask questions if someone else's perspective doesn't match yours. You might not end up agreeing in the end, but it's likely you'll learn something new.
 
@@ -30,4 +30,4 @@ As my career progressed, I realized that I aspire to have a legacy beyond the co
 
 5. **Leave things better than you found them.** Most individuals apspire to change the world, but it is challenging to do this at the individual level. At the very least, we can do our part to improve the current situation.
 
-While thinking through these core principles, I've realized that people and community are what's kept me in tech. To me, community looks like coworkers, colleagues I met at community events, people who user the things I build (customers), and more. I've gotten to where I am because people were willing to take a chance on me. I'd love to pay it forward by taking a chance on others and doing whatever I can to lift others up.
+While thinking through these core principles, I've realized that people and community are why I'm still here in tech. To me, community looks like coworkers, colleagues I met at community events, and people who use the things I build. I've gotten to where I am because people were willing to take a chance on me. I'd love to pay it forward by taking a chance on others and doing whatever I can to lift others up.
