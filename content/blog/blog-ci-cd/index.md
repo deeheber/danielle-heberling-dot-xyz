@@ -8,7 +8,7 @@ date: '2023-07-21T22:12:03.284Z'
 > Photo by <a href="https://unsplash.com/@dancristianpaduret?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Cristian Pădureț</a> on <a href="https://unsplash.com/photos/XC7lc8biINg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ## Goals
-In 2018, I set out to create this blog. Medium and other hosting providers existed; however, I wanted to have more control over ownership of my content. To me, it's fine to syndicate blog posts to other places for more reach, but I wanted my own space on the internet.
+In 2018, I set out to create [this blog](https://www.danielleheberling.xyz/). Medium and other hosting providers existed; however, I wanted to have more control and ownership of my content. To me, it's fine to syndicate blog posts to other places for more reach, but I wanted my own space on the internet.
 
 I also had the other following goals in mind:
 1. Low maintence
