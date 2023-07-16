@@ -1,6 +1,6 @@
 ---
 title: My Personal Blog Site's CI/CD
-date: '2023-07-21T22:12:03.284Z'
+date: '2023-07-17T22:10:03.284Z'
 ---
 
 ![Tools](./tools.jpg)
@@ -8,7 +8,7 @@ date: '2023-07-21T22:12:03.284Z'
 > Photo by <a href="https://unsplash.com/@dancristianpaduret?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Cristian Pădureț</a> on <a href="https://unsplash.com/photos/XC7lc8biINg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ## Goals
-In 2018, I set out to create [this blog](https://www.danielleheberling.xyz/). Medium and other hosting providers existed; however, I wanted to have more control and ownership of my content. To me, it's fine to syndicate blog posts to other places for more reach, but I wanted my own space on the internet.
+In 2018, I set out to create [this blog](https://www.danielleheberling.xyz/). [Medium](https://medium.com/) and other blogging platforms existed; however, I wanted to have more control and ownership of my content. To me, it's fine to syndicate blog posts to other places for more reach, but I wanted my own space on the internet.
 
 I also had the other following goals in mind:
 1. Low maintence
@@ -17,7 +17,7 @@ I also had the other following goals in mind:
 4. Write blog posts in a transferrable format, such as markdown
 
 ## Tech Choices
-In 2018, the hype of [JAMstack](https://jamstack.org/) and [Gatsby](https://www.gatsbyjs.com/) was in the air. Upon taking a closer look at Gatsby, I learned that it utilized GraphQL (tech I didn't know at the time and wanted to learn), React, and blog posts were written in markdown. After choosing Gatsby, I did some searching for the easiest way to deploy it and landed on [Netlify](https://www.netlify.com/).
+In 2018, the hype of [JAMstack](https://jamstack.org/) and [Gatsby](https://www.gatsbyjs.com/) was in the air. Upon taking a closer look at Gatsby, I learned that it utilized [GraphQL](https://graphql.org/) (tech I didn't know at the time and wanted to learn), [React](https://react.dev/), and blog posts were written in markdown. After choosing Gatsby, I did some searching for the easiest way to deploy it and landed on [Netlify](https://www.netlify.com/).
 
 To this day, my blog is still Gatsby hosted on Netlify and you [can view the code source on GitHub](https://github.com/deeheber/danielle-heberling-dot-xyz).
 
@@ -28,11 +28,11 @@ When a new site is created on Netlify, you can [link it to a GitHub repository](
 For my site, I decided to keep it simple and stuck with the defaults. Whenever I put up a Pull Request against the `main` branch, Netlify runs a build and gives me a preview link to view the site with changes. Whenever I merge into the `main` branch, Netlify builds and deploys my site for me.
 
 ### Linking the deploy to updating my README
-Later in my journey, I wanted to learn about GitHub actions and built an action that pulls the three most recent blog posts down from my blog's RSS feed (included with Gatsby) and writes them to the markdown file in my [profile README repo](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme). You can read about the process of creating it in [my past blog post](https://www.danielleheberling.xyz/blog/github-actions/).
+Later in my journey, I wanted to learn about [GitHub actions](https://github.com/features/actions) and built an action that pulls the three most recent blog posts down from my blog's RSS feed (included with Gatsby) and writes them to the markdown file in my [profile README repo](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme). You can read about the process of creating it in [my past blog post](https://www.danielleheberling.xyz/blog/github-actions/).
 
-A feature that I wanted was a connection between deploying my blog to prod and having the GitHub action scrape my RSS feed to update my README file. In the past, I had it running as a recurring CRON job, but I wanted something that would have a guarantee of the latest three blog posts being up to date. I had looked into using Netlify's [outgoing webhook feature](https://docs.netlify.com/site-deploys/notifications/#outgoing-webhooks), but found it to be challenging to customize the POST request to match what was needed to trigger a GitHub action.
+A feature that I wanted was a connection between deploying my blog to prod and having the GitHub action scrape my RSS feed to update my README file. In the past, I had it running as a recurring Cron job, but I wanted something that would have a guarantee of the latest three blog posts being up to date. I had looked into using Netlify's [outgoing webhook feature](https://docs.netlify.com/site-deploys/notifications/#outgoing-webhooks), but found it to be challenging to customize the POST request to match what was needed to trigger a GitHub action.
 
-I realized that I always wait for the Netlify deploy to prod to complete, manually check the site, and delete the branch...so I decided to utilize the branch deletion action to trigger my scrape of the RSS feed to update my README repo. I then discovered that the GitHub action [repository_dispatch](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow) would be helpful in triggering the scrape of my RSS feed on branch delete.
+I realized that I always wait for the Netlify deploy to prod to complete, manually check the site, and delete the branch...so I decided to utilize the branch deletion action to trigger the scrape of the RSS feed to update my README repo. I then discovered that the GitHub action [repository_dispatch](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow) would be helpful in triggering the scrape of my RSS feed on branch delete.
 
 I first created a token to save as a secret in my `danielle-heberling-dot-xyz` (blog) repository that gave it read/write permissions to my `deeheber` (README) repository. I then added a workflow to my `danielle-heberling-dot-xyz` repo to post an event to my `deeheber` repo via `repository_dispatch`. It looks like this:
 
