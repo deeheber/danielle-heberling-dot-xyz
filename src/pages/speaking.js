@@ -53,10 +53,6 @@ const Speaking = ({ data }) => {
     {
       year: '2019',
       content: [
-        {
-          title: 'The Power of Serverless for Transforming Careers and Communities',
-          link: 'https://www.pscp.tv/w/1yoJMzjeXypxQ',
-        },
         { title: 'Serverless Chats Ep. 25', link: 'https://www.serverlesschats.com/25/' },
         {
           title: 'Leveling Up in Serverless',
