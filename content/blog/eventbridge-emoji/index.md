@@ -36,4 +36,4 @@ I've made my quick CDK stack public [on Github](https://github.com/deeheber/even
 
 You can also update the code to contain other emojis as well. From my testing, I found having multiple emojis in a single event pattern works as well.
 
-Not 100% practical in all cases, but thought I would share these findings pubicly. Now go forth and update your EventBridge event patterns. 🎉
+Not 100% practical in all cases, but thought I would share these findings publicly. Now go forth and update your EventBridge event patterns. 🎉
