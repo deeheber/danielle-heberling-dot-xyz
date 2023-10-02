@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2023',
       content: [
         {
+          title: 'Serverless Weather Reporting with AWS Step Functions and CDK',
+          link: 'https://www.youtube.com/watch?v=qlUR5jVBC6c&t=17280s',
+        },
+        {
           title: 'AWS Application Composer, the App Building Future We Need',
           link: 'https://www.youtube.com/watch?v=JabQQ0f4voM',
         },
