@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDev, FaGithub, FaLinkedin, FaRss, FaTwitter } from 'react-icons/fa';
+import { FaDev, FaGithub, FaLinkedin, FaRss, FaXTwitter } from 'react-icons/fa6';
 
 function Footer() {
   const socialStyle = {
@@ -9,7 +9,7 @@ function Footer() {
   };
 
   const data = [
-    { link: 'https://twitter.com/deeheber', aria: 'twitter link', icon: <FaTwitter size={35} /> },
+    { link: 'https://twitter.com/deeheber', aria: 'twitter link', icon: <FaXTwitter size={35} /> },
     { link: 'https://github.com/deeheber', aria: 'github link', icon: <FaGithub size={35} /> },
     { link: 'https://www.linkedin.com/in/deeheber', aria: 'linkedin link', icon: <FaLinkedin size={35} /> },
     { link: 'https://dev.to/deeheber', aria: 'dev.to link', icon: <FaDev size={35} /> },
