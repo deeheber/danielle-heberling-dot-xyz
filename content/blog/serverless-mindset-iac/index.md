@@ -1,11 +1,13 @@
 ---
-title: On the Serverless Mindset and Infrastructure as Code
+title: The Serverless Mindset and Infrastructure as Code
 date: '2023-12-06T12:12:03.284Z'
 ---
 
 ![AWS Application Composer Canvas](./app-composer-canvas.png)
 
 Originally I set out to write a blog post about my favorite [re:Invent](https://reinvent.awsevents.com/) announcements. But as I started, I saw a theme and decided to write on that instead.
+
+_Disclaimer that this post contains my individual opinions and yours might differ. I welcome your polite/engaged feedback and encourage you to continue this conversation outside of reading this blog post._
 
 ## Announcements that fit the Theme
 
@@ -14,7 +16,7 @@ Originally I set out to write a blog post about my favorite [re:Invent](https://
 
 ## The Theme
 
-As a software engineer in my `$day_job`, most tasks involve writing Infrastructure as Code (IaC). When reflecting on the [serverless mindset](https://ben11kehoe.medium.com/serverless-is-a-state-of-mind-717ef2088b42), I feel that this mindset conflicts with how I spend most of my time at `$day_job`.
+As a software engineer in my `$day_job`, most tasks involve writing Infrastructure as Code (IaC). When reflecting on the [serverless mindset](https://ben11kehoe.medium.com/serverless-is-a-state-of-mind-717ef2088b42), I believe this mindset conflicts with how I spend most of my time at `$day_job`.
 
 On the one hand, writing IaC is fun and I'm good at it! 🙂 On the other hand, I'm wondering how can I spend less time thinking about tooling or specific settings for my cloud resources and more time focusing on providing business value? 🤔
 
