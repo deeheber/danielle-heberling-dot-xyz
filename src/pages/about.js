@@ -41,21 +41,37 @@ const About = ({ data }) => {
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          TypeScript, GraphQL, and AWS Serverless services are my current tools of choice. I'm open to learning new technologies if it makes sense for the project or matches my interest.
+          TypeScript, GraphQL, and AWS Serverless services are my current tools of choice. I'm open to
+          learning new technologies if it makes sense for the project or matches my interest.
         </p>
-        <section style={{ float: 'right', paddingLeft: '1.25rem' }}>
-          <GatsbyImage image={data.waterfall.childImageSharp.gatsbyImageData} alt="Danielle standing in front of a waterfall" />
-        </section>
         <p>
-          This site serves as a personal reminder of my commitment to life long learning,
-          improvement, creating things, and knowledge sharing. In 2023, I was named an{' '}
+          I got my start in the Serverless community through my work as a Software Engineer at{' '}
+          <a href="https://www.stackery.io/" target="_blank" rel="noopener noreferrer">
+            Stackery
+          </a>
+          . The work that we started at Stackery eventually led to what became{' '}
+          <a href="https://aws.amazon.com/application-composer/" target="_blank" rel="noopener noreferrer">
+            AWS Application Composer
+          </a>
+          . In 2023, I was named an{' '}
           <a
             href="https://aws.amazon.com/developer/community/heroes/danielle-heberling/"
             target="_blank"
             rel="noopener noreferrer"
           >
             AWS Serverless Hero
-          </a>.
+          </a>
+          .
+        </p>
+        <section style={{ float: 'right', paddingLeft: '1.25rem' }}>
+          <GatsbyImage
+            image={data.waterfall.childImageSharp.gatsbyImageData}
+            alt="Danielle standing in front of a waterfall"
+          />
+        </section>
+        <p>
+          This site serves as a personal reminder of my commitment to life long learning, improvement,
+          creating things, and knowledge sharing.
         </p>
         <p>
           Since technology is always evolving, disclaimer that older content might contain out of date
