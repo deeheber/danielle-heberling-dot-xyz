@@ -60,7 +60,7 @@ const Speaking = ({ data }) => {
         { title: 'Serverless Chats Ep. 25', link: 'https://www.serverlesschats.com/25/' },
         {
           title: 'Leveling Up in Serverless',
-          link: 'https://acloud.guru/series/serverlessconf-nyc-2019/view/leveling-up-in-serverless',
+          link: 'https://learn.acloud.guru/series/serverlessconf-nyc-2019/view/leveling-up-in-serverless',
         },
       ],
     },
