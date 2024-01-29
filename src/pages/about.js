@@ -41,11 +41,7 @@ const About = ({ data }) => {
           I taught myself how to code and became a software engineer.
         </p>
         <p>
-          TypeScript, GraphQL, and AWS Serverless services are my current tools of choice. I'm open to
-          learning new technologies if it makes sense for the project or matches my interest.
-        </p>
-        <p>
-          I got my start in the Serverless community through my work as a Software Engineer at{' '}
+          I got my start in the AWS and Serverless community through my work as a Software Engineer at{' '}
           <a href="https://www.stackery.io/" target="_blank" rel="noopener noreferrer">
             Stackery
           </a>
