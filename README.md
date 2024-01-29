@@ -8,6 +8,8 @@ This is the source code for my personal blog website https://www.danielleheberli
 
 Note that I've mostly just used the Gatsby starter, so some of the code in this repo might [not be reflective of my personal coding style](https://github.com/deeheber/danielle-heberling-dot-xyz/issues/11).
 
+[I've been considering moving this site off of Gatsby for a while](https://github.com/deeheber/danielle-heberling-dot-xyz/issues/55) since the extra work to keep up with the dependencies and dependcies of dependencies doesn't feel worth it. Suggestions welcome on alternative frameworks with fewer dependencies, simpler for a personal blog, and a relatively painless migration from Gatsby. Thanks!
+
 ## 🚀 Quick start
 
 1.  **Clone the repository**
