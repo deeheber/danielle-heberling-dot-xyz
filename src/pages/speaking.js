@@ -9,6 +9,15 @@ const Speaking = ({ data }) => {
   // TODO: Move this to a JSON file
   const speakingData = [
     {
+      year: '2024',
+      content: [
+        {
+          title: 'Talking Serverless Podcast #55',
+          link: 'https://youtu.be/vcIjKz3b5CM?si=00ze0ReuwSE-hGf7',
+        },
+      ],
+    },
+    {
       year: '2023',
       content: [
         {
