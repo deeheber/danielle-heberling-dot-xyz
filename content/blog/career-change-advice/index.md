@@ -1,6 +1,6 @@
 ---
 title: Dear New Code School Grad
-date: '2024-02-23T22:12:03.284Z'
+date: '2024-02-22T22:12:03.284Z'
 ---
 
 ![Diploma](./diploma.jpg)
@@ -25,7 +25,7 @@ The hiring market has evolved since I was looking for my first software job in 2
 
 - More code schools exist than did in 2016
 - Most of these code schools teach full stack JavaScript with an emphasis on the frontend (react in particular)
-- Due to higher enrollment in these programs 👉🏻 more people are looking for their first job as a full stack JS or frontend
+- Due to higher enrollment in these programs 👉🏻 more people are looking for their first job as a full stack JS or frontend developer
 - Many hiring managers are only interested in hiring people who have experience. It doesn't seem good enough to be "senior" anymore, lots are looking for "staff" or higher levels (what these levels actually mean can vary from company to company)
 - Due to "macroeconomic conditions" many companies are conducting layoffs including software engineering staff
 
@@ -33,17 +33,17 @@ The hiring market has evolved since I was looking for my first software job in 2
 
 It is harder than ever to break into tech. Know that a large part of finding a job in any market is about being in the right place at the right time. Part of it is putting in the work to land that position...but if the job doesn't exist then you don't have a chance to land it. Be kind to yourself and know some of this is outside of your control.
 
-In my opinion, the most important thing to do is to find ways to differentiate yourself. How are you different from the thousands of applications to this one open position and why should they hire you over the others? Due to the high number of career changers seeking jobs, the story of a career change is no longer enough to make yourself stand out.
+In my opinion, the most important thing to do is find ways to differentiate yourself. How are you different from the thousands of applications to this one open position and why should they hire you over the other applicants? Due to the high number of career changers seeking jobs, the story of a career change is no longer enough to make yourself stand out.
 
 A good way to start is by looking at job postings and taking note of specific technologies and positions that are in high demand. If you don't know those things 👉🏻 put in the work to learn it. We live in a golden age where there is tons of content (paid and unpaid) online.
 
 One caveat: there are lots of "influencers" trying to sell you something. Do your homework to investigate that individual or organization's background before purchasing anything. Try to find some LinkedIn profiles or ask folks in your network for a second opinion. It is possible they lied on their LinkedIn, but if they are qualified there should be artifacts somewhere in public spaces. Just because someone is loud and all over social media, it doesn't necessarily mean that they are an expert.
 
-Back to in demand skills. This is my highly biased opinion. In my part of the industry there is high demand for people who work in the cloud. In all of my recent jobs, there were lots of frontend engineers and not enough people to do things on AWS side of our stack. This might look like a software engineer that builds apps that integrate with cloud managed services or it could be more of a "DevOps" type of person. (Side rant: DevOps should never be a job title in my opinion as it is a philosophy that everyone should follow despite their official title, but that could be another post.)
+Back to in demand skills. This is my highly biased opinion, but in my part of the industry there is high demand for people who work with the cloud. In all of my recent jobs, there were lots of frontend engineers and not enough people to do things on AWS side of our stack. This might look like a software engineer that builds apps that integrate with cloud managed services or it could be more of a "DevOps" type of person. (Side rant: DevOps should never be a job title in my opinion as it is a philosophy that everyone should follow despite their official title, but that could be another post.)
 
-A mistake that I see new graduates do is focus too much on making their LinkedIn profile and resume perfect. It is important to have a good online presence and resume, I'm not debating that. But equally important is finding people to read your profiles/website/resume because otherwise you will never get hired. From my experience, the best way to do this is by networking. I know everyone says this, but it is true. 100% of my software engineering jobs have come from some form of networking and I'm an introvert. It will be very uncomfortable, but if you really want this you will need to acknowledge that unfortunately we live in a world where this is what you have to do.
+A mistake that I see new graduates do is focus too much on making their LinkedIn profile and resume perfect. It is important to have a good online presence and resume, I'm not debating that. But equally important is finding people to read your profiles/website/resume because otherwise you will never get hired. From my experience, the best way to do this is by networking. I know most career advice says this, but it is true. All of my software engineering jobs have come from some form of networking and I'm an introvert. It will be very uncomfortable, but if you want this badly enough you will need to acknowledge that unfortunately we live in a world where this is what you have to do.
 
-Ideally this would be done via a warm introduction from a common connection, but don't worry about sending messages to people you don't know. As long as you're directly asking for what you want and respecting people's time, they will most likely reply and want to help you. Worst case is that they don't reply. View relationship building as a long game strategy and not as a one time transaction. You never know if you might one day be able to help this individual in return. There have been many times when people whom I've formerly mentored were able to help me out too later on. We're all in this together as a community and remember to give as much as you take in the long run.
+Ideally this would be done via a warm introduction from a common connection, but don't worry about sending messages to people you don't know. As long as you're directly asking for what you want and respecting people's time, they will most likely reply and want to help you. Worst case is that they don't reply. View relationship building as a long term strategy and not as a one time transaction. You never know if you might one day be able to help this individual in return. Anecdotally, there have been many times when people whom I've formerly mentored were able to help me out too later on. We're all in this together as a community and remember to give as much as you take in the long run.
 
 ## Closing
 
@@ -51,4 +51,4 @@ Keep in mind that some of these thoughts are very specific what's going on in th
 
 I am not trying to sell you anything and really want you to succeed. This post is a compilation of my thoughts that many in my network have asked for, so I hope you find me publicly sharing this helpful.
 
-It is totally up to you if you want to take or leave this advice, because at the end of the day I'm just another random person on the internet with opinions.
+It is totally up to you if you want to follow this advice, because at the end of the day I'm just another random person on the internet with opinions.
