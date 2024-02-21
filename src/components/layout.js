@@ -27,7 +27,7 @@ class Layout extends Component {
           >
             {title}
           </h1>
-          <h2 style={{ marginTop: 0, ...scale(0.25) }}>Software Engineer</h2>
+          <h2 style={{ marginTop: 0, ...scale(0.25) }}>Tech Thoughts</h2>
         </Link>
         <Nav />
       </Fragment>
