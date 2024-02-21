@@ -9,11 +9,11 @@ date: '2024-02-22T22:12:03.284Z'
 
 Over the years, many people have come to me for advice on doing a career change into software engineering. Here are my thoughts written down relevant to doing this in the year 2024 in the United States.
 
-## Who Am I
+## Who am I?
 
 I graduated from a code school in 2016 in the United States and have been employed as a software engineer ever since. I've held both formal and informal mentor titles. The formal ones were through side jobs working for code schools or being a mentor for nonprofits that help folks break into tech. The informal ones are via warm intros from network connections with recent code school grads seeking help.
 
-## Goal
+## My goal in writing this
 
 I want you to succeed. We need more people in this industry that bring diverse life experiences to make our products truly reflect the public that we serve.
 
@@ -29,7 +29,7 @@ The hiring market has evolved since I was looking for my first software job in 2
 - Many hiring managers are only interested in hiring people who have experience. It doesn't seem good enough to be "senior" anymore, lots are looking for "staff" or higher levels (what these levels actually mean can vary from company to company)
 - Due to "macroeconomic conditions" many companies are conducting layoffs including software engineering staff
 
-## Unsolicited Advice
+## Unsolicited advice
 
 It is harder than ever to break into tech. Know that a large part of finding a job in any market is about being in the right place at the right time. Part of it is putting in the work to land that position...but if the job doesn't exist then you don't have a chance to land it. Be kind to yourself and know some of this is outside of your control.
 
@@ -41,11 +41,11 @@ One caveat: there are lots of "influencers" trying to sell you something. Do you
 
 Back to in demand skills. This is my highly biased opinion, but in my part of the industry there is high demand for people who work with the cloud. In all of my recent jobs, there were lots of frontend engineers and not enough people to do things on AWS side of our stack. This might look like a software engineer that builds apps that integrate with cloud managed services or it could be more of a "DevOps" type of person. (Side rant: DevOps should never be a job title in my opinion as it is a philosophy that everyone should follow despite their official title, but that could be another post.)
 
-A mistake that I see new graduates do is focus too much on making their LinkedIn profile and resume perfect. It is important to have a good online presence and resume, I'm not debating that. But equally important is finding people to read your profiles/website/resume because otherwise you will never get hired. From my experience, the best way to do this is by networking. I know most career advice says this, but it is true. All of my software engineering jobs have come from some form of networking and I'm an introvert. It will be very uncomfortable, but if you want this badly enough you will need to acknowledge that unfortunately we live in a world where this is what you have to do.
+A mistake that I see new graduates do is focus too much on making their LinkedIn profile and resume perfect. It is important to have a good online presence and resume, I'm not debating that. But equally important is finding people (specifically people who are hiring/have influence in hiring decisions) to read your profiles/website/resume. From my experience, the best way to do this is by networking. I know most career advice says this, but it is true. All of my software engineering jobs have come from some form of networking and I'm an introvert. It will be very uncomfortable, but if you want this badly enough you will need to acknowledge that unfortunately we live in a world where this is what you have to do to get people with influence to pay attention to your candidacy.
 
 Ideally this would be done via a warm introduction from a common connection, but don't worry about sending messages to people you don't know. As long as you're directly asking for what you want and respecting people's time, they will most likely reply and want to help you. Worst case is that they don't reply. View relationship building as a long term strategy and not as a one time transaction. You never know if you might one day be able to help this individual in return. Anecdotally, there have been many times when people whom I've formerly mentored were able to help me out too later on. We're all in this together as a community and remember to give as much as you take in the long run.
 
-Another mistake that I see new graduates do is they start a conversation with a hiring manager by stating they're a beginner or looking for a junior role. In this hiring climate, many hiring managers are seeking people with prior experience (see bullet point above), so starting out the conversation this way will most likely result in them losing interest in your candidacy. I'm not suggesting you lie or misrepresent your experience at all. I'd recommend talking about some things that you've built, the the technologies you've worked with, what parts of tech you're exciting about, and what type of role you're looking for. If the question of previous professional experience comes up in conversation then tell the truth. "Junior" and "entry level" can mean different things to different hiring managers. Allow them to make that judgement after getting to know you a bit and hearing about what you've been working on.
+Another mistake that I see new graduates do often is they start a conversation with a hiring manager by stating they're a beginner or looking for a junior role. In this hiring climate, many hiring managers are seeking people with prior experience (see bullet point above), so starting out the conversation this way will most likely result in them losing interest in your candidacy. I'm not suggesting you lie or misrepresent your experience at all. I'd recommend talking about some things that you've built, the the technologies you've worked with, what parts of tech you're excited about, and what type of role you're looking for. If the question of previous professional experience comes up in conversation then tell the truth. "Junior" and "entry level" can mean different things to different hiring managers. Allow them to make that judgement after getting to know you a bit and hearing about what you've been working on.
 
 ## Closing
 
