@@ -61,3 +61,5 @@ You can clone the repo following the instructions in the [README.md](https://git
 Thanks to the original creators of [isitsnowinginpdx.com](http://isitsnowinginpdx.com/) for the inspiration.
 
 \* To be fair the last instance of snow in the area was [more than usual](https://www.oregonlive.com/weather/2023/02/portland-records-snowiest-day-since-1943-landing-at-no-2-on-all-time-list.html).
+
+\*\* **Edit February 23, 2024**: I've [added CloudFront](https://github.com/deeheber/weather-site/issues/7) to this. It's nice to have the SSL cert, but to me the work felt like overkill in terms of effort and the extra infra needed for SSL. Hopefully AWS can improve this experience.
