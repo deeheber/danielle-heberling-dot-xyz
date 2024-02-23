@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2024',
       content: [
         {
+          title: 'Getting Started with AWS by Using Application Composer',
+          link: 'https://youtu.be/GmWY7weQI84?si=oy9fAhvnhH9toRCb',
+        },
+        {
           title: 'Talking Serverless Podcast #55',
           link: 'https://youtu.be/vcIjKz3b5CM?si=00ze0ReuwSE-hGf7',
         },
