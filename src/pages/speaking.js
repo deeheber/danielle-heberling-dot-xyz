@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2024',
       content: [
         {
+          title: 'Logicast - Season 3 Episode 11',
+          link: 'https://logicastvideo.podbean.com/e/season-3-episode-11-waf-dashboards-free-data-transfer-nuclear-powered-ai',
+        },
+        {
           title: 'Getting Started with AWS by Using Application Composer',
           link: 'https://youtu.be/GmWY7weQI84?si=oy9fAhvnhH9toRCb',
         },
