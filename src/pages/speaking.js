@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2024',
       content: [
         {
+          title: 'Modernizing Healthcare Delivery with AWS Serverless Services',
+          link: 'https://www.youtube.com/live/m4HT7NWPxAk?si=EvjI8OKI7iff8KQx',
+        },
+        {
           title: 'Logicast - Season 3 Episode 11',
           link: 'https://logicastvideo.podbean.com/e/season-3-episode-11-waf-dashboards-free-data-transfer-nuclear-powered-ai',
         },
