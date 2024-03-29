@@ -13,7 +13,7 @@ const Speaking = ({ data }) => {
       content: [
         {
           title: 'Modernizing Healthcare Delivery with AWS Serverless Services',
-          link: 'https://www.youtube.com/live/m4HT7NWPxAk?si=EvjI8OKI7iff8KQx',
+          link: 'https://www.youtube.com/watch?v=8NoUBQHGWzs',
         },
         {
           title: 'Logicast - Season 3 Episode 11',
