@@ -13,7 +13,7 @@ Ever since I was named an AWS Hero, lots of people have been asking me how they 
 
 Personally, I never had the goal to become an AWS Hero. I did and will continue to do what I'm doing now regardless of the AWS Hero title. Don't get me wrong, I am very humbled and honored to have been recognized as one by AWS, but this is not why I do what I do.
 
-In my opinion, the correct question to be asking is what are the rough edges and challenges in the current ecosystem and how can I share my knowledge and experiences to make it easier for others?
+In my opinion, **the correct question to be asking is what are the rough edges and challenges in the current ecosystem and how can I share my knowledge and experiences to make it easier for others?**
 
 For ideas and inspiration, I'd recommend looking at what AWS Heroes and AWS Community Builders are doing. Also, remember that you can do something completely new too!
 
