@@ -21,4 +21,4 @@ You don’t need permission or a fancy title to help others and to make a differ
 
 I'm looking forward to seeing what you share.
 
-> Disclaimer: This post reflects my personal opinions. It may be not reflective of the opinions of other AWS Heroes or AWS.
+> Disclaimer: This post reflects my personal opinions. It may or may not be representative of the opinions of other AWS Heroes or AWS. You will need to ask them for theirs.
