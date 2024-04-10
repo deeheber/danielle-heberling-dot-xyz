@@ -3,25 +3,27 @@ title: Tips for Getting Started in Cloud
 date: '2024-04-14T09:12:03.284Z'
 ---
 
-TODO: add hero image
+![Clouds Image](./clouds.jpg)
+
+> Photo by <a href="https://unsplash.com/@billy_huy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Billy Huynh</a> on <a href="https://unsplash.com/photos/cloudy-sky-at-daytime-v9bnfMCyKbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 ## Who am I?
 
-I graduated from a code school in 2016 in the United States and have been employed as a software engineer ever since. Because I like to give back to the communities that helped me get started, I have taken on paid contracts and volunteer positions where I mentor folks who would like to take a similar path.
+I graduated from a code school in 2016 in the United States and have been employed as a software engineer ever since. Because I like to give back to the communities that helped me get started, I've done on paid contracts and volunteered in positions where I mentor folks who would like to take a similar path.
 
 ## My goal in writing this
 
-Because I often surround myself with perspective, recent, and past code school graduates who have expertise in "Full Stack JavaScript" (it's mostly Frontend focused from my observation), I am often asked the question "how can I get started in Cloud" or "how can I get started using AWS." My hope is this post can serve as a helpful link on the internet that I can send folks to give them my thoughts and opinions on this topic when asked.
+Because I often surround myself with people in the Code School community who have expertise in "Full Stack JavaScript" (it's mostly Frontend focused from my observation), I am often asked the question "how can I get started in Cloud" or "how can I learn AWS." It is my hope that this post can serve as a reference for folks who ask me those questions.
 
 ## My biases
 
 We all have biases, myself included. I encourage you to do what you think is best for you. Do not take my advice as an absolute, "I must do everything on this list."
 
-Cloud-wise, I have mostly worked in AWS, so my opinions and advice will usually have an AWS angle. It is my personal opinion that I wish there were more competition out there (specifically a cloud that offers a much nicer developer experience), but in my part of the world most of the jobs available are fully AWS or AWS heavy in terms of cloud usage. This is why I've chosen to focus on this cloud and not the others.
+Cloud-wise, I have mostly worked in AWS, so my opinions and advice will usually have an AWS angle. It is my personal opinion that I wish there were more Cloud competition out there (specifically one that offers a much nicer developer experience), but in my part of the world most of the jobs available are fully AWS or AWS heavy in terms of cloud usage. This is why I've chosen to focus on this cloud and not the others.
 
-I also started my career as a "Full Stack JavaScript" developer and thus was originally very frontend interested/focused. To that end, I was drawn to using managed services (sometimes called Serverless) that AWS offers rather than rolling my own by using "Cloud Native" solutions such as Kubernetes or writing lots of Dockerfiles.
+I also started my career as a "Full Stack JavaScript" developer and thus was originally very frontend focused. To that end, I was drawn to using managed services that AWS offers (sometimes called Serverless) rather than rolling my own by using solutions such as Kubernetes or writing lots of Dockerfiles (sometimes referred to as "Cloud Native").
 
-For my work sharing my knowledge in the wider AWS community, I was named an AWS Serverless Hero in 2023.
+After years of sharing my knowledge in the wider AWS community, I was recognized as an AWS Serverless Hero in 2023.
 
 ## Should I get cerfitications or do hands-on projects?
 
@@ -43,7 +45,7 @@ Lots of certification prep material and getting started content will encourage y
 
 I would highly recommend you do not do this and learn to use an infrastructure as code (IaC) tool while building side projects for learning. This is much closer to how things will look once you have a job and are working on a team.
 
-There's lots of arguments across the internet about which one is the best. My opinion is to pick one and use it! The skills are transferrable across the different IaC tools.
+There's lots of arguments across the internet about which one is the best. My opinion is to pick one and use it! The skills are transferrable across the different IaC tools from my experience.
 
 Some commonly used ones with AWS are:
 
@@ -57,23 +59,26 @@ Along the lines of IaC, you should also look into [CI/CD](https://martinfowler.c
 
 ## Recommended resources
 
-Ok so now that we're nearing the end, here's a list of resources that I recommend. As new material comes out, I will do my best to keep this updated. Disclaimer that these are all things that I've used or are created by folks whom I know and respect. No one paid, sponsored, or asked me to add their content to this list. Also note that some of these resources have Discord communities as well where you can interact with fellow learners and ask for help.
+Ok so now that we're nearing the end, here's a list of resources that I recommend. As new material comes out, I will do my best to keep this updated. Disclaimer that these are all things that I've used or are created by folks whom I know and respect. No one paid, sponsored, or asked me to add their content to this list. Also note that some of these resources have [Discord](https://discord.com/) communities where you can interact with fellow learners and ask for help.
 
 ### Free Resources
 
 - [The Cloud Resume Challenge](https://cloudresumechallenge.dev/)
 - [Open up the Cloud](https://openupthecloud.com/)
+- [Free Code Camp AWS Complete Bootcamp Course](https://www.youtube.com/watch?v=zA8guDqfv40)
 - [Learn to Cloud](https://learntocloud.guide/)
-- [Free Code Camp AWS Complete Bootcamp Course](https://www.youtube.com/watch?v=zA8guDqfv40) - honestly anything done by Andrew Brown is great. I highly encourage you check out his paid courses too if you can to support him.
 
 ### Paid Resources
 
-- [Tutorials Dojo](https://tutorialsdojo.com/)
+- [Tutorials Dojo](https://tutorialsdojo.com/) - also has some free resources
+- [Exam pro](https://www.exampro.co/) - also has some free tier courses
 - [Cloud Academy](https://cloudacademy.com/)
 - [A Cloud Guru](https://www.pluralsight.com/cloud-guru)
 
 ## Closing
 
-I hope you found my biased opinion on this helpful! Cloud and AWS are a big things to learn, so be patient with yourself and join some communities where you can ask for help.
+I hope you found my biased opinion on this topic helpful! Cloud and AWS are a big things to learn, so be patient with yourself and join some communities where you can ask for help. I has taken me years to learn what I know and I still don't know everything.
+
+Do you have any getting started in the cloud resources you'd like to share? Please do!
 
 Good luck out there. I can't wait to see what you build!
