@@ -9,7 +9,7 @@ date: '2024-04-14T09:12:03.284Z'
 
 ## Who am I?
 
-I graduated from a code school in 2016 in the United States and have been employed as a software engineer ever since. Because I like to give back to the communities that helped me get started, I've done on paid contracts and volunteered in positions where I mentor folks who would like to take a similar path.
+I graduated from a code school in 2016 in the United States and have been employed as a software engineer ever since. Because I like to give back to the communities that helped me get started, I've done paid contracts and volunteered in positions where I mentor folks who would like to take a similar path.
 
 ## My goal in writing this
 
@@ -19,7 +19,7 @@ Because I often surround myself with people in the Code School community who hav
 
 We all have biases, myself included. I encourage you to do what you think is best for you. Do not take my advice as an absolute, "I must do everything on this list."
 
-Cloud-wise, I have mostly worked in AWS, so my opinions and advice will usually have an AWS angle. It is my personal opinion that I wish there were more Cloud competition out there (specifically one that offers a much nicer developer experience), but in my part of the world most of the jobs available are fully AWS or AWS heavy in terms of cloud usage. This is why I've chosen to focus on this cloud and not the others.
+Cloud-wise, I have mostly worked in AWS, so my opinions and advice will usually have an AWS angle. It is my personal opinion that I wish that there was more Cloud competition (specifically one that offers the same uptime/choices of Serverless services AWS offers but with better developer experience), but in my part of the world most of the jobs available are fully AWS or AWS heavy in terms of Cloud usage. This is why I've chosen to focus on this Cloud and not the others.
 
 I also started my career as a "Full Stack JavaScript" developer and thus was originally very frontend focused. To that end, I was drawn to using managed services that AWS offers (sometimes called Serverless) rather than rolling my own by using solutions such as Kubernetes or writing lots of Dockerfiles (sometimes referred to as "Cloud Native").
 
@@ -41,11 +41,11 @@ If I'm curious about an AWS service that I've never used, I will build a side pr
 
 ## Infrastructure as code
 
-Lots of certification prep material and getting started content will encourage you to click through the AWS console to create your cloud resources. This is informally known as "click ops."
+Lots of certification prep material and getting started content will encourage you to click through the AWS console to create your Cloud resources. This is informally known as "click ops."
 
-I would highly recommend you do not do this and learn to use an infrastructure as code (IaC) tool while building side projects for learning. This is much closer to how things will look once you have a job and are working on a team.
+I would highly recommend you **don't do this** and learn to use an infrastructure as code (IaC) tool while building side projects for learning. This is much closer to how things will look once you have a job and are working on a team.
 
-There's lots of arguments across the internet about which one is the best. My opinion is to pick one and use it! The skills are transferrable across the different IaC tools from my experience.
+There's lots of arguments across the internet about which one is the best. Some folks weirdly get cult-ish about it. My opinion is to pick one and use it! The skills are transferrable across the different IaC tools from my experience.
 
 Some commonly used ones with AWS are:
 
@@ -55,17 +55,17 @@ Some commonly used ones with AWS are:
 
 [AWS Application Composer](https://aws.amazon.com/application-composer/) might also be a good starting point because it is a drag and drop interface for your cloud resources, but you also have full access to the IaC that it generates.
 
-Along the lines of IaC, you should also look into [CI/CD](https://martinfowler.com/articles/continuousIntegration.html). There are lots of tools to accomplish this, but one that I've been using lately on the job has been [GitHub Actions](https://github.com/features/actions). Again, I recommend you find one and use it.
+Along the lines of IaC, you should also look into [CI/CD](https://martinfowler.com/articles/continuousIntegration.html). There are lots of tools to accomplish this, but one that I've been using lately on the job has been [GitHub Actions](https://github.com/features/actions). Again, I recommend you find one and use it. The principles and higher level ideas are transferrable across different CI/CD platforms.
 
 ## Recommended resources
 
-Ok so now that we're nearing the end, here's a list of resources that I recommend. As new material comes out, I will do my best to keep this updated. Disclaimer that these are all things that I've used or are created by folks whom I know and respect. No one paid, sponsored, or asked me to add their content to this list. Also note that some of these resources have [Discord](https://discord.com/) communities where you can interact with fellow learners and ask for help.
+Here's a list of resources that I recommend. As new material comes out, I will do my best to keep this updated. Disclaimer that these are all things that I've used or are created by folks whom I respect. No one paid, sponsored, or asked me to add their content to this list. Also note that some of these resources have [Discord](https://discord.com/) communities where you can interact with fellow learners and ask for help.
 
 ### Free Resources
 
 - [The Cloud Resume Challenge](https://cloudresumechallenge.dev/)
-- [Open up the Cloud](https://openupthecloud.com/)
 - [Free Code Camp AWS Complete Bootcamp Course](https://www.youtube.com/watch?v=zA8guDqfv40)
+- [Open up the Cloud](https://openupthecloud.com/)
 - [Learn to Cloud](https://learntocloud.guide/)
 
 ### Paid Resources
@@ -77,8 +77,8 @@ Ok so now that we're nearing the end, here's a list of resources that I recommen
 
 ## Closing
 
-I hope you found my biased opinion on this topic helpful! Cloud and AWS are a big things to learn, so be patient with yourself and join some communities where you can ask for help. I has taken me years to learn what I know and I still don't know everything.
+I hope you found my biased opinion on this topic helpful! Cloud and AWS are big things to learn, so be patient with yourself and join some communities where you can ask for help. I has taken me years to learn what I know and I still don't know everything.
 
-Do you have any getting started in the cloud resources you'd like to share? Please do!
+Do you have any getting started in the Cloud resources you'd like to share? Please do!
 
 Good luck out there. I can't wait to see what you build!
