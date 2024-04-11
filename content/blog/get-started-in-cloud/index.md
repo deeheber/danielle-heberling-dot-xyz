@@ -13,15 +13,15 @@ I graduated from a code school in 2016 in the United States and have been employ
 
 ## My goal in writing this
 
-Because I often surround myself with people in the Code School community who have expertise in "Full Stack JavaScript" (it's mostly Frontend focused from my observation), I am often asked the question "how can I get started in Cloud" or "how can I learn AWS." It is my hope that this post can serve as a reference for folks who ask me those questions.
+I often surround myself with people in the Code School community who have expertise in "Full Stack JavaScript" (it's mostly Frontend focused from my observation). Because of this, I am often asked the questions like "how can I get started in Cloud" or "how can I learn AWS." It is my hope that this post can serve as a reference for folks who ask me those questions.
 
 ## My biases
 
 We all have biases, myself included. I encourage you to do what you think is best for you. Do not take my advice as an absolute, "I must do everything on this list."
 
-Cloud-wise, I have mostly worked in AWS, so my opinions and advice will usually have an AWS angle. It is my personal opinion that I wish that there was more Cloud competition (specifically one that offers the same uptime/choices of Serverless services AWS offers but with better developer experience), but in my part of the world most of the jobs available are fully AWS or AWS heavy in terms of Cloud usage. This is why I've chosen to focus on this Cloud and not the others.
+Cloud-wise I have mostly worked in AWS, so my opinions and advice will usually have an AWS angle. It is my personal opinion that I wish that there was more Cloud competition (specifically one that offers the same uptime/choices of Serverless services AWS offers but with a better developer experience), but in my part of the world most of the jobs available are fully AWS or AWS heavy in terms of Cloud usage. This is why I've chosen to focus on this Cloud and not the others.
 
-I also started my career as a "Full Stack JavaScript" developer and thus was originally very frontend focused. To that end, I was drawn to using managed services that AWS offers (sometimes called Serverless) rather than rolling my own by using solutions such as Kubernetes or writing lots of Dockerfiles (sometimes referred to as "Cloud Native").
+I also started my career as a "Full Stack JavaScript" developer and thus was originally very frontend focused. At the time, I mostly cared about what the customers experience and the implementation details (while important) were less interesting to me. To that end, I was drawn to using managed services that AWS offers (sometimes called Serverless) rather than rolling my own by using solutions such as Kubernetes or writing lots of Dockerfiles (sometimes referred to as "Cloud Native").
 
 After years of sharing my knowledge in the wider AWS community, I was recognized as an AWS Serverless Hero in 2023.
 
