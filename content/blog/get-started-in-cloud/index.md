@@ -72,6 +72,7 @@ Here's a list of resources that I recommend. As new material comes out, I will d
 
 - [The Cloud Resume Challenge](https://cloudresumechallenge.dev/)
 - [Tutorials Dojo](https://tutorialsdojo.com/)
+- [AWS Newbies](https://awsnewbies.com/)
 - [Exam Pro](https://www.exampro.co/)
 
 ### Paid resources
