@@ -1,6 +1,6 @@
 ---
 title: Tips for Getting Started in Cloud
-date: '2024-04-14T09:12:03.284Z'
+date: '2024-04-12T09:12:03.284Z'
 ---
 
 ![Clouds Image](./clouds.jpg)
