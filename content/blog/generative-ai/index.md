@@ -1,5 +1,5 @@
 ---
-title: I'm worried about generative AI
+title: I'm Worried About Generative AI
 date: '2024-05-05T22:12:03.284Z'
 ---
 
