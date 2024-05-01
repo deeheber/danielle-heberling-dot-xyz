@@ -3,7 +3,7 @@ title: Can We Talk About Generative AI?
 date: '2024-05-05T22:12:03.284Z'
 ---
 
-![Drawer](./drawer.png)
+![Drawer](./drawer.jpg)
 
 > Photo by <a href="https://unsplash.com/@dearseymour?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ksenia Makagonova</a> on <a href="https://unsplash.com/photos/opened-white-wooden-drawer-bngKirnA1EE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
