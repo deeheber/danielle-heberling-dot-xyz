@@ -13,15 +13,15 @@ No this post isn't about the common objections I've been seeing in the discourse
 
 I'm concerned with AI monopolizing the focus of companies.
 
-Take the big tech companies for example. There are reports everywhere about multiple layoff rounds but also news of higher rates of investment (both money and people resources) in AI than ever before from these companies. These large companies have big ecosystems that many folks depend on. Does this mean since the main focus is AI that there will be less focus on their non-AI service offerings? Does this mean that service reliability will degrade as time goes on because engineers who previously responded to outages were moved to teams working on AI or were laid off?
+Take the big tech companies for example. There are reports everywhere about multiple layoff rounds but also news of higher rates of investment (both money and people resources) in AI than ever before. These large companies have huge ecosystems that many folks depend on. Does this mean since the main focus is AI that there will be less focus on their non-AI products and services? Does this mean that service reliability will degrade as time goes on because engineers who previously responded to outages were moved to teams working on AI or were laid off?
 
-On the other end of the tech spectrum we have tech startups. If they use anything that could be considered AI, it is prominently featured it in their marketing material. I'm seeing so many terrible chatbots being built while their marketing tells me this is the solution to my problems (that I didn't know I had). To me, this feels like VC funding is scarce and AI is the magic word that can attract their money.
+On the other end of the spectrum we have tech startups. If they use anything that could be considered AI, it is prominently featured it in their marketing material. I'm seeing many chatbots being built while their marketing tells me this is the solution to my problems (that I didn't know I had). To me, this feels like funding is scarce and AI is the magic word that can attract venture capital.
+
+I've also seen lots of companies throwing AI at things when it wasn't needed. An example: a company who will remain nameless was demoing a new tool that uses AI to help users troubleshoot error messages that surface in their app. A developer watching the demo yelled out "or you could consider writing better error messages that users will understand instead of bringing AI into this."
 
 These are my opinions based off of observation of the world around me. I do not have data to present as evidence. This is all based off of vibes. I sure hope my vibes are wrong, that I'm overreacting to all of this, and that I should take off my tin foil hat.
 
 Time will tell.
-
-There's still lots of innovation without AI that is needed in this world. An example: a company who will remain nameless was demoing a new tool that uses AI to help users troubleshoot error messages that surface in their app. A developer watching the demo yelled out "or you could consider writing better error messages that users will understand instead of bringing AI into this."
 
 AI has promise and it does have the potential to be helpful, but let's not forget that we should attempt to solve problems that already exist before bringing in tools that have the potential to cause even more problems.
 
