@@ -1,6 +1,6 @@
 ---
 title: I'm Worried About Generative AI
-date: '2024-05-05T22:12:03.284Z'
+date: '2024-05-04T22:12:03.284Z'
 ---
 
 ![Drawer](./drawer.jpg)
