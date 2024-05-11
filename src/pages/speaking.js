@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2024',
       content: [
         {
+          title: 'Ready. Set. Cloud Podcast - All about the Believe in Serverless community',
+          link: 'https://www.readysetcloud.io/podcast/season-2/8/',
+        },
+        {
           title: 'Modernizing Healthcare Delivery with AWS Serverless Services',
           link: 'https://www.youtube.com/watch?v=8NoUBQHGWzs',
         },
