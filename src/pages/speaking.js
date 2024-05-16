@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2024',
       content: [
         {
+          title: 'What does a Software Engineer in the Cloud actually do?',
+          link: 'https://youtu.be/0EXGfdt_ZqQ?si=jhyhvOwyfR1BEDwQ',
+        },
+        {
           title: 'Ready. Set. Cloud Podcast - All about the Believe in Serverless community',
           link: 'https://www.readysetcloud.io/podcast/season-2/8/',
         },
