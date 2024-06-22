@@ -11,7 +11,7 @@
     "node": ">=20.10.0"
   },
   "dependencies": {
-    "gatsby": "^5.13.3",
+    "gatsby": "^5.13.6",
     "gatsby-plugin-feed": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
@@ -26,9 +26,9 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "prismjs": "^1.29.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
     "react-typography": "^0.16.23",
     "typeface-merriweather": "^1.1.13",
     "typeface-montserrat": "^1.1.13",
@@ -36,7 +36,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^3.2.4"
+    "prettier": "^3.3.2"
   },
   "homepage": "https://github.com/deeheber/danielle-heberling-dot-xyz/blob/master/README.md",
   "keywords": [
