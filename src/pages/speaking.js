@@ -12,6 +12,10 @@ const Speaking = ({ data }) => {
       year: '2024',
       content: [
         {
+          title: 'Livestream: Trying out Cloudflare for the first time',
+          link: 'https://www.youtube.com/live/1RRa3A1iWzQ?si=pn8KDVCGEhdqk5gd',
+        },
+        {
           title: 'What does a Software Engineer in the Cloud actually do?',
           link: 'https://youtu.be/0EXGfdt_ZqQ?si=jhyhvOwyfR1BEDwQ',
         },
