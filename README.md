@@ -1,6 +1,6 @@
 # Danielle-Heberling-Dot-XYZ
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a4629274-59c5-47ee-901f-9621a8fb5174/deploy-status)](https://app.netlify.com/sites/deeheber/deploys)
+Note: this site has been retired and is no longer active. Check out the [new blog's code here](https://github.com/deeheber/Danielle-s-Blog).
 
 ## 🧐 What's inside?
 
